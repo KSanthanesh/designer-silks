@@ -1,23 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
 
-* {
-    margin: 0;
-    padding: 0;
-    border: none;
-    box-sizing: border-box; 
-}
-
 html {
-    /* height: 100%; */
+    height: 100%;
 }
 
 body {
-    background: url('/media/home-image-1.webp') no-repeat center center fixed;
+    background: url('/media/home-img.jpeg') no-repeat;
     background-size: cover;
-    height: calc(100vh - 164px);
+    height: calc(100vh - 100px);
     font-family: "Open Sans", cursive;
     color: #000;
 }
+
+
 /*---------------------------------------------------- base logo */
 .logo {
     width: 7%;
@@ -29,4 +24,49 @@ body {
 .header {
     display: flex;
 }
+
+
+.fa-icon {
+    align-items: center;
+    display:inline-flex;
+    justify-content: center;
+    height: 1.5rem;
+    width: 1.5 rem;
+}
+
+.logo-link {
+    width: fit-content;
+}
+.new-arrivals {
+    margin-top: 280px;
+}
+
+.shop-now {
+    margin-top: 340px;
+    margin-left: -25em;
+}
+
+.shop-now-btn {
+    background: black;
+    color: white;
+    min-width:180px;
+}
+
+.btn-black {
+    background: black;
+    color: white;
+}
+
+.shop-now-btn:hover,
+.shop-now-btn:active,
+.shop-now-btn:focus,
+.btn-black:hover,
+.btn-black:active,
+.btn-black:focus {
+    background: #222;
+    color: rgb(241, 157, 161);
+}
+
+
+
 
