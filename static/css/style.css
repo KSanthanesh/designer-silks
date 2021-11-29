@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-sizing: border-box; 
+}
+
+html {
+    overflow-x: hidden;
+}
+
+body {
+    background-color: #fff;
+    font-family: "Open Sans", cursive;
+    font-size: 16px;
+    font-weight: 300;
+    color: #000;
+}
+/*---------------------------------------------------- base logo */
+.logo {
+    width: 6%;
+    height: 6%;
+    border-radius: 50%;
+    margin-top: 15px;
+}
+
