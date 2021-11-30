@@ -5,15 +5,18 @@ html {
 }
 
 body {
-    background: url('/media/home-img.jpeg') no-repeat;
+    width:100%;
+    min-height: 115em;
+    background: url('/media/home-img.jpeg') no-repeat top;
     background-size: cover;
-    height: calc(100vh - 100px);
+    height: calc(100vh - 200px);
     font-family: "Open Sans", cursive;
     color: #000;
 }
 
 
 /*---------------------------------------------------- base logo */
+
 .logo {
     width: 7%;
     height: 7%;
@@ -21,8 +24,9 @@ body {
     margin-top: 15px;
 }
 
-.header {
+.title {
     display: flex;
+    color: white;
 }
 
 
@@ -36,20 +40,24 @@ body {
 
 .logo-link {
     width: fit-content;
-}
-.new-arrivals {
-    margin-top: 280px;
+    
 }
 
-.shop-now {
+.new-arrivals {
+    margin-top: 120
+    px;
+    margin-left: -40px;
+}
+
+/* .shop-now {
     margin-top: 340px;
     margin-left: -25em;
-}
+} */
 
 .shop-now-btn {
     background: black;
     color: white;
-    min-width:180px;
+    min-width:160px;
 }
 
 .btn-black {
@@ -64,9 +72,30 @@ body {
 .btn-black:active,
 .btn-black:focus {
     background: #222;
-    color: rgb(241, 157, 161);
+    color: rgba(255, 255, 255, 0.629);
+}
+.text-black {
+    color: #000 !important;
 }
 
+.border-black {
+    border: 1px solid black !important;
+}
+
+/*---------------------------------------------------------Media Queries */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 80%;
+    }
+}
+
+/*----------------------------fixed navbar only on medium and up */
+@media (min-width: 992px) {
+    
+    .header-container {
+        padding-top: 164px;
+    }
+}
 
 
 
