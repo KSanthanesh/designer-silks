@@ -1,0 +1,26 @@
+[
+    {
+        "pk": 1,
+        "model": "products.category",
+        "fields": {
+            "name": "chiffon_sarees",
+            "friendly_name": "Chiffon Sarees"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "products.category",
+        "fields": {
+            "name": "cotton_sarees",
+            "friendly_name": "Cotton Sarees"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "products.category",
+        "fields": {
+            "name": "silk_sarees",
+            "friendly_name": "Silk Sarees"
+        }
+    }
+]

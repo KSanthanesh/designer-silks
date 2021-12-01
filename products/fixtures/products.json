@@ -1,0 +1,362 @@
+[
+    {
+        "pk": 1,
+        "models": "products.product",
+        "fields": {
+            "sku": "chs10001",
+            "name": "Casual Wear Chiffon Saree",
+            "price": 30.95,
+            "category": 1,
+            "rating": 4.2,
+            "image": "chs10001.jpg"
+        }
+    },
+    {
+        "pk": 2,
+        "models": "products.product",
+        "fields": {
+            "sku": "chs10002",
+            "name": "Shaded Blue Chiffon Saree",
+            "price": 40.95,
+            "category": 1,
+            "rating": 4.5,
+            "image": "chs10002.jpg"
+        }
+    },
+    {
+        "pk": 3,
+        "models": "products.product",
+        "fields": {
+            "sku": "chs10003",
+            "name": "Satin Chiffon Saree",
+            "price": 30.95,
+            "category": 1,
+            "rating": 5,
+            "image": "chs10003.jpg"
+        }
+    },
+    {
+        "pk": 4,
+        "models": "products.product",
+        "fields": {
+            "sku": "chs10004",
+            "name": "Gazel Fashions Chiffon Saree",
+            "price": 38.95,
+            "category": 1,
+            "rating": 4.8,
+            "image": "chs10004.jpg"
+        }
+    },
+    {
+        "pk": 5,
+        "models": "products.product",
+        "fields": {
+            "sku": "chs10005",
+            "name": "Stylish Pure Chiffon Saree",
+            "price": 35.95,
+            "category": 1,
+            "rating": 5,
+            "image": "chs10005.jpg"
+        }
+    },
+    {
+        "pk": 6,
+        "models": "products.product",
+        "fields": {
+            "sku": "chs10006",
+            "name": "Satrupa Design Chiffon Saree",
+            "price": 45.95,
+            "category": 1,
+            "rating": 4.9,
+            "image": "chs10006.jpg"
+        }
+    },
+    {
+        "pk": 7,
+        "models": "products.product",
+        "fields": {
+            "sku": "chs10007",
+            "name": "Purple Mineral Chiffon Saree",
+            "price": 40.95,
+            "category": 1,
+            "rating": 4.2,
+            "image": "chs10007.jpg"
+        }
+    },
+    {
+        "pk": 8,
+        "models": "products.product",
+        "fields": {
+            "sku": "chs10008",
+            "name": "Shaded Blue Chiffon Saree",
+            "price": 30.95,
+            "category": 1,
+            "rating": 3.9,
+            "image": "chs10008.jpg"
+        }
+    },
+    {
+        "pk": 9,
+        "models": "products.product",
+        "fields": {
+            "sku": "chs10009",
+            "name": "Pink Zari Chiffon Saree",
+            "price": 38.95,
+            "category": 1,
+            "rating": 4.4,
+            "image": "chs10009.jpg"
+        }
+    },
+    {
+        "pk": 10,
+        "models": "products.product",
+        "fields": {
+            "sku": "chs10010",
+            "name": "Party Wear Chiffon Saree",
+            "price": 50.95,
+            "category": 1,
+            "rating": 5,
+            "image": "chs10010.jpg"
+        }
+    },
+    {
+        "pk": 11,
+        "models": "products.product",
+        "fields": {
+            "sku": "cts20001",
+            "name": "Sangam prints Cotton Saree",
+            "price": 33.95,
+            "category": 2,
+            "rating": 4,
+            "image": "cts20001.jpg"
+        }
+    },
+    {
+        "pk": 12,
+        "models": "products.product",
+        "fields": {
+            "sku": "cts20002",
+            "name": "Green Embroidered Cotton Saree",
+            "price": 40.95,
+            "category": 2,
+            "rating": 4.5,
+            "image": "cts20002.jpg"
+        }
+    },
+    {
+        "pk": 13,
+        "models": "products.product",
+        "fields": {
+            "sku": "cts20003",
+            "name": "Mustard Woven Cotten Saree",
+            "price": 47.95,
+            "category": 2,
+            "rating": 4.6,
+            "image": "cts20003.jpg"
+        }
+    },
+    {
+        "pk": 14,
+        "models": "products.product",
+        "fields": {
+            "sku": "cts20004",
+            "name": "Silk Cotten Saree",
+            "price": 43.95,
+            "category": 2,
+            "rating": 5,
+            "image": "cts20004.jpg"
+        }
+    },
+    {
+        "pk": 15,
+        "models": "products.product",
+        "fields": {
+            "sku": "cts20005",
+            "name": "Blue Checked Cotton Saree",
+            "price": 48.95,
+            "category": 2,
+            "rating": 4.6,
+            "image": "cts20005.jpg"
+        }
+    },
+    {
+        "pk": 16,
+        "models": "products.product",
+        "fields": {
+            "sku": "cts20006",
+            "name": "Seawave Cotton Saree",
+            "price": 50.95,
+            "category": 2,
+            "rating": 5,
+            "image": "cts20006.jpg"
+        }
+    },
+    {
+        "pk": 17,
+        "models": "products.product",
+        "fields": {
+            "sku": "cts20007",
+            "name": "Poonam Cotton Saree",
+            "price": 35.95,
+            "category": 2,
+            "rating": 4.5,
+            "image": "cts20007.jpg"
+        }
+    },
+    {
+        "pk": 18,
+        "models": "products.product",
+        "fields": {
+            "sku": "cts20008",
+            "name": "Designer Cotton Saree",
+            "price": 30.95,
+            "category": 2,
+            "rating": 3.9,
+            "image": "cts20008.jpg"
+        }
+    },
+    {
+        "pk": 19,
+        "models": "products.product",
+        "fields": {
+            "sku": "cts20009",
+            "name": "Pure Cotton Saree",
+            "price": 40.95,
+            "category": 2,
+            "rating": 4.6,
+            "image": "cts20009.jpg"
+        }
+    },
+    {
+        "pk": 20,
+        "models": "products.product",
+        "fields": {
+            "sku": "cts20010",
+            "name": "Pink Printed Cotton Saree",
+            "price": 47.95,
+            "category": 2,
+            "rating": 4.9,
+            "image": "cts20010.jpg"
+        }
+    },
+    {
+        "pk": 21,
+        "models": "products.product",
+        "fields": {
+            "sku": "sis30001",
+            "name": "Multi plain Art Silk Saree",
+            "price": 85.95,
+            "category": 3,
+            "rating": 4.9,
+            "image": "sis30001.jpg"
+        }
+    },
+    {
+        "pk": 22,
+        "models": "products.product",
+        "fields": {
+            "sku": "sis30002",
+            "name": "Samudrika Silk Saree",
+            "price": 70.95,
+            "category": 3,
+            "rating": 4.4,
+            "image": "sis30002.jpg"
+        }
+    },
+    {
+        "pk": 23,
+        "models": "products.product",
+        "fields": {
+            "sku": "sis30001",
+            "name": "Multicolor Peacock Silk Saree",
+            "price": 100.95,
+            "category": 3,
+            "rating": 5,
+            "image": "sis30003.jpg"
+        }
+    },
+    {
+        "pk": 24,
+        "models": "products.product",
+        "fields": {
+            "sku": "sis30004",
+            "name": "Kanchipuram Art Silk Saree",
+            "price": 100.95,
+            "category": 3,
+            "rating": 5,
+            "image": "sis30004.jpg"
+        }
+    },
+    {
+        "pk": 25,
+        "models": "products.product",
+        "fields": {
+            "sku": "sis30005",
+            "name": "Banarasi Silk Saree",
+            "price": 60.95,
+            "category": 3,
+            "rating": 4.2,
+            "image": "sis30005.jpg"
+        }
+    },
+    {
+        "pk": 26,
+        "models": "products.product",
+        "fields": {
+            "sku": "sis30006",
+            "name": "Kalyan Wedding Saree",
+            "price": 80.95,
+            "category": 3,
+            "rating": 4.5,
+            "image": "sis30006.jpg"
+        }
+    },
+    {
+        "pk": 27,
+        "models": "products.product",
+        "fields": {
+            "sku": "sis30007",
+            "name": "Pink Heart Silk Saree",
+            "price": 75.95,
+            "category": 3,
+            "rating": 4.6,
+            "image": "sis30007.jpg"
+        }
+    },
+    {
+        "pk": 28,
+        "models": "products.product",
+        "fields": {
+            "sku": "sis30008",
+            "name": "Bridal Silk Saree ",
+            "price": 95.95,
+            "category": 3,
+            "rating": 4.9,
+            "image": "sis30008.jpg"
+        }
+    },
+    {
+        "pk": 29,
+        "models": "products.product",
+        "fields": {
+            "sku": "sis30009",
+            "name": "Green Aura Silk Saree",
+            "price": 80.95,
+            "category": 3,
+            "rating": 4,
+            "image": "sis30009.jpg"
+        }
+    },
+    {
+        "pk": 30,
+        "models": "products.product",
+        "fields": {
+            "sku": "sis30010",
+            "name": "Pink Printed Silk Saree",
+            "price": 85.95,
+            "category": 3,
+            "rating": 4.5,
+            "image": "sis30010.jpg"
+        }
+    }
+]
