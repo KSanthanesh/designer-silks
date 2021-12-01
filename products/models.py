@@ -16,6 +16,11 @@ class Category(models.Model):
         """ Friendly name for the Product Display"""
         return str(self.friendly_name)
 
+    class Meta:
+        """ Meta Class """
+        verbose_name = 'Category'
+        verbose_name_plural = 'Categories'
+
 
 class Product(models.Model):
     """Product details database"""
