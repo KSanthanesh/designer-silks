@@ -83,6 +83,11 @@ body {
     border: 1px solid black !important;
 }
 
+.footer {
+    padding-left: 30px;
+    margin-top: 90em;
+}
+
 /*---------------------------------------------------------Media Queries */
 @media (min-width: 1200px) {
     .container {
