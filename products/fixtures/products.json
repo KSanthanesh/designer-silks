@@ -8,6 +8,9 @@
             "price": 30.95,
             "category": 1,
             "rating": 4.2,
+            "colors": "Pink and Green",
+            "material": "Natural or synthetically produced crepe silks",
+            "description": "A Perfect Blend of Style and Comfort. This Casual Wear Chiffon Saree comes with Blouse piece.",
             "image": "chs10001.jpg"
         }
     },
@@ -20,6 +23,9 @@
             "price": 40.95,
             "category": 1,
             "rating": 4.5,
+            "colors": "Blue and Red",
+            "material": "Natural or synthetically produced crepe silks",
+            "description": "Very lightweight and everyday wardrobe as it is perfect for all seasons. This Shaded Blue Chiffon Saree comes with Blouse piece.",
             "image": "chs10002.jpg"
         }
     },
@@ -32,6 +38,9 @@
             "price": 30.95,
             "category": 1,
             "rating": 5,
+            "colors": "Yellow",
+            "material": "Natural or synthetically produced crepe silks",
+            "description": "Elegant, lightweight and perfect for all seasons. This Satin Chiffon Saree comes with Blouse piece.",
             "image": "chs10003.jpg"
         }
     },
@@ -44,6 +53,9 @@
             "price": 38.95,
             "category": 1,
             "rating": 4.8,
+            "colors": "Blue and Orange",
+            "material": "Natural or synthetically produced crepe silks",
+            "description": "Elegant and Beautiful Fashion saree. This Gazel Fashions Chiffon Saree comes with Blouse piece.",
             "image": "chs10004.jpg"
         }
     },
@@ -56,6 +68,9 @@
             "price": 35.95,
             "category": 1,
             "rating": 5,
+            "colors": "Blue and pink",
+            "material": "Natural or synthetically produced crepe silks",
+            "description": "This fabric, made of tightly twisted yarn of very fine threads. This Stylish Pure Chiffon Saree comes with Blouse piece.",
             "image": "chs10005.jpg"
         }
     },
@@ -68,6 +83,9 @@
             "price": 45.95,
             "category": 1,
             "rating": 4.9,
+            "colors": "Pink and Black",
+            "material": "Natural or synthetically produced crepe silks",
+            "description": "Very lightweight, stylish, modern and casual wear saree. This Satrupa Design Chiffon Saree comes with Blouse piece.",
             "image": "chs10006.jpg"
         }
     },
@@ -80,6 +98,9 @@
             "price": 40.95,
             "category": 1,
             "rating": 4.2,
+            "colors": "Purple and Yellow",
+            "material": "Natural or synthetically produced crepe silks",
+            "description": "Soft and fluid fabrics with pretty palettes and exquisite prints. This Purple Mineral Chiffon Saree comes with Blouse piece.",
             "image": "chs10007.jpg"
         }
     },
@@ -92,6 +113,9 @@
             "price": 30.95,
             "category": 1,
             "rating": 3.9,
+            "colors": "Pink and Black",
+            "material": "Natural or synthetically produced crepe silks",
+            "description": "Elegant, light and beautiful saree with lace. This Shaded Blue Chiffon Saree comes with Blouse piece.",
             "image": "chs10008.jpg"
         }
     },
@@ -104,6 +128,9 @@
             "price": 38.95,
             "category": 1,
             "rating": 4.4,
+            "colors": "Red and Purple",
+            "material": "natural or synthetically produced crepe silks",
+            "description": "lightweight, casual and everyday wardrobe as it is perfect for all seasons. This Pink Zari Chiffon Saree comes with Blouse piece.",
             "image": "chs10009.jpg"
         }
     },
@@ -116,6 +143,9 @@
             "price": 50.95,
             "category": 1,
             "rating": 5,
+            "colors": "Blue and green",
+            "material": "natural or synthetically produced crepe silks",
+            "description": "Chiffon is a light, sheer and soft material with a slightly rough feel to it. This Party Wear Chiffon Saree comes with Blouse piece.",
             "image": "chs10010.jpg"
         }
     },
@@ -123,16 +153,49 @@
         "pk": 11,
         "model": "products.product",
         "fields": {
+            "sku": "chs10011",
+            "name": "Peach Chiffon Saree",
+            "price": 45.95,
+            "category": 1,
+            "rating": 4.3,
+            "colors": "Peach and light green",
+            "material": "natural or synthetically produced crepe silks",
+            "description": "Peach color chiffon saree. Having resham, sequins and stone worked border. This Chiffon Saree comes with Blouse piece.",
+            "image": "chs10011.jpg"
+        }
+    },
+    {
+        "pk": 12,
+        "model": "products.product",
+        "fields": {
+            "sku": "chs10012",
+            "name": "Resplendent Silver Chiffon Saree",
+            "price": 40.95,
+            "category": 1,
+            "rating": 4.7,
+            "colors": "Silver and Black",
+            "material": "natural or synthetically produced crepe silks",
+            "description": "Beautifully Designed with Wevon Lining,Sequance Work Work. This Chiffon Saree comes with Blouse piece.",
+            "image": "chs10012.jpg"
+        }
+    },
+    {
+        "pk": 13,
+        "model": "products.product",
+        "fields": {
             "sku": "cts20001",
             "name": "Sangam prints Cotton Saree",
             "price": 33.95,
             "category": 2,
             "rating": 4,
+            "colors": "Brown and Green",
+            "material": "Cotton",
+            "description": "Daily wear cotton and beautiful striped design. This Sangam prints Cotton Saree comes with Blouse piece.",
             "image": "cts20001.jpg"
         }
     },
     {
-        "pk": 12,
+        "pk": 14,
         "model": "products.product",
         "fields": {
             "sku": "cts20002",
@@ -140,11 +203,14 @@
             "price": 40.95,
             "category": 2,
             "rating": 4.5,
+            "colors": "Green and Red",
+            "material": "Cotton",
+            "description": "Cotton is a soft, fluffy staple fiber that grows in a boll, or protective case. This Embroidered Cotton Saree comes with Blouse piece.",
             "image": "cts20002.jpg"
         }
     },
     {
-        "pk": 13,
+        "pk": 15,
         "model": "products.product",
         "fields": {
             "sku": "cts20003",
@@ -152,11 +218,14 @@
             "price": 47.95,
             "category": 2,
             "rating": 4.6,
+            "colors": "Mustard and Cream",
+            "material": "Cotton",
+            "description": "Beautifully Designed with Wevon Lining,Sequance Work Work. This Woven Cotten Saree comes with Blouse piece.",
             "image": "cts20003.jpg"
         }
     },
     {
-        "pk": 14,
+        "pk": 16,
         "model": "products.product",
         "fields": {
             "sku": "cts20004",
@@ -164,11 +233,14 @@
             "price": 43.95,
             "category": 2,
             "rating": 5,
+            "colors": "Brown and Green",
+            "material": "Cotton",
+            "description": "Beautifully Designed with border and very comfortable for all the Seasons. This Silk Cotten Saree comes with Blouse piece.",
             "image": "cts20004.jpg"
         }
     },
     {
-        "pk": 15,
+        "pk": 17,
         "model": "products.product",
         "fields": {
             "sku": "cts20005",
@@ -176,11 +248,14 @@
             "price": 48.95,
             "category": 2,
             "rating": 4.6,
+            "colors": "Blue and Purple",
+            "material": "Cotton",
+            "description": "These Sarees are light in weight, soft feel, comfortable to drape on the body, and feels like the part of the skin. This Checked Cotton Saree comes with Blouse piece.",
             "image": "cts20005.jpg"
         }
     },
     {
-        "pk": 16,
+        "pk": 18,
         "model": "products.product",
         "fields": {
             "sku": "cts20006",
@@ -188,11 +263,14 @@
             "price": 50.95,
             "category": 2,
             "rating": 5,
+            "colors": "Blue and Green",
+            "material": "Cotton",
+            "description": "Traditional and Ethinic Look. This Seawave Cotton Saree comes with Blouse piece.",
             "image": "cts20006.jpg"
         }
     },
     {
-        "pk": 17,
+        "pk": 19,
         "model": "products.product",
         "fields": {
             "sku": "cts20007",
@@ -200,23 +278,29 @@
             "price": 35.95,
             "category": 2,
             "rating": 4.5,
+            "colors": "silver and Black",
+            "material": "Cotton",
+            "description": "very calm and pleasant look design and very lightweight. This Poonam Cotton Saree comes with Blouse piece.",
             "image": "cts20007.jpg"
         }
     },
     {
-        "pk": 18,
+        "pk": 20,
         "model": "products.product",
         "fields": {
             "sku": "cts20008",
-            "name": "Designer Cotton Saree",
+            "name": "Olive Printed Cotton Saree",
             "price": 30.95,
             "category": 2,
             "rating": 3.9,
+            "colors": "Olive and Mustard",
+            "material": "Cotton",
+            "description": "Beautiful flower printed saree with border. This printed Cotton Saree comes with Blouse piece.",
             "image": "cts20008.jpg"
         }
     },
     {
-        "pk": 19,
+        "pk": 21,
         "model": "products.product",
         "fields": {
             "sku": "cts20009",
@@ -224,11 +308,14 @@
             "price": 40.95,
             "category": 2,
             "rating": 4.6,
+            "colors": "Blue and Pink",
+            "material": "Cotton",
+            "description": "Flaunt this beautiful handloom cotton - silk saree to be very attractive. This Pure Cotton Saree comes with Blouse piece.",
             "image": "cts20009.jpg"
         }
     },
     {
-        "pk": 20,
+        "pk": 22,
         "model": "products.product",
         "fields": {
             "sku": "cts20010",
@@ -236,11 +323,44 @@
             "price": 47.95,
             "category": 2,
             "rating": 4.9,
+            "colors": "Pink and Brown",
+            "material": "Cotton",
+            "description": "Very elegant, soft and smooth saree for all occasions. This Printed Cotton Saree comes with Blouse piece.",
             "image": "cts20010.jpg"
         }
     },
     {
-        "pk": 21,
+        "pk": 23,
+        "model": "products.product",
+        "fields": {
+            "sku": "cts20011",
+            "name": "GiniGold Women's Cotton Saree",
+            "price": 40.95,
+            "category": 2,
+            "rating": 4.6,
+            "colors": "Orange and Peach",
+            "material": "Cotton",
+            "description": "The saree has a beautiful pattern on its borders. This GiniGold Women's Cotton Sareecomes with Blouse piece.",
+            "image": "cts20011.jpg"
+        }
+    },
+    {
+        "pk": 24,
+        "model": "products.product",
+        "fields": {
+            "sku": "cts20012",
+            "name": "Designer Cotton Saree",
+            "price": 43.95,
+            "category": 2,
+            "rating": 4.8,
+            "colors": "Lightgreen and Yellow",
+            "material": "Cotton",
+            "description": "Lightweight and traditional wear. This Designer Cotton Saree comes with Blouse piece.",
+            "image": "cts20012.jpg"
+        }
+    },
+    {
+        "pk": 25,
         "model": "products.product",
         "fields": {
             "sku": "sis30001",
@@ -248,11 +368,14 @@
             "price": 85.95,
             "category": 3,
             "rating": 4.9,
+            "colors": "Green",
+            "material": "Silk",
+            "description": "Lightweight and traditional bridal wear. This Multi plain Art Silk Saree comes with Blouse piece.",
             "image": "sis30001.jpg"
         }
     },
     {
-        "pk": 22,
+        "pk": 26,
         "model": "products.product",
         "fields": {
             "sku": "sis30002",
@@ -260,23 +383,29 @@
             "price": 70.95,
             "category": 3,
             "rating": 4.4,
+            "colors": "brown and Green",
+            "material": "Silk",
+            "description": "Lightweight and traditional wedding saree. This Samudrika Silk Saree comes with Blouse piece.",
             "image": "sis30002.jpg"
         }
     },
     {
-        "pk": 23,
+        "pk": 27,
         "model": "products.product",
         "fields": {
-            "sku": "sis30001",
+            "sku": "sis30003",
             "name": "Multicolor Peacock Silk Saree",
             "price": 100.95,
             "category": 3,
             "rating": 5,
+            "colors": "Lightgreen and Yellow",
+            "material": "Silk",
+            "description": "Lightweight and traditional wear. This Designer Cotton Saree comes with Blouse piece.",
             "image": "sis30003.jpg"
         }
     },
     {
-        "pk": 24,
+        "pk": 28,
         "model": "products.product",
         "fields": {
             "sku": "sis30004",
@@ -284,11 +413,14 @@
             "price": 100.95,
             "category": 3,
             "rating": 5,
+            "colors": "Lightgreen and Yellow",
+            "material": "Silk",
+            "description": "Lightweight and traditional wear. This Designer Cotton Saree comes with Blouse piece.",
             "image": "sis30004.jpg"
         }
     },
     {
-        "pk": 25,
+        "pk": 29,
         "model": "products.product",
         "fields": {
             "sku": "sis30005",
@@ -296,11 +428,14 @@
             "price": 60.95,
             "category": 3,
             "rating": 4.2,
+            "colors": "Lightgreen and Yellow",
+            "material": "Silk",
+            "description": "Lightweight and traditional wear. This Designer Cotton Saree comes with Blouse piece.",
             "image": "sis30005.jpg"
         }
     },
     {
-        "pk": 26,
+        "pk": 30,
         "model": "products.product",
         "fields": {
             "sku": "sis30006",
@@ -308,11 +443,14 @@
             "price": 80.95,
             "category": 3,
             "rating": 4.5,
+            "colors": "Lightgreen and Yellow",
+            "material": "Silk",
+            "description": "Lightweight and traditional wear. This Designer Cotton Saree comes with Blouse piece.",
             "image": "sis30006.jpg"
         }
     },
     {
-        "pk": 27,
+        "pk": 31,
         "model": "products.product",
         "fields": {
             "sku": "sis30007",
@@ -320,11 +458,14 @@
             "price": 75.95,
             "category": 3,
             "rating": 4.6,
+            "colors": "Lightgreen and Yellow",
+            "material": "Silk",
+            "description": "Lightweight and traditional wear. This Designer Cotton Saree comes with Blouse piece.",
             "image": "sis30007.jpg"
         }
     },
     {
-        "pk": 28,
+        "pk": 32,
         "model": "products.product",
         "fields": {
             "sku": "sis30008",
@@ -332,11 +473,14 @@
             "price": 95.95,
             "category": 3,
             "rating": 4.9,
+            "colors": "Lightgreen and Yellow",
+            "material": "Silk",
+            "description": "Lightweight and traditional wear. This Designer Cotton Saree comes with Blouse piece.",
             "image": "sis30008.jpg"
         }
     },
     {
-        "pk": 29,
+        "pk": 33,
         "model": "products.product",
         "fields": {
             "sku": "sis30009",
@@ -344,11 +488,14 @@
             "price": 80.95,
             "category": 3,
             "rating": 4,
+            "colors": "Lightgreen and Yellow",
+            "material": "Silk",
+            "description": "Lightweight and traditional wear. This Designer Cotton Saree comes with Blouse piece.",
             "image": "sis30009.jpg"
         }
     },
     {
-        "pk": 30,
+        "pk": 34,
         "model": "products.product",
         "fields": {
             "sku": "sis30010",
@@ -356,7 +503,40 @@
             "price": 85.95,
             "category": 3,
             "rating": 4.5,
+            "colors": "Lightgreen and Yellow",
+            "material": "Silk",
+            "description": "Lightweight and traditional wear. This Designer Cotton Saree comes with Blouse piece.",
             "image": "sis30010.jpg"
+        }
+    },
+    {
+        "pk": 35,
+        "model": "products.product",
+        "fields": {
+            "sku": "sis30011",
+            "name": "Model in Heavy Bridal Silk Saree",
+            "price": 110.95,
+            "category": 3,
+            "rating": 5,
+            "colors": "Green",
+            "material": "Silk",
+            "description": "Model wearing light green kanjeevaram wedding silk saree. Red and golden zari weave rich border. This Bridal Silk Saree comes with Blouse piece.",
+            "image": "sis30011.jpg"
+        }
+    },
+    {
+        "pk": 36,
+        "model": "products.product",
+        "fields": {
+            "sku": "sis30012",
+            "name": "Golden Pink Silk Saree",
+            "price": 105.95,
+            "category": 3,
+            "rating": 4.9,
+            "colors": "Golden Pink",
+            "material": "Silk",
+            "description": "Lightweight and traditional wedding wear saree. This Designer Cotton Saree comes with Blouse piece.",
+            "image": "sis30012.jpg"
         }
     }
 ]
