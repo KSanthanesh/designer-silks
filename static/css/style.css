@@ -113,19 +113,39 @@ body {
     width: 300px;
     height: 300px;
 }
+.img-fluid-detail {
+    width: 300px;
+    height: 400px;
+}
 
 /*---------------------------------------------------------Media Queries */
 @media (min-width: 1200px) {
     .container {
         max-width: 80%;
     }
+    
 }
 
 /*----------------------------fixed navbar only on medium and up */
 @media (min-width: 992px) {
-    
+    .fixed-top-desktop-only {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+    }
     .header-container {
         padding-top: 164px;
+    }
+}
+/* pad the top a bit when the navbar is Collapsed------------*/
+@media (max-width:991px) {
+    .header-container{
+        padding-top: 120px;
+    }
+    body {
+        height: calc(100vh - 120px)
     }
 }
 
