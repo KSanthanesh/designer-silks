@@ -7,13 +7,12 @@ from .models import Product, Category
 class ProductAdmin(admin.ModelAdmin):
     """ Display list for Products in the admin page """
 
-    list_display =(
+    list_display = (
         'sku',
         'name',
         'category',
         'price',
         'rating',
-        'colors',
         'material',
         'image',
     )
@@ -28,6 +27,7 @@ class CategoryAdmin(admin.ModelAdmin):
         'friendly_name',
         'name',
     )
+
 
 admin.site.register(Product, ProductAdmin)
 admin.site.register(Category, CategoryAdmin)

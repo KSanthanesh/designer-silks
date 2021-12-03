@@ -30,9 +30,9 @@ class Product(models.Model):
     name = models.CharField(max_length=50)
     price = models.DecimalField(max_digits=6, decimal_places=2)
     rating = models.DecimalField(max_digits=6, decimal_places=2, null=True, blank=True)  # noqa: E501
-    material = models.CharField(max_length=50, null=True, blank=True)
-    description = models.CharField(max_length=254, null=True, blank=True)
-    colors = models.CharField(max_length=50, null=True, blank=True)
+    material = models.CharField(max_length=50, blank=True)
+    description = models.TextField(max_length=254, blank=True)
+    length = models.CharField(max_length=50, blank=True)
     image = models.ImageField(null=True, blank=True)
 
     def __str__(self):

@@ -10,12 +10,12 @@ html {
 
 body {
     width:100%;
-    min-height: 115px;
+    min-height: 100vh;
     background: url('/media/home-img.jpeg') no-repeat top;
     background-size: cover;
-    height: calc(100vh - 200px);
     font-family: "Open Sans", cursive;
     color: #000;
+
 }
 
 
@@ -58,7 +58,7 @@ body {
 
 .new-arrivals {
     margin-top: 120px;
-    margin-left: -40px;
+    margin-left: -45px;
 }
 
 .shop-now-btn {
