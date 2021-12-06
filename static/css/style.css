@@ -10,7 +10,7 @@ html {
 
 body {
     width:100%;
-    min-height: 100vh;
+    height: auto;
     background: url('/media/home-img.jpeg') no-repeat top;
     background-size: cover;
     font-family: "Open Sans", cursive;
@@ -91,7 +91,10 @@ body {
 
 .footer {
     padding-left: 30px;
-    margin-top: 90em;
+    margin-top: 80em;
+}
+.product-footer {
+    margin-top: 30px;
 }
 
 /*---------------------------------------------------------Remove home page image */
@@ -110,7 +113,7 @@ body {
 }
 
 .img-fluid {
-    width: 300px;
+    width: 280px;
     height: 300px;
 }
 .img-fluid-detail {
