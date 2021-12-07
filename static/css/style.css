@@ -51,11 +51,6 @@ body {
     text-transform: uppercase;
 }
 
-
-.free-shipping {
-    font-size: 20px;
-}
-
 .new-arrivals {
     margin-top: 120px;
     margin-left: -45px;
@@ -70,6 +65,19 @@ body {
 .btn-black {
     background: black;
     color: white;
+}
+
+.btn-outline-black {
+    background: #fff;
+    color: #000;
+    border: 1px solid black;
+}
+
+.btn-outline-black:hover,
+.btn-outline-black:active,
+.btn-outline-black:focus {
+    background: #000;
+    color: #fff;
 }
 
 .shop-now-btn:hover,
