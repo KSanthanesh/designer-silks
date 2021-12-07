@@ -12,6 +12,30 @@
 {% endblock %}
 
 {% block content %}
+<div class="overlay"></div>
+<div class="container mb-2">
+  <div class="row">
+    <div class="col">
+      <h3 class="logo-font mb-4">Shopping Cart</h3>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      {% if cart_items %}
+      <div class="table-responsive rounded"></div>
+      {% else %}
+      <p class="lead mb-5">Your Cart is empty.</p>
+      <a href="{% url 'products' %}" class="btn btn-outline-black btn-lg border-black">
+        <span class="fa-icon">
+          <i class="fas fa-chevron-left"></i>
+        </span>
+        <span class="pl-2">GoTo Shopping Page</span>
+      </a>
+
+      {% endif %}
+    </div>
+  </div>
+</div>
 
 
 
