@@ -16,22 +16,59 @@
 <div class="container mb-2">
   <div class="row">
     <div class="col">
+      {% if cart_items %}
       <h3 class="logo-font mb-4">Shopping Cart</h3>
     </div>
   </div>
   <div class="row">
     <div class="col">
-      {% if cart_items %}
-      <div class="table-responsive rounded"></div>
+      
+      <div class="table-responsive rounded">
+        <table class="table table-sm table-borderless">
+          <thead class="text-black">
+            <tr>
+              <th scope="col">Product Info</th>
+              <th scope="col"></th>
+              <th scope="col">Price</th>
+              <th scope="col">Quantity</th>
+              <th scope="col">Subtotal</th>
+            </tr>
+          </thead>
+          {% for item in cart_items %}
+          
+          <tr>
+            <td class="p-3 w-25">
+              <img class="rounded" src="{{ item.product.image.url}}" width="200" height="250">
+            </td>
+            <td class="py-3">
+              <p class="my-0"><b>{{ item.product.name}}</b></p>
+              <p class="my-0 small text-muted">SKU: {{ item.product.sku|upper}}</p>
+            </td>
+            <td class="py-3">
+              <p class="my-0">€{{ item.product.price }}</p>
+            </td>
+            <td class="py-3">
+              <p class="my-0">{{ item.quantity }}</p>
+            </td>
+            <td class="py-3 w-25">
+              <p class="my-0">€{{ item.product.price }}</p>
+            </td>
+            
+          </tr>
+          {% endfor %}
+        </table>
+      </div>
       {% else %}
-      <p class="lead mb-5">Your Cart is empty.</p>
+      <div class="text-center">
+      <p class="lead mb-5"><i class="fas fa-shopping-cart large"></i> Cart is empty.</p>
+      <p>Looks like you have no item in your Shopping cart.</p>
       <a href="{% url 'products' %}" class="btn btn-outlook-black btn-lg border-black">
         <span class="fa-icon">
           <i class="fas fa-chevron-left"></i>
         </span>
-        <span class="pl-2">Keep Shopping</span>
+        <span class="pl-2">Return To Shop</span>
       </a>
-
+    </div>
       {% endif %}
     </div>
   </div>

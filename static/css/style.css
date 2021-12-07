@@ -133,6 +133,11 @@ body {
     height: 400px;
 }
 
+.cart-img {
+    width: 200px;
+    height: 200px;
+}
+
 /*---------------------------------------------------------Media Queries */
 @media (min-width: 1200px) {
     .container {
