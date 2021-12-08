@@ -9,9 +9,9 @@ from .models import Product, Category
 
 def all_products(request):
     """User can view all products including sorting and search the products """
-    products = Product.objects.all()
+    products_list = Product.objects.all()
     query = None
-    categories = None
+    categories_list = None
     sort = None
     direction = None
 
@@ -21,19 +21,19 @@ def all_products(request):
             sort = sortkey
             if sortkey == 'name':
                 sortkey = 'lower_name'
-                products = products.annotate(lower_name=Lower('name'))
+                products_list = products_list.annotate(lower_name=Lower('name'))
             if sortkey == 'category':
                 sortkey = 'category__name'
             if 'direction' in request.GET:
                 direction = request.GET['direction']
                 if direction == 'desc':
                     sortkey = f'-{sortkey}'
-            products = products.order_by(sortkey)
+            products_list = products_list.order_by(sortkey)
 
         if 'category' in request.GET:
-            categories = request.GET['category'].split(',')
-            products = products.filter(category__name__in=categories)
-            categories = Category.objects.filter(name__in=categories)
+            categories_list = request.GET['category'].split(',')
+            products_list = products_list.filter(category__name__in=categories_list)
+            categories_list = Category.objects.filter(name__in=categories_list)
 
         if 'q' in request.GET:
             query = request.GET['q']
@@ -42,14 +42,14 @@ def all_products(request):
                 return redirect(reverse('products'))
 
             queries = Q(name__icontains=query) | Q(description__icontains=query)  # noqa: E501
-            products = products.filter(queries)
+            products_list = products_list.filter(queries)
 
     current_sorting = f'{sort}_{direction}'
 
     context = {
-        'products': products,
+        'products_list': products_list,
         'search_term': query,
-        'current_categories': categories,
+        'current_categories': categories_list,
         'current_sorting': current_sorting,
     }
     return render(request, 'products/products.html', context)
