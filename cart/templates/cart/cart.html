@@ -37,11 +37,11 @@
           {% for item in cart_items %}
           
           <tr>
-            <td class="p-3 w-25">
+            <td class="p-3">
               <a href="{{ item.product.image.url }}">
               <img class="rounded" src="{{ item.product.image.url}}" width="100" height="100"></a>
             </td>
-            <td class="py-3">
+            <td class="py-3 w-25">
               <p class="my-0"><b>{{ item.product.name}}</b></p>
               <p class="my-0 small text-muted">SKU: {{ item.product.sku|upper}}</p>
             </td>
@@ -51,16 +51,16 @@
             <td class="py-3">
               <form class="form update-form" method="POST" action="">
                 {% csrf_token %}
-                <div class="form-group w-50">
+                <div class="form-group w-50 mx-auto">
                   <div class="input-group">
                       <button type="button" id="minus-btn" class="minus-btn buttons btn-outlook-black w-25">-</button>
-                      <input class="form-control text-center" type="text" value="1" maxlength="2" minlength="1" name="quantity" data_item_id="{{ product.id }}" id="id_qty_{{ product.id }}" required/>
+                      <input class="form-control text-center" type="text" value="{{ item.quantity }}" maxlength="2" minlength="1" name="quantity" data_item_id="{{ item.item_id }}" id="id_qty_{{ item.item_id }}" required/>
                       <button type="button" id="add-btn" class="add-btn buttons btn-outlook-black w-25">+</button>
                   </div>
               </div>
               </form>
             </td>
-            <td class="py-3 w-25">
+            <td class="py-3 w-25 text-center">
               <p class="my-0">€{{ item.product.price }}</p>
             </td>
             
@@ -114,7 +114,7 @@
 
 
 
-<footer class="bg-dark text-white footer">
+<footer class="bg-dark text-white product-footer">
   <div class="row">
     <div class="col">
       <h3 class="text-warning">Contact Us</h3>
@@ -126,4 +126,35 @@
     <p class="text-center">Copyright&copy;designersarees</p>
   </div>
 </footer>
+{% endblock %}
+
+{% block postloadjs %}
+    {{block.super }}
+    <script type="text/javascript">
+        var unit = 0;
+            var total;
+            var id = $(this).attr("id");
+        $(".form-control").change(function() {
+            unit = this.value
+        })
+
+        $("#add-btn").click(function() {
+            if (unit < 99) {
+                unit++;
+                var $input = $(this).prevUntil('#add-btn');
+                $input.val(unit);
+                unit = unit;
+            }
+        });
+        $("#minus-btn").click(function() {
+            if (unit > 0) {
+                unit--;
+                var $input = $(this).nextUntil('#minus-btn');
+                $input.val(unit);
+                
+            }
+        });
+    </script>
+    
+
 {% endblock %}
