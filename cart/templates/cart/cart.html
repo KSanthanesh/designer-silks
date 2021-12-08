@@ -57,6 +57,18 @@
             
           </tr>
           {% endfor %}
+          <tr>
+            <td colspan="5" class="pt-5 text-right">
+              <h6><b>Cart Total: €{{ total|floatformat:2 }}</b></h6>
+              <h6>Shipping Charge: €{{ delivery|floatformat:2 }}</h6>
+              <h4 class="mt-4"><b>Grand Total: €{{ grand_total|floatformat:2 }}</b></h4>
+              {% if free_delivery_delta > 0 %}
+              <p class="mb-1 text-danger">
+              You could get free Shipping by spending just <b>€{{ free_delivery_delta}}</b> more!</p>
+              {% endif %}
+
+            </td>
+          </tr>
         </table>
       </div>
       {% else %}
