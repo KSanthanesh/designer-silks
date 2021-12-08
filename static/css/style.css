@@ -137,6 +137,11 @@ body {
     width: 200px;
     height: 200px;
 }
+/*---------------------------------------------------------Product-detail page */
+
+/* .buttons {
+    width: 25px;
+} */
 
 /*---------------------------------------------------------Media Queries */
 @media (min-width: 1200px) {
