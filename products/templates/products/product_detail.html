@@ -81,32 +81,18 @@
 
 
 {% block postloadjs %}
-    {{block.super }}
-    <script type="text/javascript">
-        var unit = 0;
-            var total;
-            var id = $(this).attr("id");
-        $(".form-control").change(function() {
-            unit = this.value
-        })
+{{block.super }}
+    
+<script type="text/javascript">
 
-        $("#add-btn").click(function() {
-            if (unit < 99) {
-                unit++;
-                var $input = $(this).prevUntil('#add-btn');
-                $input.val(unit);
-                unit = unit;
-            }
-        });
-        $("#minus-btn").click(function() {
-            if (unit > 0) {
-                unit--;
-                var $input = $(this).nextUntil('#minus-btn');
-                $input.val(unit);
-                
-            }
-        });
-    </script>
+    $('#add-btn').click(function () {
+        $(this).prev().val(+$(this).prev().val() + 1);
+    });
+
+    $('#minus-btn').click(function () {
+        if ($(this).next().val() > 0) $(this).next().val(+$(this).next().val() - 1);
+    });
+</script>
     
 
 {% endblock %}

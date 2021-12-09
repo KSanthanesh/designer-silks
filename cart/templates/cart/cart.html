@@ -49,21 +49,19 @@
               <p class="my-0">€{{ item.product.price }}</p>
             </td>
             <td class="py-3">
-              <form class="form update-form" method="POST" action="">
+              <form class="form update-form" method="POST" action="{% url 'adjust_cart' item.item_id %}">
                 {% csrf_token %}
                 <div class="form-group w-50 mx-auto">
                   <div class="input-group">
                     <button type="button" id="minus-btn" class="minus-btn buttons btn-outlook-black w-25">-</button>
-                    <input class="form-control text-center" type="text" value="{{ item.quantity }}" maxlength="2"
-                      minlength="1" name="quantity" data_item_id="{{ item.item_id }}" id="id_qty_{{ item.item_id }}"
-                      required />
+                    <input class="form-control text-center" type="text" value="{{ item.quantity }}" maxlength="2" minlength="1" name="quantity" data_item_id="{{ item.item_id }}" id="id_qty_{{ item.item_id }}" required />
                     <button type="button" id="add-btn" class="add-btn buttons btn-outlook-black w-25">+</button>
                   </div>
                 </div>
               </form>
-              <a class="edit-link text-info ml-5 mb-2"><small>Update</small></a>
-              <a class="delete-link text-danger float-right mr-5 mb-2"
-                id="delete_{{ item.item_id}}"><small>Delete</small></a>
+              <a class="update-link text-info ml-5 mb-2"><small>Update</small></a>
+              <a class="remove-link text-danger float-right mr-5 mb-2"
+                id="remove_{{ item.item_id}}"><small>Remove</small></a>
             </td>
             <td class="py-3 w-25 text-center">
               <p class="my-0">€{{ item.product.price }}</p>
@@ -137,48 +135,32 @@
 {{block.super }}
 
 <script type="text/javascript">
-  // for adding + and - for quantity
-  var unit = 0;
-  var total;
-  var id = $(this).attr("id");
-  $(".form-control").change(function () {
-    unit = this.value
-  })
-  // for add button
-  $("#add-btn").click(function () {
-    if (unit < 99) {
-      unit++;
-      var $input = $(this).prevUntil('#add-btn');
-      $input.val(unit);
-      unit = unit;
-    }
-  });
-  // for delete button
-  $("#minus-btn").click(function () {
-    if (unit > 0) {
-      unit--;
-      var $input = $(this).nextUntil('#minus-btn');
-      $input.val(unit);
-
-    }
-  });
+  // for plus button onclick
+  $('#add-btn').click(function () {
+    $(this).prev().val(+$(this).prev().val() + 1);
+});
+// for minus button onclick
+$('#minus-btn').click(function () {
+    if ($(this).next().val() > 0) $(this).next().val(+$(this).next().val() - 1);
+});
+  
 </script>
-<script>
+<script type="text/javascript">
   // for Edit button on click
-  $('.edit-link').click(function (e) {
-    var form = $(this).prev('update-form');
-    form.submit();
+  $('.update-link').click(function(e) {
+      var form = $(this).prev('.update-form');
+      form.submit();
   })
 
   // for delete button on click
-  $('.delete-link').click(function (e) {
-    var csrfToken = "{{ csrf_token}}";
-    // var itemId = $(this).attr('id').split('remove_')[1];
-    var url = `/cart/remove/${'itemId'}`;
+  $('.remove-link').click(function(e) {
+    var csrfToken = "{{ csrf_token }}";
+    var itemId = $(this).attr('id').split('remove_')[1];
+    var url = `/cart/remove/${itemId}/`;
     var data = {'csrfmiddlewaretoken': csrfToken}
 
     $.post(url, data)
-      .done(function () {
+      .done(function() {
         location.reload();
       });
   })

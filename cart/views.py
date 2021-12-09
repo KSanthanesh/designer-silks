@@ -1,6 +1,6 @@
 """ Views for cart app """
 
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, reverse, HttpResponse
 
 
 def view_cart(request):
@@ -25,3 +25,35 @@ def add_to_cart(request, item_id):
 
     request.session['cart'] = cart
     return redirect(redirect_url)
+
+
+def adjust_cart(request, item_id):
+    """
+    Adjust the quantity in the cart
+    """
+    quantity = int(request.POST.get('quantity'))
+    cart = request.session.get('cart', {})
+
+    if quantity > 0:
+        cart[item_id] = quantity
+
+    else:
+        cart.pop(item_id)
+
+    request.session['cart'] = cart
+    return redirect(reverse('view_cart'))
+
+
+def remove_from_cart(request, item_id):
+    """
+    remove the quantity from cart
+    """
+    try:
+        # product = get_object_or_404(Product, pk=item_id)
+        cart = request.session.get('cart', {})
+        cart.pop(item_id)
+
+        request.session['cart'] = cart
+        return HttpResponse(status=200)
+    except Exception:
+        return HttpResponse(status=500)
