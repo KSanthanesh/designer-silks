@@ -2,13 +2,13 @@
 {% load static %}
 
 {% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col">
+<div class="container header-container">
+  <div class="row">
+    <div class="col">
 
-            </div>
-        </div>
     </div>
+  </div>
+</div>
 {% endblock %}
 
 {% block content %}
@@ -22,7 +22,7 @@
   </div>
   <div class="row">
     <div class="col">
-      
+
       <div class="table-responsive rounded">
         <table class="table table-sm table-bordered">
           <thead class="text-black">
@@ -35,11 +35,11 @@
             </tr>
           </thead>
           {% for item in cart_items %}
-          
+
           <tr>
             <td class="p-3">
               <a href="{{ item.product.image.url }}">
-              <img class="rounded" src="{{ item.product.image.url}}" width="100" height="100"></a>
+                <img class="rounded" src="{{ item.product.image.url}}" width="100" height="100"></a>
             </td>
             <td class="py-3 w-25">
               <p class="my-0"><b>{{ item.product.name}}</b></p>
@@ -53,17 +53,22 @@
                 {% csrf_token %}
                 <div class="form-group w-50 mx-auto">
                   <div class="input-group">
-                      <button type="button" id="minus-btn" class="minus-btn buttons btn-outlook-black w-25">-</button>
-                      <input class="form-control text-center" type="text" value="{{ item.quantity }}" maxlength="2" minlength="1" name="quantity" data_item_id="{{ item.item_id }}" id="id_qty_{{ item.item_id }}" required/>
-                      <button type="button" id="add-btn" class="add-btn buttons btn-outlook-black w-25">+</button>
+                    <button type="button" id="minus-btn" class="minus-btn buttons btn-outlook-black w-25">-</button>
+                    <input class="form-control text-center" type="text" value="{{ item.quantity }}" maxlength="2"
+                      minlength="1" name="quantity" data_item_id="{{ item.item_id }}" id="id_qty_{{ item.item_id }}"
+                      required />
+                    <button type="button" id="add-btn" class="add-btn buttons btn-outlook-black w-25">+</button>
                   </div>
-              </div>
+                </div>
               </form>
+              <a class="edit-link text-info ml-5 mb-2"><small>Update</small></a>
+              <a class="delete-link text-danger float-right mr-5 mb-2"
+                id="delete_{{ item.item_id}}"><small>Delete</small></a>
             </td>
             <td class="py-3 w-25 text-center">
               <p class="my-0">€{{ item.product.price }}</p>
             </td>
-            
+
           </tr>
           {% endfor %}
           <tr>
@@ -73,7 +78,7 @@
               <h4 class="mt-4"><b>Grand Total: €{{ grand_total|floatformat:2 }}</b></h4>
               {% if free_delivery_delta > 0 %}
               <p class="mb-1 text-danger">
-              You could get free Shipping by spending just <b>€{{ free_delivery_delta}}</b> more!</p>
+                You could get free Shipping by spending just <b>€{{ free_delivery_delta}}</b> more!</p>
               {% endif %}
 
             </td>
@@ -98,15 +103,15 @@
       </div>
       {% else %}
       <div class="text-center">
-      <p class="lead mb-5"><i class="fas fa-shopping-cart large"></i> Cart is empty.</p>
-      <p>Looks like you have no item in your Shopping cart.</p>
-      <a href="{% url 'products' %}" class="btn btn-outlook-black btn-lg border-black">
-        <span class="fa-icon">
-          <i class="fas fa-chevron-left"></i>
-        </span>
-        <span class="pl-2">Return To Shop</span>
-      </a>
-    </div>
+        <p class="lead mb-5"><i class="fas fa-shopping-cart large"></i> Cart is empty.</p>
+        <p>Looks like you have no item in your Shopping cart.</p>
+        <a href="{% url 'products' %}" class="btn btn-outlook-black btn-lg border-black">
+          <span class="fa-icon">
+            <i class="fas fa-chevron-left"></i>
+          </span>
+          <span class="pl-2">Return To Shop</span>
+        </a>
+      </div>
       {% endif %}
     </div>
   </div>
@@ -129,32 +134,55 @@
 {% endblock %}
 
 {% block postloadjs %}
-    {{block.super }}
-    <script type="text/javascript">
-        var unit = 0;
-            var total;
-            var id = $(this).attr("id");
-        $(".form-control").change(function() {
-            unit = this.value
-        })
+{{block.super }}
 
-        $("#add-btn").click(function() {
-            if (unit < 99) {
-                unit++;
-                var $input = $(this).prevUntil('#add-btn');
-                $input.val(unit);
-                unit = unit;
-            }
-        });
-        $("#minus-btn").click(function() {
-            if (unit > 0) {
-                unit--;
-                var $input = $(this).nextUntil('#minus-btn');
-                $input.val(unit);
-                
-            }
-        });
-    </script>
-    
+<script type="text/javascript">
+  // for adding + and - for quantity
+  var unit = 0;
+  var total;
+  var id = $(this).attr("id");
+  $(".form-control").change(function () {
+    unit = this.value
+  })
+  // for add button
+  $("#add-btn").click(function () {
+    if (unit < 99) {
+      unit++;
+      var $input = $(this).prevUntil('#add-btn');
+      $input.val(unit);
+      unit = unit;
+    }
+  });
+  // for delete button
+  $("#minus-btn").click(function () {
+    if (unit > 0) {
+      unit--;
+      var $input = $(this).nextUntil('#minus-btn');
+      $input.val(unit);
+
+    }
+  });
+</script>
+<script>
+  // for Edit button on click
+  $('.edit-link').click(function (e) {
+    var form = $(this).prev('update-form');
+    form.submit();
+  })
+
+  // for delete button on click
+  $('.delete-link').click(function (e) {
+    var csrfToken = "{{ csrf_token}}";
+    // var itemId = $(this).attr('id').split('remove_')[1];
+    var url = `/cart/remove/${'itemId'}`;
+    var data = {'csrfmiddlewaretoken': csrfToken}
+
+    $.post(url, data)
+      .done(function () {
+        location.reload();
+      });
+  })
+</script>
+
 
 {% endblock %}
