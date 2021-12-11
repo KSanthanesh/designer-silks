@@ -140,6 +140,23 @@ body {
     height: 200px;
 }
 /*---------------------------------------------------------Product-detail page */
+/*---------------------------------------------------------message box */
+
+.message-container {
+    position: fixed;
+    top: 72px;
+    right: 15px;
+    z-index: 99999999999;
+}
+
+.toast-plyover {
+    overflow: visible;
+
+}
+
+.toast-capper {
+    height: 2px;
+}
 
 /* .buttons {
     width: 25px;
