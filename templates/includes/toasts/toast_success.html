@@ -1,5 +1,4 @@
-<div class="toast rounded-0 border-top-0 toast-plyover" data-autohide="false">
-    <div class="arrow-up arrow-success"></div>
+<div class="toast rounded-0 border-top-0 toast-plyover" data-autohide="false">   
         <div class="w-100 toast-capper bg-success"></div>
             <div class="toast-header bg-white text-success">
                 <strong class="mr-auto">Success!</strong>
@@ -8,7 +7,43 @@
                 </button>
             </div>
         <div class="toast-body bg-white">
-            {{ message }}
+            <div class="row">
+                <div class="col">
+                    {{ message }}
+                    <hr class="mt-1 mb-3">
+                </div>
+            </div>
+            {% if grand_total%}
+            
+            <p class="logo-font bg-white text-black py-1"> Your Cart ({{ product_count }})</p>
+            <div class="cart-notification-wrapper">
+                {% for item in cart_items %}
+                <div class="row">
+                    <div class="col-3 my-1">
+                        <img class="w-100" src="{{ item.product.image.url}}">
+                    </div>
+                    <div class="col-9">
+                        <p class="my-0"><b>{{ item.product.name }}</b></p>
+                        <p class="my-0 small text-muted">Qty:{{ item.quantity }}</p>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            <div class="row">
+                <div class="col">
+                    <b><p class="mb-3 mt-1 text-black">
+                        Total (Exc.Shipping){% if free_delivery_delta > 0 %} {% endif %}:
+                        <span class="float-right">€{{ total|floatformat:2 }}</span>
+                        
+                    </p></b>
+                    <a href="{% url 'view_cart' %}" class="btn btn-block bg-warning text-black rounded-0">
+                        <span>Proceed to Checkout</span>
+                        <span class="fa-icon">
+                            <i class="fas fa-lock"></i>
+                        </span>
+                    </a>
+                </div>
+            </div>
+            {% endif %}
         </div>
-    
 </div>
