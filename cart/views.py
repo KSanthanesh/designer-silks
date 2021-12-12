@@ -27,7 +27,7 @@ def add_to_cart(request, item_id):
     if item_id in list(cart.keys()):
         cart[item_id] += quantity
         messages.success(
-            request, f'Updated {product.name} quantity to {cart[item_id]}')
+            request, f'Updated {cart[item_id]} quantity of {product.name}')
     else:
         cart[item_id] = quantity
         messages.success(
@@ -48,7 +48,7 @@ def adjust_cart(request, item_id):
     if quantity > 0:
         cart[item_id] = quantity
         messages.success(
-            request, f'Updated {product.name} quantity to {cart[item_id]}')
+            request, f'Updated {cart[item_id]} quantity of {product.name}')
 
     else:
         cart.pop(item_id)

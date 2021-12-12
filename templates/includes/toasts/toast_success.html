@@ -32,10 +32,16 @@
             <div class="row">
                 <div class="col">
                     <b><p class="mb-3 mt-1 text-black">
-                        Total (Exc.Shipping){% if free_delivery_delta > 0 %} {% endif %}:
-                        <span class="float-right">€{{ total|floatformat:2 }}</span>
+                        Total{% if free_shipping_delta > 0 %} {% endif %}:
+                        <span class="float-right">€{{ cart_total|floatformat:2 }}</span>
                         
                     </p></b>
+                    {% if free_shipping_delta > 0 %}
+              <p class="mb-1 text-danger">
+                You could get free Shipping by spending just <b>€{{ free_shipping_delta}}</b> more!</p>
+                {% else %}
+                <p class="bg-success w-50 text-center">Free Shipping</p>
+              {% endif %}
                     <a href="{% url 'view_cart' %}" class="btn btn-block bg-warning text-black rounded-0">
                         <span>Proceed to Checkout</span>
                         <span class="fa-icon">

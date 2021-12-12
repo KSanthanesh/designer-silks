@@ -158,6 +158,12 @@ body {
     height: 2px;
 }
 
+.cart-notification-wrapper {
+    height: 100px;
+    overflow: hidden;
+    overflow-y: auto;
+}
+
 /* .buttons {
     width: 25px;
 } */

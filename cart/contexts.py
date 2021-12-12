@@ -8,16 +8,16 @@ from products.models import Product
 
 
 def cart_contents(request):
-    """ View for Cart Delivery cost"""
+    """ View for Cart Shipping cost"""
 
     cart_items = []
-    total = 0
+    cart_total = 0
     product_count = 0
     cart = request.session.get('cart', {})
 
     for item_id, quantity in cart.items():
         product = get_object_or_404(Product, pk=item_id)
-        total += quantity * product.price
+        cart_total += quantity * product.price
         product_count += quantity
         cart_items.append({
             'item_id': item_id,
@@ -25,21 +25,22 @@ def cart_contents(request):
             'product': product,
         })
 
-    if total < settings.FREE_DELIVERY_THRESHOLD:
-        delivery = total * Decimal(settings.STANDARD_DELIVERY_PERCENTAGE/100)
-        free_delivery_delta = settings.FREE_DELIVERY_THRESHOLD - total
+    if cart_total < settings.FREE_SHIPPING_THRESHOLD:
+        shipping = cart_total * Decimal(
+            settings.STANDARD_SHIPPING_PERCENTAGE/100)
+        free_shipping_delta = settings.FREE_SHIPPING_THRESHOLD - cart_total
     else:
-        delivery = 0
-        free_delivery_delta = 0
+        shipping = 0
+        free_shipping_delta = 0
 
-    grand_total = delivery + total
+    grand_total = shipping + cart_total
     context = {
         'cart_items': cart_items,
-        'total': total,
+        'cart_total': cart_total,
         'product_count': product_count,
-        'delivery': delivery,
-        'free_delivery_delta': free_delivery_delta,
-        'free_delivery_threshold': settings.FREE_DELIVERY_THRESHOLD,
+        'shipping': shipping,
+        'free_shipping_delta': free_shipping_delta,
+        'free_shipping_threshold': settings.FREE_SHIPPING_THRESHOLD,
         'grand_total': grand_total,
     }
 
