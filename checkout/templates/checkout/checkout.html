@@ -26,19 +26,47 @@
     </div>
   </div>
   <div class="row">
-    <div class="col-12 col-lg-6">
+    <div class="col-12 col-lg-5">
 
       <p>Please fill the form to complete your order</p>
       <form action="{% url 'checkout' %}" method="POST" id="payment-form">
         {% csrf_token %}
         <fieldset class="rounded px-3 mb-5">
-          <legend class="fieldset-label small w-auto px-2 text-black">Details</legend>
+          <!-- <legend class="fieldset-label small w-auto px-2 text-black">Details</legend> -->
           {{ order_form.first_name | as_crispy_field }}
           {{ order_form.last_name | as_crispy_field }}
           {{ order_form.email | as_crispy_field }}
+          {{ order_form.phone_number | as_crispy_field }}
+          {{ order_form.house_number | as_crispy_field }}
+          {{ order_form.address_line1 | as_crispy_field }}
+          {{ order_form.address_line2 | as_crispy_field }}
+          {{ order_form.county_or_city | as_crispy_field }}
+          {{ order_form.postcode | as_crispy_field }}
+          {{ order_form.country | as_crispy_field }}
+          <!-- user-profile can save and notification if user not signed for order-->
+          <div class="form-check form-check-inline float-right mr-0">
+            {% if user.is_authenticated %}
+            <label class="form-check-label" for="id-save-info">
+              Save this Information to my profile.
+            </label>
+            <input class="form-check-input ml-2 mr-0" type="checkbox" id="id-save-info" name="save-info" checked>
+            {% else %}
+            <label class="form-check-label" for="id-save-info">
+              <a class="text-info" href="{% url 'account_signup' %}">Create an Account</a> Or
+              <a class="text-info" href="{% url 'account_login' %}">Login</a>to save this information
+            </label>
+            {% endif %}
+          </div>
         </fieldset>
-        <fieldset class="rounded px-3 mb-5"></fieldset>
-        <fieldset class="rounded px-3 mb-5"></fieldset>
+        
+        <fieldset class="rounded px-3">
+          <legend class="fieldset-label small w-auto px-2 text-black">Payment</legend>
+          <!-- Stripe card element-->
+          <div class="mb-3" id="card-element"></div>
+
+          <!-- Card errors-->
+          <div class="mb-3 text-danger" id="card-errors" role="alert"></div>
+        </fieldset>
       </form>
       
     </div>
