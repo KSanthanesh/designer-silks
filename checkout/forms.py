@@ -26,11 +26,11 @@ class OrderForm(forms.ModelForm):
             'house_number': 'House Number',
             'address_line1': 'Street Name',
             'address_line2': 'Street Name(Optional)',
-            'country_or_city': 'County or City',
+            'county_or_city': 'County or City',
             'postcode': 'Postcode(Optional)',
             'country': 'Please Select Country',
         }
-
+        
         self.fields['first_name'].widget.attrs['autofocus'] = True
         for field in self.fields:
             if self.fields[field].required:
