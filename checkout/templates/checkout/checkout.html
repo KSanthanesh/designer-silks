@@ -80,14 +80,14 @@
       <p>Please fill the form to complete your order</p>
       <form action="{% url 'checkout' %}" method="POST" id="payment-form">
         {% csrf_token %}
-        <fieldset class="rounded px-3 mb-5">
-          <legend class="fieldset-label small w-auto px-2 text-black">Personal Details:</legend>
+        <fieldset class="rounded px-3 mb-5 border-black">
+          <legend class="fieldset-form small w-auto px-2 text-primary">Personal Details</legend>
           {{ order_form.first_name | as_crispy_field }}
           {{ order_form.last_name | as_crispy_field }}
           {{ order_form.email | as_crispy_field }}
         </fieldset>
-          <fieldset class="rounded px-3">
-            <legend class="fieldset-label small w-auto px-2 text-black">Shipping Address:</legend>
+          <fieldset class="rounded px-3 border-black">
+            <legend class="fieldset-form small w-auto px-2 text-primary">Shipping Address</legend>
           {{ order_form.phone_number | as_crispy_field }}
           {{ order_form.house_number | as_crispy_field }}
           {{ order_form.address_line1 | as_crispy_field }}
@@ -111,8 +111,8 @@
           </div>
         </fieldset>
         
-        <fieldset class="rounded px-3">
-          <legend class="fieldset-label small w-auto px-2 text-black">Payment:</legend>
+        <fieldset class="rounded px-3 border-black">
+          <legend class="fieldset-form small w-auto px-2 text-primary">Payment:</legend>
           <!-- Stripe card element-->
           <div class="mb-3" id="card-element"></div>
 
@@ -127,7 +127,7 @@
             <span class="font-weight-bold">Adjust Bag</span>
           </a>
           <button id="submit-btn" class="btn btn-outlook-black rounded-0">
-            <span class="font-weight-bold">complete Order</span>
+            <span class="font-weight-bold">Complete Order</span>
             <span class="fa-icon">
               <span class="fa-icon">
                 <i class="fas fa-lock"></i>

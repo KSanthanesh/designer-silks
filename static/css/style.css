@@ -80,7 +80,7 @@ body {
     color: #000;
 }
 
-.shop-now-btn:hover,
+/* .shop-now-btn:hover,
 .shop-now-btn:active,
 .shop-now-btn:focus,
 .btn-black:hover,
@@ -88,7 +88,7 @@ body {
 .btn-black:focus {
     background: #222;
     color: rgba(255, 255, 255, 0.629);
-}
+} */
 .btt-link,
 .update-link,
 .remove-link {
