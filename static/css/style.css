@@ -140,6 +140,10 @@ body {
     height: 200px;
 }
 /*---------------------------------------------------------Product-detail page */
+.form-controls {
+    height: 1px;
+    width: 1px;
+}
 /*---------------------------------------------------------Toast message box */
 
 .message-container {
