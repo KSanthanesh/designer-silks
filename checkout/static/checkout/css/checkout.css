@@ -1,3 +1,35 @@
+.StripeElement,
+.stripe-style-input {
+  box-sizing: border-box;
+  height: 40px;
+  padding: 10px 12px;
+  border: 1px solid transparent;
+  border-radius: 0px;
+  background-color: #fff;
+  box-shadow: 0 1px 3px 0 rgb(208, 225, 247);
+  -webkit-transition: box-shadow 150ms ease;
+  transition: box-shadow 150ms ease;
+}
+
+.StripeElement--focus,
+.stripe-style-input:focus,
+.stripe-style-input:active {
+  box-shadow: 0 1px 3px 0 rgb(103, 169, 235);
+}
+
+.StripeElement--webkit-autofill {
+  background-color: rgb(254, 253, 229) !important;
+}
+
+.stripe-style-input::placeholder {
+    color: rgb(170, 183, 196);
+}
+#payment-form, .form-control,
+#card-element {
+    color: #000;
+    border: 1px solid #000;
+}
+
 .fieldset-label {
     position: relative;
     right: .5rem;
