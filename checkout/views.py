@@ -1,6 +1,6 @@
 """ Checkout views.py """
 
-from django.shortcuts import render, redirect, reverse
+from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.conf import settings
 
@@ -28,7 +28,7 @@ def checkout(request):
             'address_line1': request.POST['address_line1'],
             'address_line2': request.POST['address_line2'],
             'county_or_city': request.POST['county_or_city'],
-            'post_code': request.POST['post_code'],
+            'postcode': request.POST['postcode'],
             'country': request.POST['country'],
         }
         order_form = OrderForm(form_data)
@@ -46,14 +46,15 @@ def checkout(request):
                         order_line_item.save()
                 except Product.DoesNotExist:
                     messages.error(request, (
-                        "One of the products in your cart wasnot found in our database."
-                        "Please call us for assistance")
+                        "One of the products in your cart wasnot found \
+                        in our database." "Please call us for assistance")
                     )
                     order.delete()
                     return redirect(reverse('view_cart'))
 
             request.session['save_info'] = 'save-info' in request.POST
-            return redirect(reverse('checkout_success', args=[order.order_number]))
+            return redirect(reverse(
+                'checkout_success', args=[order.order_number]))
         else:
             messages.error(request, 'There was an error with your form. \
                 Please double check your information.')
@@ -86,3 +87,21 @@ def checkout(request):
         'client_secret': intent.client_secret,
     }
     return render(request, 'checkout/checkout.html', context)
+
+
+def checkout_success(request, order_number):
+    """
+    To handle success checkouts
+    """
+    save_info = request.session.get('save_info')
+    order = get_object_or_404(Order, order_number=order_number)
+    messages.success(request, f'Your Order successfully processed! \
+        Your Order Number is {order_number}. A Confirmation \
+        Email will be sent to {order.email}.')
+
+    if 'cart' in request.session:
+        del request.session['cart']
+        context = {
+            'order': order
+        }
+        return render(request, 'checkout/checkout_success.html', context)
