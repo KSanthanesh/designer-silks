@@ -1,9 +1,9 @@
 .StripeElement,
 .stripe-style-input {
   box-sizing: border-box;
-  height: 40px;
+  height: 30px;
   padding: 10px 12px;
-  border: 1px solid transparent;
+  border: 1px solid black;
   border-radius: 0px;
   background-color: #fff;
   box-shadow: 0 1px 3px 0 rgb(208, 225, 247);
@@ -24,13 +24,8 @@
 .stripe-style-input::placeholder {
     color: rgb(170, 183, 196);
 }
-#payment-form, .form-control,
-#card-element {
-    color: #000;
-    border: 1px solid #000;
-}
 
-.fieldset-label {
+.fieldset-form {
     position: relative;
     right: .5rem;
 }
