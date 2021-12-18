@@ -44,8 +44,8 @@ card.addEventListener('change', function(event) {
 
 // Create a token or display an error when the form is submitted.
 var form = document.getElementById('payment-form');
-form.addEventListener('submit', function(event) {
-    event.preventDefault();
+form.addEventListener('submit', function(ev) {
+    ev.preventDefault();
     card.update({ 'disabled': true})
     $('#submit-btn').attr('disabled', true)
     $('#payment-form').fadeToggle(100);
@@ -67,8 +67,8 @@ form.addEventListener('submit', function(event) {
                 card: card,
                 billing_details: {
                     name: $.trim(form.first_name.value) +''+ $.trim(form.last_name.value),
-                    email:$.trim(form.email.value),
-                    phone_number:$.trim(form.phone_number.value),
+                    email: $.trim(form.email.value),
+                    phone_number: $.trim(form.phone_number.value),
                     address: {
                         house_number: $.trim(form.house_number.value),
                         line1: $.trim(form.address_line1.value),
@@ -78,9 +78,9 @@ form.addEventListener('submit', function(event) {
                     }
                 }
             },
-            shipping: {
+            shipping_address: {
                     name: $.trim(form.first_name.value) +''+ $.trim(form.last_name.value),
-                    phone_number:$.trim(form.phone_number.value),
+                    phone_number: $.trim(form.phone_number.value),
                     address: {
                         house_number: $.trim(form.house_number.value),
                         line1: $.trim(form.address_line1.value),
@@ -89,7 +89,7 @@ form.addEventListener('submit', function(event) {
                         postcode: $.trim(form.postcode.value),
                         country: $.trim(form.country.value),
                     }
-                }
+                },
         }).then(function(result) {
             if (result.error) {
                 var errorElement = document.getElementById('card-errors');
