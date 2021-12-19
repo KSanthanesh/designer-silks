@@ -68,25 +68,23 @@ form.addEventListener('submit', function(ev) {
                 billing_details: {
                     name: $.trim(form.first_name.value) +''+ $.trim(form.last_name.value),
                     email: $.trim(form.email.value),
-                    phone_number: $.trim(form.phone_number.value),
+                    phone: $.trim(form.phone_number.value),
                     address: {
-                        house_number: $.trim(form.house_number.value),
                         line1: $.trim(form.address_line1.value),
                         line2: $.trim(form.address_line2.value),
-                        county: $.trim(form.county_or_city.value),
+                        city: $.trim(form.county_or_city.value),
                         country: $.trim(form.country.value),
                     }
                 }
             },
-            shipping_address: {
+            shipping: {
                     name: $.trim(form.first_name.value) +''+ $.trim(form.last_name.value),
-                    phone_number: $.trim(form.phone_number.value),
+                    phone: $.trim(form.phone_number.value),
                     address: {
-                        house_number: $.trim(form.house_number.value),
                         line1: $.trim(form.address_line1.value),
                         line2: $.trim(form.address_line2.value),
-                        county: $.trim(form.county_or_city.value),
-                        postcode: $.trim(form.postcode.value),
+                        city: $.trim(form.county_or_city.value),
+                        postal_code: $.trim(form.postcode.value),
                         country: $.trim(form.country.value),
                     }
                 },
