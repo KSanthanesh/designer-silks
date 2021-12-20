@@ -17,9 +17,11 @@ class Order(models.Model):
     phone_number = models.CharField(max_length=20, null=False, blank=False)
     house_number = models.CharField(max_length=10, null=False, blank=False)
     address_line1 = models.CharField(max_length=50, null=False, blank=False)
-    address_line2 = models.CharField(max_length=50, blank=True, default="")
+    address_line2 = models.CharField(
+        max_length=50, null=True, blank=True, default='')
     county_or_city = models.CharField(max_length=30, null=False, blank=False)
-    postcode = models.CharField(max_length=20, blank=True, default="")
+    postcode = models.CharField(
+        max_length=20, null=True, blank=True, default='')
     country = models.CharField(max_length=30, null=False, blank=False)
     date = models.DateTimeField(auto_now_add=True, blank=True)
     shipping_cost = models.DecimalField(
