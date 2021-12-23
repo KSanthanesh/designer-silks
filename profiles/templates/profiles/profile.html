@@ -22,7 +22,7 @@
 <div class="container">
   <div class="row">
     <div class="col">
-    
+
       <h3 class="logo-font mb-4 text-primary">My Profile</h3>
     </div>
   </div>
@@ -38,26 +38,66 @@
     </div>
     <div class="col-12 col-lg-6">
       <p class="text-danger">Order History</p>
-      {{ orders }}
+      <div class="table-responsive order-history">
+        <table class="table table-sm">
+          <thead>
+            <tr>
+              <th>Order Number</th>
+              <th>Date</th>
+              <th>Items</th>
+              <th>Total</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for order in orders %}
+            <tr>
+              <td>
+                <a href="{% url 'order_history' order.order_number %}" title="{{ order.order_number }}">
+                  {{ order.order_number|truncatechars:6 }}
+
+                </a>
+              </td>
+              <td>
+                {{ order.date }}
+              </td>
+              <td>
+                <ul class="list-unstyled">
+                  {% for item in order.lineitems.all %}
+                  <li>
+                    {{ item.product.name }} x {{ item.quantity }} 
+                  </li>
+                  {% endfor %}
+                </ul>
+              </td>
+              <td>
+                €{{ order.grand_total }}
+              </td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
     </div>
   </div>
-  
- 
-{% endblock %}
 
-{% block postloadjs %}
-  {{ block.super }}
- let countrySelected = $('#id_default_country').val();
- if(!countrySelected) {
-   $('#id_default_country').css('color', 'rgb(170, 183, 196)');
- };
- $('#id_default_country').change(function() {
-   countrySelected = $(this).val();
-   if(!countrySelected) {
-     $(this).css('color', 'rgb(170, 183, 196)');
-   } else {
-    $(this).css('color', '#000000')
-   }
- })
 
-{% endblock %}
+  {% endblock %}
+
+  {% block postloadjs %}
+    {{ block.super }}
+    <script>
+  let countrySelected = $('#id_default_country').val();
+  if(!countrySelected) {
+    $('#id_default_country').css('color', '#aab7c4');
+  };
+  $('#id_default_country').change(function() {
+    countrySelected = $(this).val();
+    if(!countrySelected) {
+      $(this).css('color', '#aab7c4');
+    } else {
+      $(this).css('color', '#000000')
+    }
+  });
+</script>
+
+  {% endblock %}
