@@ -19,6 +19,7 @@ from .models import Order, OrderLineItem
 
 @require_POST
 def cache_checkout_data(request):
+    """ For cache checkout data """
     try:
         pid = request.POST.get('client_secret').split('_secret')[0]
         stripe.api_key = settings.STRIPE_SECRET_KEY
@@ -101,7 +102,26 @@ def checkout(request):
 
         )
 
-        order_form = OrderForm()
+        if request.user.is_authenticated:
+            try:
+                profile = UserProfile.objects.get(user=request.user)
+                order_form = OrderForm(initial={
+                    # 'first_name': profile.user.get_name(),
+                    # 'last_name': profile.user.get_last_name(),
+                    'email': profile.user.email,
+                    'phone_number': profile.default_phone_number,
+                    'house_number': profile.default_house_number,
+                    'address_line1': profile.default_address_line1,
+                    'address_line2': profile.default_address_line2,
+                    'county_or_city': profile.default_county_or_city,
+                    'postcode': profile.default_postcode,
+                    'country': profile.default_country,
+                })
+
+            except UserProfile.DoesNotExist:
+                order_form = OrderForm()
+        else:
+            order_form = OrderForm()
 
     if not stripe_public_key:
         messages.warning(request, 'Stripe public key is missing. \
@@ -143,7 +163,7 @@ def checkout_success(request, order_number):
             user_profile_form = UserProfileForm(profile_data, instance=profile)
             if user_profile_form.is_valid():
                 user_profile_form.save()
-    
+
     messages.success(request, f'Your Order successfully processed! \
         Your Order Number is {order_number}. A Confirmation \
         Email will be sent to {order.email}.')
