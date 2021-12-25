@@ -31,7 +31,7 @@ class Product(models.Model):
     name = models.CharField(max_length=50)
     price = models.DecimalField(max_digits=6, decimal_places=2)
     rating = models.DecimalField(
-        max_digits=3, decimal_places=2, null=True, blank=True)
+        max_digits=6, decimal_places=2, null=True, blank=True)
     material = models.CharField(max_length=50, blank=True, null=True)
     description = models.TextField()
     length = models.CharField(max_length=50, blank=True, null=True)
