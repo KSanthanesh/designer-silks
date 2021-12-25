@@ -25,14 +25,16 @@ class Category(models.Model):
 class Product(models.Model):
     """Product details database"""
 
-    category = models.ForeignKey('Category', on_delete=models.SET_NULL, null=True, blank=True)  # noqa: E501
-    sku = models.CharField(max_length=50, blank=True, default=True)
+    category = models.ForeignKey(
+        'Category', on_delete=models.SET_NULL, null=True, blank=True)
+    sku = models.CharField(max_length=50, blank=True, null=True)
     name = models.CharField(max_length=50)
     price = models.DecimalField(max_digits=6, decimal_places=2)
-    rating = models.DecimalField(max_digits=6, decimal_places=2, null=True, blank=True)  # noqa: E501
-    material = models.CharField(max_length=50, blank=True, default=True)
-    description = models.TextField(max_length=254, blank=True, default=True)
-    length = models.CharField(max_length=50, blank=True, default=True)
+    rating = models.DecimalField(
+        max_digits=3, decimal_places=2, null=True, blank=True)
+    material = models.CharField(max_length=50, blank=True, null=True)
+    description = models.TextField()
+    length = models.CharField(max_length=50, blank=True, null=True)
     image = models.ImageField(null=True, blank=True)
 
     def __str__(self):
