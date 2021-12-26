@@ -10,7 +10,7 @@ html {
 
 body {
     width:100%;
-    height: auto;
+    height: calc(100vh - 200px);
     background: url('/media/home-img.jpeg') no-repeat top;
     background-size: cover;
     font-family: "Open Sans", cursive;
