@@ -66,11 +66,23 @@
                             <div class="card-footer bg-white pt-0 border-0 text-left">
                                 <div class="row">
                                     <div class="col">
-                                        <p class="lead mb-0 text-left font-weight-bold">€{{ product.price }}</p>
+                                        <p class="lead mb-0 text-left font-weight-bold">€{{ product.price }}
+                                            {% if product.price > 80 %}
+                                            <button class="small ml-4 bg-success border-black px-1">Free shipping</button>
+                                            {% endif %}
+                                        </p>
+                                        {% if product.rating %}
                                         <small class="text-muted"><i class="fas fa-star mr-1 text-warning"></i>{{ product.rating }} / 5</small>
-                                        {% if product.price > 80 %}
-                                        <button class="small ml-4 bg-success border-black px-1">Free shipping</button>
+                                        {% else %}
+                                        <small class="text-muted">No Rating</small>
                                         {% endif %}
+                                        
+                                        {% if request.user.is_authenticated %}
+                                        <small class="ml-3">
+                                        <a href="{% url 'edit_product' product.id %}">Edit</a> |
+                                        <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
+                                        </small>
+                                    {% endif %}
                                     </div>
                                 </div>
                             </div>
