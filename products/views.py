@@ -2,6 +2,7 @@
 
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.db.models.functions import Lower
 
@@ -23,7 +24,8 @@ def all_products(request):
             sort = sortkey
             if sortkey == 'name':
                 sortkey = 'lower_name'
-                products_list = products_list.annotate(lower_name=Lower('name'))
+                products_list = products_list.annotate(
+                    lower_name=Lower('name'))
             if sortkey == 'category':
                 sortkey = 'category__name'
             if 'direction' in request.GET:
@@ -34,7 +36,8 @@ def all_products(request):
 
         if 'category' in request.GET:
             categories_list = request.GET['category'].split(',')
-            products_list = products_list.filter(category__name__in=categories_list)
+            products_list = products_list.filter(
+                category__name__in=categories_list)
             categories_list = Category.objects.filter(name__in=categories_list)
 
         if 'q' in request.GET:
@@ -66,8 +69,13 @@ def product_detail(request, product_id):
     return render(request, 'products/product_detail.html', context)
 
 
+@login_required
 def add_product(request):
     """ Add product to the website """
+    if not request.user.is_superuser:
+        messages.error(request, "Sorry, Only store owners can do that")
+        return redirect(reverse('home'))
+
     if request.method == 'POST':
         form = ProductForm(request.POST, request.FILES)
         if form.is_valid():
@@ -84,8 +92,14 @@ def add_product(request):
     return render(request, 'products/add_product.html', context)
 
 
+@login_required
 def edit_product(request, product_id):
     """ Edit product to the website """
+
+    if not request.user.is_superuser:
+        messages.error(request, "Sorry, Only store owners can do that")
+        return redirect(reverse('home'))
+
     product = get_object_or_404(Product, pk=product_id)
     if request.method == 'POST':
         form = ProductForm(request.POST, request.FILES, instance=product)
@@ -107,8 +121,13 @@ def edit_product(request, product_id):
     return render(request, 'products/edit_product.html', context)
 
 
+@login_required
 def delete_product(request, product_id):
     """ Delete product to the website """
+    if not request.user.is_superuser:
+        messages.error(request, "Sorry, Only store owners can do that")
+        return redirect(reverse('home'))
+
     product = get_object_or_404(Product, pk=product_id)
     product.delete()
     messages.success(request, 'Product deleted!')

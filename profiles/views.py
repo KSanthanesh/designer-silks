@@ -2,12 +2,14 @@
 
 from django.shortcuts import render, get_object_or_404
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 
 from profiles.models import UserProfile
 from profiles.forms import UserProfileForm
 from checkout.models import Order
 
 
+@login_required
 def profile(request):
     """ Display the User details, order and payment confirmation"""
 
@@ -15,7 +17,6 @@ def profile(request):
 
     if request.method == 'POST':
         form = UserProfileForm(request.POST, instance=profileuser)
-
         if form.is_valid:
             form.save()
             messages.success(request, "Profiles Updated Successfully.")
