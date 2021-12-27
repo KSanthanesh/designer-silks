@@ -1,5 +1,6 @@
 """ Forms for product """
 from django import forms
+from products.widgets import CustomClearableFileInput
 from products.models import Product, Category
 
 
@@ -10,6 +11,9 @@ class ProductForm(forms.ModelForm):
         """ Meta class for all the fields in ProductForm"""
         model = Product
         fields = '__all__'
+
+    image = forms.ImageField(
+        label='Image', required=False, widget=CustomClearableFileInput)
 
     def __init__(self, *args, **kwargs):
         """ Using Init method to get friendly names in the categories"""
