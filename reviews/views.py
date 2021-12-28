@@ -17,3 +17,4 @@ def review_rate(request):
         Review(user=user, product=product, comment=comment, rate=rate).save()
 
         return redirect('product_detail', id=product_id)
+        # return render(request, 'products/products.html')
