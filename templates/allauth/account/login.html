@@ -8,7 +8,7 @@
 {% block inner_content %}
 
 
-<h3 class="logo-font text-primary">{% trans "Sign In" %}</h3>
+<h3 class="logo-font text-primary login mb-6">{% trans "Sign In" %}</h3>
 
 {% get_providers as socialaccount_providers %}
 
@@ -40,9 +40,9 @@ for a {{ site_name }} account and sign in below:{% endblocktrans %}</p>
   {% if redirect_field_value %}
   <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
   {% endif %}
-  <a class="btn btn-outlook-black rounded-0" href="{%url 'home' %}">Home</a>
+  <a class="btn btn-outlook-black rounded-0" href="{% url 'home' %}">Home</a>
   <button class="primaryAction" type="submit">{% trans "Sign In" %}</button>
-  <p class=mt-2>
+  <p class="mt-2">
     <a class="button secondaryAction" href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a>
   </p>
 </form>

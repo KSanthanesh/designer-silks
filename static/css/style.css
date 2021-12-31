@@ -168,13 +168,13 @@ body {
 /*----------------------------for login,signup and logout pages*/
 
 .allauth-form-inner-content {
-    margin-top: 150px;
     margin-left: 200px;
+    
 }
 
 .allauth-form-inner-content p {
-    margin-top: 10px;
     color: #6c757d;
+    margin-bottom: 40px;
  }
  
  .allauth-form-inner-content input {

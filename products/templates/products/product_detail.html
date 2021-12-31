@@ -106,9 +106,9 @@
                 </div>
                 <div class="col-sm-5 mt-2">
                     <h5 class="logo-font font-weight-bold">Write your Review</h5>
-                    <form class="review-form" method="GET" action="/reviews">
+                    <form class="review-form" method="GET" action="{% url 'review_rate' %}">
                         {% csrf_token %}
-                        {% for p in products %}
+                        {% for product in products %}
                         <input type="hidden" name="product_id" id="product_id" value="{{ product.id}}" />
                         {% endfor %}
                         <div class="form-group">
@@ -136,6 +136,11 @@
                                 </div>
                             </div>
                         </div>
+                        {% if user.is_authenticated %}
+                        <button class="btn btn-danger btn-md m-0" type="submit">Post</button>
+                        {% else %}
+                        <p> You must be logged in for post a Review, <a href="{% url 'account_logout' %}">Login</a></p>
+                        {% endif %}
                     </form>
                 </div>
             </div>
