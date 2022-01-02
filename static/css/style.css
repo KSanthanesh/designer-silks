@@ -8,7 +8,7 @@ html {
     height: 100%;
 }
 
-body {
+/* .bg {
     width:100%;
     height: calc(100vh - 200px);
     background: url('/media/home-img.jpeg') no-repeat top;
@@ -16,8 +16,19 @@ body {
     font-family: "Open Sans", cursive;
     color: #000;
 
-}
+} */
+.bg {
+    height: 250vh;
+    background: url('/media/home-img.jpeg') center no-repeat;
+    background-size: cover;
+    font-family: "Open Sans", cursive;
+    color: #000;
+    margin-bottom: 0;
 
+}
+.header-container {
+    padding-top: 120px;
+}
 
 /*---------------------------------------------------- base logo */
 
@@ -52,8 +63,9 @@ body {
 }
 
 .new-arrivals {
-    margin-top: 120px;
-    margin-left: -45px;
+    margin-top: 14em;
+    margin-left: 50px;
+    
 }
 
 .shop-now-btn {
@@ -103,13 +115,10 @@ body {
     border: 1px solid black !important;
 }
 
-.footer {
+/* .footer {
     padding-left: 30px;
     margin-top: 90em;
-}
-.product-footer {
-    margin-top: 30px;
-}
+} */
 
 /*---------------------------------------------------------Remove home page image */
 .overlay {
@@ -168,7 +177,8 @@ body {
 /*----------------------------for login,signup and logout pages*/
 
 .allauth-form-inner-content {
-    margin-left: 200px;
+    /* margin-left: 200px; */
+    float: left;
     
 }
 
@@ -263,7 +273,7 @@ body {
 }
 
 /*----------------------------fixed navbar only on medium and up */
-@media (min-width: 992px) {
+@media (max-width: 992px) {
     .fixed-top-desktop-only {
         position: fixed;
         top: 0;
@@ -272,19 +282,15 @@ body {
         z-index: 1030;
     }
     .header-container {
-        padding-top: 164px;
+        padding-top: 20px;
     }
 }
 
 /* pad the top a bit when the navbar is Collapsed------------*/
-@media (max-width:991px) {
-    .header-container{
-        padding-top: 120px;
-    }
+/* @media (max-width:991px) {
+    
     body {
         height: calc(100vh - 120px)
     }
 }
-
-
-
+} */
