@@ -29,7 +29,7 @@ class OrderAdmin(admin.ModelAdmin):
               'country', 'shipping_cost', 'order_total', 'grand_total',
               'original_cart', 'stripe_pid')
 
-    list_display = ('order_number', 'date', 'first_name', 'last_name',
+    list_display = ('order_number', 'user_profile', 'date', 'first_name', 'last_name',
                     'order_total', 'shipping_cost',  'grand_total')
 
     ordering = ('-date',)

@@ -35,13 +35,28 @@ def profile(request):
     return render(request, 'profiles/profile.html', context)
 
 
-def order_history(request, order_number):
+def order_history_view(request, order_number):
     """Display Order History for specific order """
     order = get_object_or_404(Order, order_number=order_number)
 
-    messages.info(request, f'Your order Number is {order_number}.')
+    # messages.info(request, f'Your order Number is {order_number}.')
     context = {
         'order': order,
         'from_profile': True,
     }
     return render(request, 'checkout/checkout_success.html', context)
+
+def order_history(request):
+    """Display Order History for specific order """
+    profileuser = get_object_or_404(UserProfile, user=request.user)
+    # order = get_object_or_404(Order, user_profile=request.user)
+    order = profileuser.orders.all()
+
+    # messages.info(request, f'Your order Number is {order}.')
+    context = {
+        'order': order,
+        'from_profile': True,
+    }
+    
+    return render(request, 'profiles/order_history.html', context)
+
