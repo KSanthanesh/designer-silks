@@ -27,6 +27,7 @@
     </div>
   </div>
   <div class="row">
+    
     <div class="col-12 col-lg-6 order-lg-last mb-5">
       <p>
         Order Summary({{ product_count }})
@@ -77,7 +78,7 @@
       </div>
     </div>
     <div class="col-12 col-lg-5">
-
+      {% if user.is_authenticated %}
       <p>Please fill the form to complete your order</p>
       <form action="{% url 'checkout' %}" method="POST" id="payment-form">
         {% csrf_token %}
@@ -145,8 +146,11 @@
             <span>Your card will be charged <strong>€{{ grand_total|floatformat:2 }}</strong></span>
           </p>
         </div>
+        {% else %}
+        <a class="text-info" href="{% url 'account_signup' %}">Create an Account</a> Or
+              <a class="text-info" href="{% url 'account_login' %}">Login</a>
       </form>
-      
+      {% endif %}
     </div>
   </div>
 </div>

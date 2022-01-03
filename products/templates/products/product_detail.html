@@ -13,9 +13,9 @@
 
 {% block content %}
 <!-- <div class="overlay"></div> -->
-    <div class="container-fluid">
+    <div class="container-fluid product-margin">
         <div class="row">
-           <div class="col-12 col-md-6 col-lg-4 offset-lg-2 mt-4">
+           <div class="col-12 col-md-6 col-lg-4 offset-lg-2 mt-5">
                <div class="image-container my-3">
                 {% if product.image %}
                    <a href="{{ product.image.url }}">
@@ -42,10 +42,10 @@
                                         <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
                                         </small>
                                     {% endif %}
-                <p>SKU: {{ product.sku|upper }}</p>
-                <p>Fabric: {{ product.material }} </p>
+                <p><b>SKU: </b>{{ product.sku|upper }}</p>
+                <p><b>Fabric: </b>{{ product.material }} </p>
                 <p> {{ product.description }}</p>
-                <p>Length:  {{ product.length }} </p>
+                <p><b>Length: </b> {{ product.length }} </p>
                 <p><b>Shipping:</b> Estimated Shipping within 10 to 15 working days.<br>
                     <b>Returns:</b> 30 days refund | Buyer pays for return postage. </p>
                 {% if product.price > 80 %}

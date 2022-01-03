@@ -65,6 +65,7 @@ html {
 .new-arrivals {
     margin-top: 14em;
     margin-left: 50px;
+    font-family: 'Lato', sans-serif;
     
 }
 
@@ -295,6 +296,26 @@ html {
     .new-arrivals h3 {
         font-size: 20px;
     }
+
+    .product-margin {
+        margin-top: 100px;
+    }
+}
+
+/*----------------------------fixed navbar only on medium and up */
+@media (max-width: 700px) {
+
+    .header-container {
+        padding-top: 80px;
+    }
+}
+
+/*----------------------------fixed navbar only on medium and up */
+@media (max-width: 500px) {
+
+    /* .mobile-heading {
+        font-size: 20px;
+    } */
 }
 
 /* pad the top a bit when the navbar is Collapsed------------*/

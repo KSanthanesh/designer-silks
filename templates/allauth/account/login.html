@@ -3,12 +3,11 @@
 {% load i18n %}
 {% load account socialaccount %}
 
-
 {% block head_title %}{% trans "Sign In" %}{% endblock %}
 {% block inner_content %}
 
 
-<h3 class="logo-font text-primary login mt-5">{% trans "Sign In" %}</h3>
+<h3 class="logo-font text-primary mt-5">{% trans "Sign In" %}</h3>
 
 {% get_providers as socialaccount_providers %}
 
@@ -26,6 +25,7 @@ for a {{ site_name }} account and sign in below:{% endblocktrans %}</p>
   <div class="login-or">{% trans 'or' %}</div>
 
 </div>
+
 
 {% include "socialaccount/snippets/login_extra.html" %}
 
