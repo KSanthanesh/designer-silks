@@ -5,7 +5,7 @@ from reviews.models import Review
 from products.models import Product
 
 
-def review_rate(request):
+def review_rate(request, product_id):
     """ Reviews views"""
     if request.method == "GET":
         product_id = request.GET.get('product_id')
@@ -16,5 +16,4 @@ def review_rate(request):
 
         Review(user=user, product=product, comment=comment, rate=rate).save()
 
-        return redirect('product_detail', pk=product_id)
-        # return render(request, 'products/products.html')
+    return redirect('product_detail', product_id)
