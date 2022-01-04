@@ -27,6 +27,9 @@ SECRET_KEY = 'django-insecure-&=eqz+j38y@@-^bipaog8hn#!j4rmho2wqpu8f!al_ht(7k%^s
 DEBUG = True
 
 ALLOWED_HOSTS = []
+# DEBUG = development
+#  if development:
+#     ALLOWED_HOSTS = ['localhost']
 
 
 # Application definition
@@ -127,6 +130,18 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
+# if development:
+#     DATABASES = {
+#         'default': {
+#             'ENGINE': 'django.db.backends.sqlite3',
+#             'NAME': BASE_DIR / 'db.sqlite3',
+#         }
+#     }
+# else:
+#     DATABASES = {
+#             'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+#     }
 
 
 # Password validation

@@ -107,7 +107,7 @@
                 </div>
                 <div class="col-sm-5 mt-2 mb-5">
                     <h5 class="logo-font font-weight-bold">Write your Review</h5>
-                    <form class="review-form" method="GET" action="/reviews/reviews">
+                    <form class="review-form" method="POST" action="{% url 'review_rate' product.id %}">
                         {% csrf_token %}
                         {% for product in products %}
                         <input type="hidden" name="product_id" id="product_id" value="{{ product.id}}" />
