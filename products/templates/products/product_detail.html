@@ -12,7 +12,6 @@
 {% endblock %}
 
 {% block content %}
-<!-- <div class="overlay"></div> -->
     <div class="container-fluid product-margin">
         <div class="row">
            <div class="col-12 col-md-6 col-lg-4 offset-lg-2 mt-5">
@@ -82,6 +81,8 @@
         </div>
     </div>
 
+    <!-- Reviews and Ratings -->
+
         <div class="container mt-5">
             <h5 class="logo-font font-weight-bold">
                 Reviews
@@ -106,28 +107,18 @@
                 </div>
                 <div class="col-sm-5 mt-2 mb-5">
                     <h5 class="logo-font font-weight-bold">Write your Review</h5>
-                    <form class="review-form" method="GET" action="{% url 'review_rate' %}">
+                    <form class="review-form" method="GET" action="/reviews/reviews">
                         {% csrf_token %}
                         {% for product in products %}
                         <input type="hidden" name="product_id" id="product_id" value="{{ product.id}}" />
                         {% endfor %}
                         <div class="form-group">
-                            <textarea class="input review-box" type="text" name="comment" placeholder="Your Review"></textarea>
+                            <textarea class="input review-box" type="text" id="review" name="comment" placeholder="Your Review"></textarea>
                         </div>
                         <div class="form-group">
                             <div class="input-rating">
                                 <p class="logo-font font-weight-bold">Your Rating</p>
                                 <div class="rating-wrapper">
-                                    <!-- <input type="radio" id="star-5" name="rate" value="5"/>
-                                    <label for="star-5" class="fas fa-star"></label>
-                                    <input type="radio" id="star-4" name="rate" value="4"/>
-                                    <label for="star-4" class="fas fa-star"></label>
-                                    <input type="radio" id="star-3" name="rate" value="3"/>
-                                    <label for="star-4" class="fas fa-star"></label>
-                                    <input type="radio" id="star-2" name="rate" value="2"/>
-                                    <label for="star-2" class="fas fa-star"></label>
-                                    <input type="radio" id="star-1" name="rate" value="1"/>
-                                    <label for="star-1" class="fas fa-star"></label> -->
                                     <i class="text-warning cursor-pointer rating-star fas fa-star"></i>
                                     <i class="text-warning rating-star fas fa-star"></i>
                                     <i class="text-warning rating-star fas fa-star"></i>
@@ -137,7 +128,7 @@
                             </div>
                         </div>
                         {% if user.is_authenticated %}
-                        <button class="btn btn-danger btn-md m-0" type="submit">Post</button>
+                        <button class="btn btn-danger btn-md m-0" id="submit" type="submit">Post</button>
                         {% else %}
                         <p> You must be logged in for post a Review, <a href="{% url 'account_login' %}">Login</a></p>
                         {% endif %}
@@ -154,6 +145,7 @@
 {{block.super }}
     
 <script type="text/javascript">
+    // increment and decrement product buttons
 
     $('#add-btn').click(function () {
         $(this).prev().val(+$(this).prev().val() + 1);
@@ -164,7 +156,7 @@
     });
 </script>
 <script>
-    // for click star rating
+    // click for star rating
 
     const ratingStars = [...document.getElementsByClassName("rating-star")];
 
@@ -186,6 +178,14 @@
     });
     }
     executeRating(ratingStars);
+
+    // Submit Button
+    var btn = document.getElementById('submit');
+btn.addEventListener('click', func);
+
+function func() {
+  console.log(document.getElementById("review").value)
+}
 
 </script>
     
