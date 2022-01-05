@@ -6,8 +6,8 @@ from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.db.models.functions import Lower
 
-from products.models import Product, Category
-from products.forms import ProductForm
+from products.models import Product, Category, Review
+from products.forms import ProductForm, ReviewForm
 
 
 def all_products(request):
@@ -63,8 +63,12 @@ def all_products(request):
 def product_detail(request, product_id):
     """User can view individual product details"""
     product = get_object_or_404(Product, pk=product_id)
+    product_name = Product.objects.get(pk=product_id)
+    # review = get_object_or_404(Review, product=product_name)
+    review = Review.objects.filter(product=product_name)
     context = {
         'product': product,
+        'review': review,
     }
     return render(request, 'products/product_detail.html', context)
 
@@ -132,3 +136,30 @@ def delete_product(request, product_id):
     product.delete()
     messages.success(request, 'Product deleted!')
     return redirect(reverse('products'))
+
+
+def review_rate(request, product_id):
+    """ Reviews views"""
+    if request.method == 'POST':
+        form = ReviewForm(request.POST)
+        # products = request.POST['rate']
+        if form.is_valid():
+            form.save()
+            messages.success(request, "Success")
+            return redirect('product_detail', product_id)
+        else:
+            messages.error(request, "Failure")
+    
+        form = ReviewForm()
+        return redirect('product_detail', product_id)
+    # if request.method == "GET":
+    #     product_id = request.GET.get('product')
+    #     product = Product.objects.get(pk=product_id)
+    #     comment = request.GET.get('comment')
+    #     rate = request.GET.get('rate')
+    #     user = request.GET.get('user')
+    #     created_at = request.GET.get('created_at')
+
+    #     Review(user=user, product=product, comment=comment, rate=rate, created_at=created_at).save()
+
+    return redirect('product_detail', product_id)
