@@ -81,6 +81,13 @@ html {
     border: 2px solid black;
 }
 
+.btn-black:hover,
+.btn-black:active,
+.btn-black:focus {
+    background: #000;
+    color: #fff;
+}
+
 .btn-outlook-black {
     background: #000;
     color: #fff;
@@ -90,17 +97,10 @@ html {
 .btn-outlook-black:hover,
 .btn-outlook-black:active,
 .btn-outlook-black:focus {
-    background: #222;
-    color: #fff;
+    background: #fff;
+    color: #222;
 }
 
-
-.btn-black:hover,
-.btn-black:active,
-.btn-black:focus {
-    background: #000;
-    color: #fff;
-}
 
 .btt-link,
 .update-link,
@@ -291,7 +291,7 @@ html {
         padding-top: 20px;
     }
     .new-arrivals {
-        margin-top: 18em;
+        margin-top: 350px;
     }
     .new-arrivals h3 {
         font-size: 20px;
@@ -308,10 +308,14 @@ html {
     .header-container {
         padding-top: 80px;
     }
+
 }
 
 /*----------------------------fixed navbar only on medium and up */
 @media (max-width: 500px) {
+    .new-arrivals {
+        margin-top: 22em;
+    }
 
     /* .mobile-heading {
         font-size: 20px;
