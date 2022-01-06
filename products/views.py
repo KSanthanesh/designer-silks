@@ -5,6 +5,8 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.db.models.functions import Lower
+from django.contrib.auth.models import User
+from profiles.models import UserProfile
 
 from products.models import Product, Category, Review, Wishlist
 from products.forms import ProductForm, ReviewForm, WishlistForm
@@ -67,11 +69,9 @@ def product_detail(request, product_id):
     product_name = Product.objects.get(pk=product_id)
     # review = get_object_or_404(Review, product=product_name)
     review = Review.objects.filter(product=product_name)
-    wishlists = Wishlist.objects.filter(product=product_name)
     context = {
         'product': product,
         'review': review,
-        'wishlists': wishlists,
     }
     return render(request, 'products/product_detail.html', context)
 
@@ -170,21 +170,77 @@ def review_rate(request, product_id):
 
 def wishlist(request, product_id):
     """ Wishlist views"""
-    if request.method == 'POST':
-        form = WishlistForm(request.POST)
-        # products = request.POST['rate']
-        if form.is_valid():
-            form.save()
-            messages.success(request, "Successfully added a whislist")
-            return redirect('product_detail', product_id)
-        else:
-            messages.error(request, "Failure")
+    wishlist_p = "None"
+    product_name = Product.objects.get(pk=product_id)
+    user_id = request.POST['user']
+    wishlist_user = User.objects.get(pk=user_id)
+    wishlist_p = Wishlist.objects.filter(product=product_name, user=wishlist_user).count()
+    if wishlist_p < 1:
 
-        form = WishlistForm()
-        return redirect('product_detail', product_id)
+        if request.method == 'POST':
+            form = WishlistForm(request.POST)
+            if form.is_valid():
+                form.save()
+                messages.success(request, 'Successfully added a wishlist')
+                return redirect('products')
+            else:
+                messages.error(request, "Failure to add")
+
+            form = WishlistForm()
+            return redirect('products')
+    else:
+        messages.warning(request, 'Already in Your Wishlist')
+    return redirect('products')
+
+
+def wishlist1(request, product_id):
+    """ Wishlist views"""
+    wishlist_p = "None"
+    product_name = Product.objects.get(pk=product_id)
+    user_id = request.POST['user']
+    wishlist_user = User.objects.get(pk=user_id)
+    wishlist_p = Wishlist.objects.filter(product=product_name, user=wishlist_user).count()
+    if wishlist_p < 1:
+
+        if request.method == 'POST':
+            form = WishlistForm(request.POST)
+            if form.is_valid():
+                form.save()
+                messages.success(request, 'Successfully added a wishlist')
+                return redirect('product_detail', product_id)
+            else:
+                messages.error(request, "Failure to add")
+
+            form = WishlistForm()
+            return redirect('product_detail', product_id)
+    else:
+        messages.warning(request, 'Already in Your Wishlist')
     return redirect('product_detail', product_id)
 
-def wishlist_toggle(request, product_id):
-    wishlists = get_object_or_404(Item, pk=product_id)
-    wishlists.done = not item.done
-    wishlists.save()
+
+def wishlist_history(request):
+    """Display Order History for specific order """
+    profileuser = get_object_or_404(UserProfile, user=request.user)
+    # order = get_object_or_404(Order, user_profile=request.user)
+    # wishlist = profileuser.wishlist.all()
+    wishlist = Wishlist.objects.all()
+
+    # messages.info(request, f'Your order Number is {order}.')
+    context = {
+        'wishlist': wishlist,
+        'from_profile': True,
+    }
+    
+    return render(request, 'products/wishlist.html', context)
+
+
+def wishlist_delete(request, product_id):
+    # wishlists = get_object_or_404(Wishlist, product=product_id)
+    # product_name = Wishlist.objects.filter(pk=product_id)
+    # product_name = Product.objects.get(pk=product_id)
+    wishlist_p = Wishlist.objects.filter(product=product_id)
+    
+    wishlist_p.delete()
+    messages.success(request, 'Deleted Successfully')
+    return redirect('wishlist_history')
+

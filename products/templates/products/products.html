@@ -70,8 +70,16 @@
                             <div class="card-body pb-0">
                             
                                 <p class="mb-0">{{ product.name}}
-                                    <a href="" data-toggle="tooltip" title="Add to Wishlist"><i class="fas fa-heart wishlist"></i></a>
-                                   
+                                    <!-- <a href="{% url 'wishlist' product.id %}" data-toggle="tooltip" title="Add to Wishlist"><i class="fas fa-heart wishlist"></i></a> -->
+                                    {% if user.is_authenticated %}
+                                    <form class="form" action="{% url 'wishlist' product.id %}" method="Post">
+                                        {% csrf_token %}
+                                        
+                                        <input type="hidden" name="product" id="product" value="{{ product.id}}" />
+                                        <input type="hidden" name="user" id="user" value="{{ user.id }}" />
+                                        <button class="btn btn-md m-0" id="submit" type="submit"><i class="fas fa-heart wishlist"></i></button>
+                                    </form>
+                                    {% endif %}
                                 </p>
                                 
                                 <p class="mb-0">Fabric: {{ product.material }}</p>
