@@ -55,6 +55,7 @@
                 <div class="row mt-1 mb-2"></div>
                 <div class="row">
                     {% for product in products_list %}
+                    
                     <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 mb-2">
                         <div class="card h-100">
                             {% if product.image %}
@@ -67,7 +68,12 @@
                             </a>
                             {% endif %}
                             <div class="card-body pb-0">
-                                <p class="mb-0">{{ product.name}}</p>
+                            
+                                <p class="mb-0">{{ product.name}}
+                                    <a href="" data-toggle="tooltip" title="Add to Wishlist"><i class="fas fa-heart wishlist"></i></a>
+                                   
+                                </p>
+                                
                                 <p class="mb-0">Fabric: {{ product.material }}</p>
                             </div>
                             <div class="card-footer bg-white pt-0 border-0 text-left">
@@ -90,6 +96,7 @@
                                         <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
                                         </small>
                                     {% endif %}
+                                    
                                     </div>
                                 </div>
                             </div>
@@ -133,5 +140,9 @@
                 window.location.replace(currentUrl);
             }
         })
+    // Wishlist Tooltip
+    $(document).ready(function(){
+        $('[data-toggle="tooltip"]').tooltip();   
+});
     </script>
 {% endblock %}

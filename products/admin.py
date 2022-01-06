@@ -1,7 +1,7 @@
 """ For Superuser"""
 
 from django.contrib import admin
-from .models import Product, Category, Review
+from products.models import Product, Category, Review, Wishlist
 
 
 class ProductAdmin(admin.ModelAdmin):
@@ -28,10 +28,19 @@ class CategoryAdmin(admin.ModelAdmin):
         'name',
     )
 
+
 class ReviewAdmin(admin.ModelAdmin):
+    """Display list for Review in the admin page """
 
     list_display = ('user', 'product', 'comment', 'rate', 'created_at')
+
+
+class WishlistAdmin(admin.ModelAdmin):
+    """Display list for Wishlist in the admin page """
+    list_display = ('user', 'product',)
+
 
 admin.site.register(Product, ProductAdmin)
 admin.site.register(Category, CategoryAdmin)
 admin.site.register(Review, ReviewAdmin)
+admin.site.register(Wishlist, WishlistAdmin)

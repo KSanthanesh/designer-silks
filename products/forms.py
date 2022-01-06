@@ -1,7 +1,7 @@
 """ Forms for product """
 from django import forms
 from products.widgets import CustomClearableFileInput
-from products.models import Product, Category, Review
+from products.models import Product, Category, Review, Wishlist
 
 
 class ProductForm(forms.ModelForm):
@@ -27,6 +27,16 @@ class ProductForm(forms.ModelForm):
 
 
 class ReviewForm(forms.ModelForm):
+    """ Using form for Review comment and Star rating"""
     class Meta:
+        """Meta class for ReviewForm"""
         model = Review
+        fields = '__all__'
+
+
+class WishlistForm(forms.ModelForm):
+    """ Using form for Wishlist"""
+    class Meta:
+        """Meta class for Wishlist"""
+        model = Wishlist
         fields = '__all__'

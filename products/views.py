@@ -6,8 +6,8 @@ from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.db.models.functions import Lower
 
-from products.models import Product, Category, Review
-from products.forms import ProductForm, ReviewForm
+from products.models import Product, Category, Review, Wishlist
+from products.forms import ProductForm, ReviewForm, WishlistForm
 
 
 def all_products(request):
@@ -46,7 +46,8 @@ def all_products(request):
                 messages.error(request, "Please enter the search criteria!")
                 return redirect(reverse('products'))
 
-            queries = Q(name__icontains=query) | Q(description__icontains=query)  # noqa: E501
+            queries = Q(
+                name__icontains=query) | Q(description__icontains=query)
             products_list = products_list.filter(queries)
 
     current_sorting = f'{sort}_{direction}'
@@ -66,9 +67,11 @@ def product_detail(request, product_id):
     product_name = Product.objects.get(pk=product_id)
     # review = get_object_or_404(Review, product=product_name)
     review = Review.objects.filter(product=product_name)
+    wishlists = Wishlist.objects.filter(product=product_name)
     context = {
         'product': product,
         'review': review,
+        'wishlists': wishlists,
     }
     return render(request, 'products/product_detail.html', context)
 
@@ -145,11 +148,11 @@ def review_rate(request, product_id):
         # products = request.POST['rate']
         if form.is_valid():
             form.save()
-            messages.success(request, "Success")
+            messages.success(request, "Successfully added a Review")
             return redirect('product_detail', product_id)
         else:
-            messages.error(request, "Failure")
-    
+            messages.error(request, "Failed to add, Please Enter Rating")
+
         form = ReviewForm()
         return redirect('product_detail', product_id)
     # if request.method == "GET":
@@ -160,6 +163,28 @@ def review_rate(request, product_id):
     #     user = request.GET.get('user')
     #     created_at = request.GET.get('created_at')
 
-    #     Review(user=user, product=product, comment=comment, rate=rate, created_at=created_at).save()
+    #     Review(user=user, product=product, comment=comment, rate=rate).save()
 
     return redirect('product_detail', product_id)
+
+
+def wishlist(request, product_id):
+    """ Wishlist views"""
+    if request.method == 'POST':
+        form = WishlistForm(request.POST)
+        # products = request.POST['rate']
+        if form.is_valid():
+            form.save()
+            messages.success(request, "Successfully added a whislist")
+            return redirect('product_detail', product_id)
+        else:
+            messages.error(request, "Failure")
+
+        form = WishlistForm()
+        return redirect('product_detail', product_id)
+    return redirect('product_detail', product_id)
+
+def wishlist_toggle(request, product_id):
+    wishlists = get_object_or_404(Item, pk=product_id)
+    wishlists.done = not item.done
+    wishlists.save()

@@ -149,6 +149,11 @@ html {
     width: 200px;
     height: 200px;
 }
+
+.wishlist {
+    color: rgb(235, 29, 63)
+}
+
 /*---------------------------------------------------------Product-detail page */
 /*----------------------------Reviews */
 .review-box {
