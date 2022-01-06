@@ -84,7 +84,7 @@
     <!-- Reviews and Ratings -->
 
         <div class="container mt-5">
-            <h5 class="logo-font font-weight-bold">
+            <h5 class="logo-font font-weight-bold text-primary">
                 Reviews
             </h5>
             <hr class="mt-0 pt-0">
@@ -93,16 +93,16 @@
                 <div class="col-sm-7 mt-2">
                     {% for reviews in review %}
                     <div class="review-heading">
-                        <a class="logo-font"><i class="far fa-user mr-1"></i>{{ reviews.user }}</a>
-                        <a class="ml-2"><i class="far fa-clock mr-1"></i>{{ reviews.created_at }}</a>
+                        <a class="logo-font small text-success font-weight-bold "><i class="far fa-user mr-1"></i>{{ reviews.user }}</a>
+                        <a class="ml-2 small text-info font-weight-bold"><i class="far fa-clock mr-1"></i>{{ reviews.created_at }}</a>
                         
-                        {% for i in reviews.rate %}
-                        <i class="fa fa-star checked" style="float: right;"></i>
+                        
+                        <a style="float: right;">{{ reviews.rate }} <i class="fa fa-star text-warning"></i></a>
                         <!-- <i class="fa fa-star {% if review.rate > 3 %} checked {% endif %}" style="float: right;"></i>
                         <i class="fa fa-star {% if review.rate > 2 %} checked {% endif %}" style="float: right;"></i>
                         <i class="fa fa-star {% if review.rate > 1 %} checked {% endif %}" style="float: right;"></i>
                         <i class="fa fa-star {% if review.rate > 0 %} checked {% endif %}" style="float: right;"></i> -->
-                        {% endfor %}
+                        
                     </div>
                     <div class="review-body mt-2">
                         <p>{{ reviews.comment}}</p>
@@ -110,7 +110,7 @@
                     {% endfor %}
                 </div>
                 <div class="col-sm-5 mt-2 mb-5">
-                    <h5 class="logo-font font-weight-bold">Write your Review</h5>
+                    <h5 class="logo-font text-primary font-weight-bold">Write your Review</h5>
                     {% if user.is_authenticated %}
                     <form class="form" method="POST" name="ReviewForm" action="{% url 'review_rate' product.id %}">
                         {% csrf_token %}
@@ -125,15 +125,15 @@
                         <div class="form-group">
                             <div class="input-rating">
                                 <p class="logo-font font-weight-bold">Your Rating</p>
-                                <label for="rate">1</label>
+                                <label for="rate"><i class="fa fa-star text-warning"></i></label>
                                 <input type="radio" name="rate" id="rate" value="1"/>
-                                <label for="rate">2</label>
+                                <label for="rate"><i class="fa fa-star text-warning"></i></label>
                                 <input type="radio" name="rate" id="rate" value="2"/>
-                                <label for="rate">3</label>
+                                <label for="rate"><i class="fa fa-star text-warning"></i></label>
                                 <input type="radio" name="rate" id="rate" value="3"/>
-                                <label for="rate">4</label>
+                                <label for="rate"><i class="fa fa-star text-warning"></i></label>
                                 <input type="radio" name="rate" id="rate" value="4"/>
-                                <label for="rate">5</label>
+                                <label for="rate"><i class="fa fa-star text-warning"></i></label>
                                 <input type="radio" name="rate" id="rate" value="5"/>
                                  <!-- <div class="rating-wrapper">
                                     <i class="text-warning cursor-pointer rating-star fas fa-star"></i>
@@ -173,39 +173,5 @@
         if ($(this).next().val() > 0) $(this).next().val(+$(this).next().val() - 1);
     });
 </script>
-<script>
-    // click for star rating
-
-    const ratingStars = [...document.getElementsByClassName("rating-star")];
-
-    function executeRating(stars) {
-    const starActive = "rating-star fas fa-star";
-    const starInactive = "rating-star far fa-star";
-    const starsLength = stars.length;
-    let i;
-    stars.map((star) => {
-        star.onclick = () => {
-        i = stars.indexOf(star);
-
-        if (star.className===starInactive) {
-            for (i; i >= 0; --i) stars[i].className = starActive;
-        } else {
-            for (i; i < starsLength; ++i) stars[i].className = starInactive;
-        }
-        };
-    });
-    }
-    executeRating(ratingStars);
-
-    // Submit Button
-    var btn = document.getElementById('submit');
-btn.addEventListener('click', func);
-
-function func() {
-  console.log(document.getElementById("review").value)
-}
-
-</script>
     
-
 {% endblock %}
