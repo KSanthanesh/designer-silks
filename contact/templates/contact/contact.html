@@ -12,5 +12,25 @@
 {% endblock %}
 
 {% block content %}
+<div class="container-fluid">
+<h2 class="text-center text-primary mt-5">Contact Us</h2>
 
-{% endblock%}
+    <form class="form ml-5 was-validated" method="post" action="{% url 'contacts' %}">
+        {% csrf_token %}
+
+        <div class="form-group">
+            <label for="fname">Name</label>
+            <input id="name" name="fname" type="text" class="form-control" placeholder="Your Name" style="width: 60%" required />
+           
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" class="form-control" placeholder="Your email address" style="width: 60%" required />
+            
+            <label for="subject">Subject</label>
+            <textarea id="subject" type="text" name="subject" class="form-control" placeholder="subject" style="height: 200px; width: 60%" required ></textarea>
+            <input type="submit" class="btn btn-lg btn-success mt-1" value="Send">
+        
+    </form>
+</div>
+
+
+{% endblock %}
