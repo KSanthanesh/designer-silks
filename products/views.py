@@ -155,15 +155,6 @@ def review_rate(request, product_id):
 
         form = ReviewForm()
         return redirect('product_detail', product_id)
-    # if request.method == "GET":
-    #     product_id = request.GET.get('product')
-    #     product = Product.objects.get(pk=product_id)
-    #     comment = request.GET.get('comment')
-    #     rate = request.GET.get('rate')
-    #     user = request.GET.get('user')
-    #     created_at = request.GET.get('created_at')
-
-    #     Review(user=user, product=product, comment=comment, rate=rate).save()
 
     return redirect('product_detail', product_id)
 
@@ -174,7 +165,8 @@ def wishlist(request, product_id):
     product_name = Product.objects.get(pk=product_id)
     user_id = request.POST['user']
     wishlist_user = User.objects.get(pk=user_id)
-    wishlist_p = Wishlist.objects.filter(product=product_name, user=wishlist_user).count()
+    wishlist_p = Wishlist.objects.filter(
+        product=product_name, user=wishlist_user).count()
     if wishlist_p < 1:
 
         if request.method == 'POST':
@@ -199,7 +191,8 @@ def wishlist1(request, product_id):
     product_name = Product.objects.get(pk=product_id)
     user_id = request.POST['user']
     wishlist_user = User.objects.get(pk=user_id)
-    wishlist_p = Wishlist.objects.filter(product=product_name, user=wishlist_user).count()
+    wishlist_p = Wishlist.objects.filter(
+        product=product_name, user=wishlist_user).count()
     if wishlist_p < 1:
 
         if request.method == 'POST':
@@ -230,17 +223,16 @@ def wishlist_history(request):
         'wishlist': wishlist,
         'from_profile': True,
     }
-    
     return render(request, 'products/wishlist.html', context)
 
 
 def wishlist_delete(request, product_id):
+    """ User can delete the wishlist from my wishlist page"""
     # wishlists = get_object_or_404(Wishlist, product=product_id)
     # product_name = Wishlist.objects.filter(pk=product_id)
     # product_name = Product.objects.get(pk=product_id)
     wishlist_p = Wishlist.objects.filter(product=product_id)
-    
+
     wishlist_p.delete()
     messages.success(request, 'Deleted Successfully')
     return redirect('wishlist_history')
-

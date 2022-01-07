@@ -107,10 +107,6 @@
                         <a class="logo-font small text-success font-weight-bold "><i class="far fa-user mr-1"></i>{{ reviews.user }}</a>
                         <a class="ml-2 small text-info font-weight-bold"><i class="far fa-clock mr-1"></i>{{ reviews.created_at }}</a>
                         
-                        <!-- {% for i in reviews.rate %}
-                        <i class="fa fa-star checked" style="float: right;"></i>
-                        {% endfor %} -->
-                        
                         <a style="float: right;">
                             {% if reviews.rate == 5 %}
                             <i class="fa fa-star text-warning"></i>
@@ -138,8 +134,8 @@
                             <i class="fa fa-star text-warning"></i>
                             {% endif %}
                         
-                        </a>     -->
-                        <!-- <i class="fa fa-star text-warning"></i>
+                        </a>     
+                        <!-- <i class="fa fa-star text-warning"></i> -->
                         
                     </div>
                     <div class="review-body mt-2">
@@ -153,7 +149,7 @@
                     <form class="form" method="POST" name="ReviewForm" action="{% url 'review_rate' product.id %}">
                         {% csrf_token %}
 
-                        <!-- {{ form.as_p }} -->
+                        {{ form.as_p }} 
                         <input type="hidden" name="product" id="product" value="{{ product.id}}" />
                         <input type="hidden" name="user" id="user" value="{{ user.id }}" />
                         <input type="hidden" name="created_at" id="created_at" value="06/01/2022" />
@@ -179,7 +175,7 @@
                                     <i class="text-warning rating-star fas fa-star"></i>
                                     <i class="text-warning rating-star fas fa-star"></i>
                                     <i class="text-warning rating-star fas fa-star"></i>
-                                </div>  -->
+                                </div> 
                             </div>
                         </div>
                         {% if user.is_authenticated %}
