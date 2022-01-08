@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-&=eqz+j38y@@-^bipaog8hn#!j4rmho2wqpu8f!al_ht(7k%^s
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['designer-silks.herokuapp.com', 'localhost']
 # DEBUG = development
 #  if development:
 #     ALLOWED_HOSTS = ['localhost']
@@ -125,13 +125,24 @@ WSGI_APPLICATION = 'designer_silks.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
 
+if 'DATABASE_URL' in os.environ:
+    DATABASES = {
+        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+    }
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        }
+    }
 
 # DATABASES = {
 #             'default': dj_database_url.parse('postgres://oqgqkhqkppylrq:4df501c2bfaa609b0eeac2a5aa5ccb767c7314860e7e548ebb641218d240c72d@ec2-52-211-158-144.eu-west-1.compute.amazonaws.com:5432/d6vrfffjss5qe8')
