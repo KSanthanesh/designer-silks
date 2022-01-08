@@ -147,10 +147,33 @@
 
     <footer class="bg-dark text-white footer">
       <div class="row">
-        <div class="col">
+        <div class="col-6 pl-5">
           <h3 class="text-warning">Contact Details</h3>
           <p class="phone">Phone: +353 123 456 789</p>
           <p>Email: designer@silks.com</p>
+        </div>
+        <div class="col-6 pl-5">
+          <h3 class="text-warning pl-5">Newsletter Subscription</h3>
+          <form class="form ml-5 was-validated" method="post" action="{% url 'contacts' %}">
+            {% csrf_token %}
+    
+            <div class="form-group">
+                
+                <input id="name" name="name" type="hidden" class="form-control" placeholder="Your Name" value="guest" required />
+               
+                
+                <input id="email" name="email" type="email" class="form-control" placeholder="Your email address" style="width: 60%" required />
+                
+                
+                <input id="subject" type="hidden" name="subject" class="form-control" placeholder="subject" value="guest" required />
+                
+                <input id="n_letter" name="newsletter" type="hidden" value="Yes" required/>
+        
+                <input type="submit" class="btn btn-lg btn-success mt-1" value="Subscribe">
+            </div>
+            
+        </form>
+          
         </div>
       </div>
       <div class="text-center">
