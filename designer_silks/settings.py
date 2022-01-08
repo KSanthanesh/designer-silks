@@ -132,20 +132,9 @@ DATABASES = {
     }
 }
 
-# if development:
-#     DATABASES = {
-#         'default': {
-#             'ENGINE': 'django.db.backends.sqlite3',
-#             'NAME': BASE_DIR / 'db.sqlite3',
-#         }
-#     }
-# else:
-#     DATABASES = {
-#             'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
-#     }
 
 # DATABASES = {
-#             'default': dj_database_url.parse('postgres://ygdmhwuowzxmlw:1a1399bd8f87567629aea5af4c93b892bfd32e274c4215072ebc3a9b4b8f574d@ec2-54-220-243-77.eu-west-1.compute.amazonaws.com:5432/d4mmgbo57fn994')
+#             'default': dj_database_url.parse('postgres://oqgqkhqkppylrq:4df501c2bfaa609b0eeac2a5aa5ccb767c7314860e7e548ebb641218d240c72d@ec2-52-211-158-144.eu-west-1.compute.amazonaws.com:5432/d6vrfffjss5qe8')
 #     }
 
 # Password validation
