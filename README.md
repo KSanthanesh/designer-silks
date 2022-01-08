@@ -55,11 +55,42 @@ Types of Content
 
 
 ## Introduction
+- This project will cover Saree collections, which is one of the Indian Traditional Culture. 
+- This webpage is categorised into Four main sections,such as Home, Sarees, All Products and Contact. In other two additional navigations available in the header, Which are My account and Cart.
+- When the User choose Sarees Navigation option dropdown menu appears and shows four options to choose, such as Chiffon Sarees, Cotton Sarees, Silk Sarees and All Sarees.
+- When the User choose All Products Navigation option, dropdown menu appears and shows four options to choose, such as By Price, By Rating, By Category and All Products.
+- Finally Thanks message is displayed after submitting the Enquiry Contact form.
+- when the User Choose My account Navigation option, dropdown menu appears and show Two options, such as Register and Login.
+- Once the User Login in to  My Account option then the dropdown menu change to four different Categories, Such as My Profile, My Orders, My Wishlist and Logout.
+- If the User is admin then an additional option is available which is Product Management. The Product Management option will allow the following options such as add the product, edit the product and delete the product.
+- When the User Checkout from the Cart, it will move to Checkout Page. Success Message will appear Once the payment will be successfully completed.
 
+<!-- - Success checkout message will appear in completion of the purchase Process. -->
+- The website covers all the screen types, such as Pc,Laptop,Tablet and Mobile.
 
 ### Home
+The Home Page covers the foloowing sections:
+- Header, Navigation Menus and Shipping details.
+- Hero Image
+- Shop Now button is available in the main page. Clicking this button move the user to All Products Page.
+- The Following options are availabele in the Footer:
+  - Contact Details
+  - 
+  -
+- Header and Footer will appear in all pages through Navigations. 
+
+
 ### Sarees
+- When the User choose Sarees Navigation option dropdown menu appears and shows four options to choose, such as Chiffon Sarees, Cotton Sarees, Silk Sarees and All Sarees.
+- Total number of Sarees available in each Sarees category is displayed for the User.
+- Sorting Options are available for the User. Such as
+  - Price (low to high) and Price (high to low)
+  - Rating (low to high) and Rating (high to low)
+  - Name (A-Z) and Name (Z-A)
+  - Category (A-Z) and Category (Z-A)
+
 #### Chiffon Sarees
+
 #### Cotton Sarees
 #### Silk Sarees
 #### All Sarees
