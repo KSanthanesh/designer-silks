@@ -81,41 +81,69 @@ The Home Page covers the foloowing sections:
 
 
 ### Sarees
-- When the User choose Sarees Navigation option dropdown menu appears and shows four options to choose, such as Chiffon Sarees, Cotton Sarees, Silk Sarees and All Sarees.
+- When the User choose Sarees Navigation option dropdown menu appears and shows four options to choose, such as:
+#### Chiffon Sarees
+#### Cotton Sarees
+#### Silk Sarees
+#### All Sarees
 - Total number of Sarees available in each Sarees category is displayed for the User.
-- Sorting Options are available for the User. Such as
+- Sorting Options are available for the User in each Sarees Category, Such as
   - Price (low to high) and Price (high to low)
   - Rating (low to high) and Rating (high to low)
   - Name (A-Z) and Name (Z-A)
   - Category (A-Z) and Category (Z-A)
 
-#### Chiffon Sarees
 
-#### Cotton Sarees
-#### Silk Sarees
-#### All Sarees
 
 
 ### All Products
+- When the User choose All Products option dropdown menu appears and shows four options to choose, such as 
 #### By Price
 #### By Rating
 #### By Category
 #### All Products
+- Total number of Sarees available in each Sarees category is displayed for the User.
+- Sorting Options are available for the User in each Sarees Category, Such as
+  - Price (low to high) and Price (high to low)
+  - Rating (low to high) and Rating (high to low)
+  - Name (A-Z) and Name (Z-A)
+  - Category (A-Z) and Category (Z-A)
+-
 
-### About Us
+### Contact
+- In the Contact form option, the user has to fillup all the parameters in the form. 
+- There is a Newsletter option where the user has a choice to subscribe or not to subscribe the newsletter.
 
 ### Search bar
+- The Search bar will help the user to narrow down the relevant products and display the products as per search description.
 
 ### My Account
+- when the User Choose My account Navigation option, dropdown menu appears and show Two options, such as Register and Login.
+- Once the User Login in to  My Account option then the dropdown menu change to four different Categories, Such as My Profile, My Orders, My Wishlist and Logout.
+- If the User is admin then an additional option is available which is Product Management. The Product Management option will allow the following options such as add the product, edit the product and delete the product.
 #### Register
+- The User can use the Register option to fillup his information to register.
 #### Login
+- Only Registered User is able to use login option to login in to the website.
 #### Logout
+- The User should logout from the website after using the website. 
 #### Product Management
+- The Product Management option will allow the following options such as add the product, edit the product and delete the product for the admin. 
 #### My Profile
+- Login user can update or store their Delivery information.
 #### My Orders
+- Order history and information about the products will be stored in the database.
 #### Wishlist
+- user can add favourite items into the wishlist and shortlist what to buy later.
+
+### Product Details
+- Product Details options contains: SKU (Product id),Fabric (Material Type), Description,length, Shipping and Returns.
+- Quantity option is available for User to select the number of products of the same product.
+- The cart will be update the section.
 
 ### Cart
+
+
 
 ### Checkout
 
@@ -157,6 +185,10 @@ The Home Page covers the foloowing sections:
     - As a Site User I can easily enter my payment option So that there is no issues in the payment process.
     - As a Site User I can provide my personal and payment details are safe and secure So that I can trust the purchase Site.
     - As a User I can write a Review about the product So that It will help for others.
+    - As a Site User I can add favourite Products in to the Wishlist So that I can decide what to buy during the purchase.
+    - As a Site User I can Delete the products from the wishlist So that I can shortlist what to buy.
+    - As a Site User I can use Contact form to send enquiry So that I can enquire information regarding products and services.
+    - As a Site User I can subscribe option for Newsletter So that I can get the information regarding the products regularly.
     
     
 ### Business Vision
