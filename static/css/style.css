@@ -19,7 +19,7 @@ html {
 } */
 .bg {
     height: 255vh;
-    background: url('/media/home-img.jpeg') center no-repeat;
+    background: url('/media/home-image.jpg') center no-repeat;
     background-size: cover;
     font-family: "Open Sans", cursive;
     color: #000;

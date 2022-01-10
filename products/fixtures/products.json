@@ -4,14 +4,14 @@
         "model": "products.product",
         "fields": {
             "sku": "ds1045670",
-            "name": "Multicolor Peacock Silk Saree",
-            "price": 100.95,
+            "name": "Pink Silk Saree",
+            "price": 80.95,
             "category": 3,
-            "rating": 5,
+            "rating": 4.2,
             "length": "Saree Length is 5.5m And Blouse length is 1m",
             "material": "Silk",
             "description": "Lightweight and traditional bridal wear Saree. This Multicolor Peacock Silk Saree comes with Blouse piece.",
-            "image": "sis30003.jpg"
+            "image": "silk-3.webp"
         }
     },
     {
@@ -26,7 +26,7 @@
             "length": "Saree Length is 5.5m And Blouse length is 1m",
             "material": "Chiffon",
             "description": "Very lightweight, stylish, modern and casual wear saree. This Satrupa Design Chiffon Saree comes with Blouse piece.",
-            "image": "chs10006.jpg"
+            "image": "chiffon-9.jpg"
         }
     },
     {
@@ -35,13 +35,13 @@
         "fields": {
             "sku": "ds1000145",
             "name": "Casual Wear Chiffon Saree",
-            "price": 30.95,
+            "price": 40.95,
             "category": 1,
-            "rating": 4.2,
+            "rating": 4.6,
             "length": "Saree Length is 5.5m And Blouse length is 1m",
             "material": "Chiffon",
             "description": "A Perfect Blend of Style and Comfort. This Casual Wear Chiffon Saree comes with Blouse piece.",
-            "image": "chs10001.jpg"
+            "image": "chiffon-1.jpg"
         }
     },
     {
@@ -50,13 +50,13 @@
         "fields": {
             "sku": "ds5245473",
             "name": "Bridal Silk Saree ",
-            "price": 95.95,
+            "price": 105.95,
             "category": 3,
             "rating": 4.9,
             "length": "Saree Length is 5.5m And Blouse length is 1m",
             "material": "Silk",
             "description": "Lightweight and traditional bridal Saree. This Bridal Silk Saree comes with Blouse piece.",
-            "image": "sis30008.jpg"
+            "image": "silk-12.jpg"
         }
     },
     {
@@ -71,7 +71,7 @@
             "length": "Saree Length is 5.5m And Blouse length is 1m",
             "material": "Cotton",
             "description": "The saree has a beautiful pattern on its borders. This GiniGold Women's Cotton Sareecomes with Blouse piece.",
-            "image": "cts20011.jpg"
+            "image": "cotton-11.jpg"
         }
     },
     {
@@ -86,7 +86,7 @@
             "length": "Saree Length is 5.5m And Blouse length is 1m",
             "material": "Cotton",
             "description": "Daily wear cotton and beautiful striped design. This Sangam prints Cotton Saree comes with Blouse piece.",
-            "image": "cts20001.jpg"
+            "image": "cotton-1.jpg"
         }
     },
     {
@@ -101,7 +101,7 @@
             "length": "Saree Length is 5.5m And Blouse length is 1m",
             "material": "Silk",
             "description": "This stunning effect saree is pure Kanchipuram silk. This Art Silk Saree comes with Blouse piece.",
-            "image": "sis30004.jpg"
+            "image": "silk-11.jpg"
         }
     },
     {
@@ -116,7 +116,7 @@
             "length": "Saree Length is 5.5m And Blouse length is 1m",
             "material": "Cotton",
             "description": "Lightweight and traditional wear. This Designer Cotton Saree comes with Blouse piece.",
-            "image": "cts20012.jpg"
+            "image": "cotton-12.jpg"
         }
     },
     {
@@ -124,14 +124,14 @@
         "model": "products.product",
         "fields": {
             "sku": "ds5284679",
-            "name": "Shaded Blue Chiffon Saree",
+            "name": "Flowery Chiffon Saree",
             "price": 30.95,
             "category": 1,
             "rating": 3.9,
             "length": "Saree Length is 5.5m And Blouse length is 1m",
             "material": "Chiffon",
             "description": "Elegant, light and beautiful saree with lace. This Shaded Blue Chiffon Saree comes with Blouse piece.",
-            "image": "chs10008.jpg"
+            "image": "chiffon-8.jpg"
         }
     },
     {
@@ -146,7 +146,7 @@
             "length": "Saree Length is 5.5m And Blouse length is 1m",
             "material": "Cotton",
             "description": "Flaunt this beautiful handloom cotton - silk saree to be very attractive. This Pure Cotton Saree comes with Blouse piece.",
-            "image": "cts20009.jpg"
+            "image": "cotton-9.jpg"
         }
     },
     {
@@ -154,14 +154,14 @@
         "model": "products.product",
         "fields": {
             "sku": "ds3245444",
-            "name": "Peach Chiffon Saree",
+            "name": "PartyWear Chiffon Saree",
             "price": 45.95,
             "category": 1,
             "rating": 4.3,
             "length": "Saree Length is 5.5m And Blouse length is 1m",
             "material": "Chiffon",
             "description": "Peach color chiffon saree. Having resham, sequins and stone worked border. This Chiffon Saree comes with Blouse piece.",
-            "image": "chs10011.jpg"
+            "image": "chiffon-10.jpg"
         }
     },
     {
@@ -176,7 +176,7 @@
             "length": "Saree Length is 5.5m And Blouse length is 1m",
             "material": "Silk",
             "description": "Lightweight and traditional wear. This Banarasi Silk Saree comes with Blouse piece.",
-            "image": "sis30005.jpg"
+            "image": "silk-5.jpg"
         }
     },
     {
@@ -187,11 +187,11 @@
             "name": "Green Aura Silk Saree",
             "price": 80.95,
             "category": 3,
-            "rating": 4,
+            "rating": 4.8,
             "length": "Saree Length is 5.5m And Blouse length is 1m",
             "material": "Silk",
             "description": "Handwoven sarees in fine yarns, regional silk sarees wrapped in luxury silk saree. This Aura Silk Saree comes with Blouse piece.",
-            "image": "sis30009.jpg"
+            "image": "silk-9.jpg"
         }
     },
     {
@@ -199,14 +199,14 @@
         "model": "products.product",
         "fields": {
             "sku": "ds2345543",
-            "name": "Shaded Blue Chiffon Saree",
+            "name": "Shaded purple Chiffon Saree",
             "price": 40.95,
             "category": 1,
             "rating": 4.5,
             "length": "Saree Length is 5.5m And Blouse length is 1m",
             "material": "Chiffon",
             "description": "Very lightweight and everyday wardrobe as it is perfect for all seasons. This Shaded Blue Chiffon Saree comes with Blouse piece.",
-            "image": "chs10002.jpg"
+            "image": "chiffon-2.webp"
         }
     },
     {
@@ -214,14 +214,14 @@
         "model": "products.product",
         "fields": {
                 "sku": "ds1005679",
-                "name": "Model Bridal Silk Saree",
-                "price": 110.95,
+                "name": "checked blue Silk Saree",
+                "price": 75.95,
                 "category": 3,
-                "rating": 5,
+                "rating": 4,
                 "length": "Saree Length is 5.5m And Blouse length is 1m",
                 "material": "Silk",
                 "description": "Model wearing light green kanjeevaram wedding silk saree. Red and golden zari weave rich border. This Bridal Silk Saree comes with Blouse piece.",
-                "image": "sis30011.jpg"
+                "image": "silk-4.webp"
         }
     },
     {
@@ -236,7 +236,7 @@
             "length": "Saree Length is 5.5m And Blouse length is 1m",
             "material": "Cotton",
             "description": "Beautifully Designed with border and very comfortable for all the Seasons. This Silk Cotten Saree comes with Blouse piece.",
-            "image": "cts20004.jpg"
+            "image": "cotton-4.jpg"
         }
     },
     {
@@ -251,7 +251,7 @@
             "length": "Saree Length is 5.5m And Blouse length is 1m",
             "material": "Chiffon",
             "description": "Elegant and Beautiful Fashion saree. This Gazel Fashions Chiffon Saree comes with Blouse piece.",
-            "image": "chs10004.jpg"
+            "image": "chiffon-4.jpg"
         }
     },
     {
@@ -266,7 +266,7 @@
             "length": "Saree Length is 5.5m And Blouse length is 1m",
             "material": "Cotton",
             "description": "Traditional and Ethinic Look. This Seawave Cotton Saree comes with Blouse piece.",
-            "image": "cts20006.jpg"
+            "image": "cotton-6.webp"
         }
     },
     {
@@ -274,14 +274,14 @@
         "model": "products.product",
         "fields": {
             "sku": "ds3245686",
-            "name": "Golden Pink Silk Saree",
+            "name": "Golden green Silk Saree",
             "price": 105.95,
             "category": 3,
             "rating": 4.9,
             "length": "Saree Length is 5.5m And Blouse length is 1m",
             "material": "Silk",
             "description": "Lightweight and traditional wedding wear saree. This Designer Cotton Saree comes with Blouse piece.",
-            "image": "sis30012.jpg"
+            "image": "silk-8.webp"
         }
     },
     {
@@ -296,7 +296,7 @@
             "length": "Saree Length is 5.5m And Blouse length is 1m",
             "material": "Chiffon",
             "description": "This fabric, made of tightly twisted yarn of very fine threads. This Stylish Pure Chiffon Saree comes with Blouse piece.",
-            "image": "chs10005.jpg"
+            "image": "chiffon-5.jpg"
         }
     },
     {
@@ -304,14 +304,14 @@
         "model": "products.product",
         "fields": {
             "sku": "ds2240609",
-            "name": "Pink Printed Silk Saree",
-            "price": 85.95,
+            "name": "Green Printed Silk Saree",
+            "price": 73.95,
             "category": 3,
             "rating": 4.5,
             "length": "Saree Length is 5.5m And Blouse length is 1m",
             "material": "Silk",
             "description": "Lightweight, Party wear and traditional wear saree. This Printed Silk Saree comes with Blouse piece.",
-            "image": "sis30010.jpg"
+            "image": "silk-10.jpg"
         }
     },
     {
@@ -319,14 +319,14 @@
         "model": "products.product",
         "fields": {
             "sku": "ds1240679",
-            "name": "Pink Printed Cotton Saree",
-            "price": 47.95,
+            "name": "Sahith Orange Cotton Saree",
+            "price": 37.95,
             "category": 2,
-            "rating": 4.9,
+            "rating": 4,
             "length": "Saree Length is 5.5m And Blouse length is 1m",
             "material": "Cotton",
             "description": "Very elegant, soft and smooth saree for all occasions. This Printed Cotton Saree comes with Blouse piece.",
-            "image": "cts20010.jpg"
+            "image": "cotton-10.webp"
         }
     },
     {
@@ -335,13 +335,13 @@
         "fields": {
             "sku": "ds4245571",
             "name": "Olive Printed Cotton Saree",
-            "price": 30.95,
+            "price": 42.95,
             "category": 2,
-            "rating": 3.9,
+            "rating": 4.8,
             "length": "Saree Length is 5.5m And Blouse length is 1m",
             "material": "Cotton",
             "description": "Beautiful flower printed saree with border. This printed Cotton Saree comes with Blouse piece.",
-            "image": "cts20008.jpg"
+            "image": "cotton-8.jpg"
         }
     },
     {
@@ -349,14 +349,14 @@
         "model": "products.product",
         "fields": {
             "sku": "ds2245679",
-            "name": "Purple Mineral Chiffon Saree",
+            "name": "Green Mineral Chiffon Saree",
             "price": 40.95,
             "category": 1,
             "rating": 4.2,
             "length": "Saree Length is 5.5m And Blouse length is 1m",
             "material": "Chiffon",
             "description": "Soft and fluid fabrics with pretty palettes and exquisite prints. This Purple Mineral Chiffon Saree comes with Blouse piece.",
-            "image": "chs10007.jpg"
+            "image": "chiffon-7.jpg"
         }
     },
     {
@@ -365,13 +365,13 @@
         "fields": {
             "sku": "ds2545659",
             "name": "Multi plain Art Silk Saree",
-            "price": 85.95,
+            "price": 80.95,
             "category": 3,
-            "rating": 4.9,
+            "rating": 4.5,
             "length": "Saree Length is 5.5m And Blouse length is 1m",
             "material": "Silk",
             "description": "Lightweight and traditional bridal wear. This Multi plain Art Silk Saree comes with Blouse piece.",
-            "image": "sis30001.jpg"
+            "image": "silk-1.webp"
         }
     },
     
@@ -379,30 +379,30 @@
         "pk": 26,
         "model": "products.product",
         "fields": {
-            "sku": "ds2265669",
-            "name": "Party Wear Chiffon Saree",
-            "price": 50.95,
-            "category": 1,
-            "rating": 5,
+            "sku": "ds3244343",
+            "name": "Embroidered Cotton Saree",
+            "price": 40.95,
+            "category": 2,
+            "rating": 4.4,
             "length": "Saree Length is 5.5m And Blouse length is 1m",
-            "material": "Chiffon",
-            "description": "Chiffon is a light, sheer and soft material with a slightly rough feel to it. This Party Wear Chiffon Saree comes with Blouse piece.",
-            "image": "chs10010.jpg"
+            "material": "Cotton",
+            "description": "Cotton is a soft, fluffy staple fiber that grows in a boll, or protective case. This Embroidered Cotton Saree comes with Blouse piece.",
+            "image": "cotton-2.jpg"
         }
-    },
+    }, 
     {
         "pk": 27,
         "model": "products.product",
         "fields": {
             "sku": "ds4245879",
-            "name": "Blue Checked Cotton Saree",
+            "name": "Black printed Cotton Saree",
             "price": 48.95,
             "category": 2,
             "rating": 4.6,
             "length": "Saree Length is 5.5m And Blouse length is 1m",
             "material": "Cotton",
             "description": "These Sarees are light in weight, soft feel, comfortable to drape on the body, and feels like the part of the skin. This Checked Cotton Saree comes with Blouse piece.",
-            "image": "cts20005.jpg"
+            "image": "cotton-5.webp"
         }
     },
     {
@@ -417,7 +417,7 @@
             "length": "Saree Length is 5.5m And Blouse length is 1m",
             "material": "Cotton",
             "description": "very calm and pleasant look design and very lightweight. This Poonam Cotton Saree comes with Blouse piece.",
-            "image": "cts20007.jpg"
+            "image": "cotton-7.jpg"
         }
     },
     {
@@ -432,7 +432,7 @@
             "length": "Saree Length is 5.5m And Blouse length is 1m",
             "material": "Silk",
             "description": "Lightweight and traditional wedding saree. This Samudrika Silk Saree comes with Blouse piece.",
-            "image": "sis30002.jpg"
+            "image": "silk-2.webp"
         }
     },
     {
@@ -447,7 +447,7 @@
             "length": "Saree Length is 5.5m And Blouse length is 1m",
             "material": "Chiffon",
             "description": "Elegant, lightweight and perfect for all seasons. This Satin Chiffon Saree comes with Blouse piece.",
-            "image": "chs10003.jpg"
+            "image": "chiffon-3.jpg"
         }
     },
     {
@@ -455,14 +455,14 @@
         "model": "products.product",
         "fields": {
             "sku": "ds2045679",
-            "name": "Mustard Woven Cotten Saree",
+            "name": "Orange Woven Cotten Saree",
             "price": 47.95,
             "category": 2,
             "rating": 4.6,
             "length": "Saree Length is 5.5m And Blouse length is 1m",
             "material": "Cotton",
             "description": "Beautifully Designed with Wevon Lining,Sequance Work Work. This Woven Cotten Saree comes with Blouse piece.",
-            "image": "cts20003.jpg"
+            "image": "cotton-3.webp"
         }
     },
     {
@@ -477,7 +477,7 @@
             "length": "Saree Length is 5.5m And Blouse length is 1m",
             "material": "Silk",
             "description": "Very Elegant plain silks with stunning looks border design . This Heart Silk Saree comes with Blouse piece.",
-            "image": "sis30007.jpg"
+            "image": "silk-7.jpg"
         }
     },
     {
@@ -485,59 +485,29 @@
         "model": "products.product",
         "fields": {
             "sku": "ds3256670",
-            "name": "Kalyan Wedding Saree",
+            "name": "Checked Silk Saree",
             "price": 80.95,
             "category": 3,
-            "rating": 4.5,
+            "rating": 4.2,
             "length": "Saree Length is 5.5m And Blouse length is 1m",
             "material": "Silk",
             "description": "Traditional Wedding Saree with beautiful border. This Kalyan Wedding Saree comes with Blouse piece.",
-            "image": "sis30006.jpg"
+            "image": "silk-6.jpg"
         }
     },
     {
         "pk": 34,
         "model": "products.product",
         "fields": {
-            "sku": "ds3244343",
-            "name": "Embroidered Cotton Saree",
-            "price": 40.95,
-            "category": 2,
-            "rating": 4.5,
-            "length": "Saree Length is 5.5m And Blouse length is 1m",
-            "material": "Cotton",
-            "description": "Cotton is a soft, fluffy staple fiber that grows in a boll, or protective case. This Embroidered Cotton Saree comes with Blouse piece.",
-            "image": "cts20002.jpg"
-        }
-    },   
-    {
-        "pk": 35,
-        "model": "products.product",
-        "fields": {
-            "sku": "ds4243679",
-            "name": "Pink Zari Chiffon Saree",
-            "price": 38.95,
+            "sku": "ds3245666",
+            "name": "pink flower Chiffon Saree",
+            "price": 44.95,
             "category": 1,
-            "rating": 4.4,
+            "rating": 5,
             "length": "Saree Length is 5.5m And Blouse length is 1m",
             "material": "Chiffon",
-            "description": "lightweight, casual and everyday wardrobe as it is perfect for all seasons. This Pink Zari Chiffon Saree comes with Blouse piece.",
-            "image": "chs10009.jpg"
+            "description": "This fabric, made of tightly twisted yarn of very fine threads. This Stylish Pure Chiffon Saree comes with Blouse piece.",
+            "image": "chiffon-6.jpg"
         }
-    },  
-    {
-        "pk": 36,
-        "model": "products.product",
-        "fields": {
-            "sku": "ds1845679",
-            "name": "Reshma Silver Chiffon Saree",
-            "price": 40.95,
-            "category": 1,
-            "rating": 4.7,
-            "length": "Saree Length is 5.5m And Blouse length is 1m",
-            "material": "Chiffon",
-            "description": "Beautifully Designed with Wevon Lining,Sequance Work Work. This Chiffon Saree comes with Blouse piece.",
-            "image": "chs10012.jpg"
-        }
-    }       
+    }     
 ]
