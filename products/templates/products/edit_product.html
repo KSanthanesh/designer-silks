@@ -15,6 +15,7 @@
 {% block content %}
 <!-- <div class="overlay"></div> -->
 <div class="container mb-5">
+  {% if user.is_authenticated %}
   <div class="row">
     <div class="col-12 col-md-6">
 
@@ -40,6 +41,7 @@
       </form>
     </div>
   </div>
+  {% endif %}
 </div>
 
 {% endblock %}
