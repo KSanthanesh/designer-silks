@@ -19,14 +19,14 @@
         "model": "products.product",
         "fields": {
             "sku": "ds4343435",
-            "name": "Satrupa Design Chiffon Saree",
+            "name": "Pink Flower Chiffon Saree",
             "price": 45.95,
             "category": 1,
             "rating": 4.9,
             "length": "Saree Length is 5.5m And Blouse length is 1m",
             "material": "Chiffon",
             "description": "Very lightweight, stylish, modern and casual wear saree. This Satrupa Design Chiffon Saree comes with Blouse piece.",
-            "image": "chiffon-9.jpg"
+            "image": "chiffon-6.jpg"
         }
     },
     {
@@ -500,14 +500,14 @@
         "model": "products.product",
         "fields": {
             "sku": "ds3245666",
-            "name": "pink flower Chiffon Saree",
-            "price": 44.95,
+            "name": "Satrupa Design Chiffon Saree",
+            "price": 40.95,
             "category": 1,
-            "rating": 5,
+            "rating": 4.1,
             "length": "Saree Length is 5.5m And Blouse length is 1m",
             "material": "Chiffon",
             "description": "This fabric, made of tightly twisted yarn of very fine threads. This Stylish Pure Chiffon Saree comes with Blouse piece.",
-            "image": "chiffon-6.jpg"
+            "image": "chiffon-9.jpg"
         }
     }     
 ]
