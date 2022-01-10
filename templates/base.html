@@ -153,7 +153,7 @@
           <p>Email: designer@silks.com</p>
         </div>
         <div class="col-6 pl-5">
-          <h3 class="text-warning pl-5">Newsletter Subscription</h3>
+          <h4 class="text-warning pl-5">Newsletter Subscription</h4>
           <form class="form ml-5 was-validated" method="post" action="{% url 'contacts' %}">
             {% csrf_token %}
     
@@ -169,7 +169,7 @@
                 
                 <input id="n_letter" name="newsletter" type="hidden" value="Yes" required/>
         
-                <input type="submit" class="btn btn-lg btn-success mt-1" value="Subscribe">
+                <input type="submit" class="btn btn-sm btn-success mt-1" value="Subscribe">
             </div>
             
         </form>
