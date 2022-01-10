@@ -18,7 +18,7 @@
   {% if user.is_authenticated %}
   <div class="row">
     <div class="col-12 col-md-6">
-    {% if user.is_authenticated %}
+    
       <h3 class="logo-font mb-4">Product Management</h3>
       <h5>Add a Product</h5>
     </div>
@@ -51,7 +51,7 @@
     <script>
     $('#new-image').change(function() {
       let file = $(this)[0].files[0];
-      $('#filename').text(`image will be set to: ${file.name}`);
+      $('#filename').text(`Image will be set to: ${file.name}`);
     });
     </script>
 
