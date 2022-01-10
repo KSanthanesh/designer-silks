@@ -29,6 +29,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY' '')
 DEBUG = 'Development' in os.environ
 
 ALLOWED_HOSTS = ['designer-silks.herokuapp.com', 'localhost']
+
 # DEBUG = development
 #  if development:
 #     ALLOWED_HOSTS = ['localhost']
