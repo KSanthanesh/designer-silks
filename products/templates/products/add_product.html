@@ -18,27 +18,27 @@
   {% if user.is_authenticated %}
   <div class="row">
     <div class="col-12 col-md-6">
-    
+
       <h3 class="logo-font mb-4">Product Management</h3>
       <h5>Add a Product</h5>
     </div>
   </div>
   <div class="row">
     <div class="col-12 col-md-6">
-        <form method="POST" action="{% url 'add_product'%}" class="form mb-2" enctype="multipart/form-data">
-            {% csrf_token %}
-            {% for field in form %}
-              {% if field.name != 'image' %}
-                {{ field | as_crispy_field }}
-              {% else %}
-                {{ field }}
-              {% endif %}
-            {% endfor %}
+      <form method="POST" action="{% url 'add_product'%}" class="form mb-2" enctype="multipart/form-data">
+        {% csrf_token %}
+        {% for field in form %}
+        {% if field.name != 'image' %}
+        {{ field | as_crispy_field }}
+        {% else %}
+        {{ field }}
+        {% endif %}
+        {% endfor %}
         <div class="text-right">
-            <a class="btn btn-outlook-black rounded-0" href="{% url 'products' %}">Cancel</a>
-            <button class="btn btn-outlook-black rounded-0" type="submit">Add Product</button>
+          <a class="btn btn-outlook-black rounded-0" href="{% url 'products' %}">Cancel</a>
+          <button class="btn btn-outlook-black rounded-0" type="submit">Add Product</button>
         </div>
-    </form>
+      </form>
     </div>
   </div>
   {% endif %}
@@ -47,12 +47,12 @@
 {% endblock %}
 
 {% block postloadjs %}
-    {{ block.super }}
-    <script>
-    $('#new-image').change(function() {
-      let file = $(this)[0].files[0];
-      $('#filename').text(`Image will be set to: ${file.name}`);
-    });
-    </script>
+{{ block.super }}
+<script>
+  $('#new-image').change(function () {
+    let file = $(this)[0].files[0];
+    $('#filename').text(`Image will be set to: ${file.name}`);
+  });
+</script>
 
 {% endblock %}

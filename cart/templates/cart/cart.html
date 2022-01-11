@@ -13,7 +13,7 @@
 {% endblock %}
 
 {% block content %}
-<!-- <div class="overlay"></div> -->
+
 <div class="container mb-5">
   <div class="row">
     <div class="col">
@@ -41,13 +41,14 @@
             <td class="p-3">
               <!-- {% if item.product.image %} -->
               <a href="{{ item.product.image.url }}">
-                
-                <img class="my-auto rounded" src="{{ item.product.image.url}}" alt="{{ item.product.name }}"width="100" height="100"></a>
-                <!-- {% else %}
+
+                <img class="my-auto rounded" src="{{ item.product.image.url}}" alt="{{ item.product.name }}" width="100"
+                  height="100"></a>
+              <!-- {% else %}
                         <img class="rounded" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.product.name }}" width="100" height="100">
                         {% endif %} -->
             </td>
-           
+
             <td class="py-3 w-25">
               <p class="my-0"><b>{{ item.product.name}}</b></p>
               <p class="my-0 small text-muted">SKU: {{ item.product.sku|upper}}</p>
@@ -61,7 +62,9 @@
                 <div class="form-group w-50 mx-auto">
                   <div class="input-group">
                     <button type="button" id="minus-btn" class="minus-btn buttons btn-outlook-black w-25">-</button>
-                    <input class="form-control text-center" type="text" value="{{ item.quantity }}" maxlength="2" minlength="1" name="quantity" data_item_id="{{ item.item_id }}" id="id_qty_{{ item.item_id }}" required />
+                    <input class="form-control text-center" type="text" value="{{ item.quantity }}" maxlength="2"
+                      minlength="1" name="quantity" data_item_id="{{ item.item_id }}" id="id_qty_{{ item.item_id }}"
+                      required />
                     <button type="button" id="add-btn" class="add-btn buttons btn-outlook-black w-25">+</button>
                   </div>
                 </div>
@@ -132,29 +135,30 @@
   // for plus button onclick
   $('#add-btn').click(function () {
     $(this).prev().val(+$(this).prev().val() + 1);
-});
-// for minus button onclick
-$('#minus-btn').click(function () {
+  });
+  // for minus button onclick
+  $('#minus-btn').click(function () {
     if ($(this).next().val() > 0) $(this).next().val(+$(this).next().val() - 1);
-});
-  
+  });
 </script>
 <script type="text/javascript">
   // for Edit button on click
-  $('.update-link').click(function(e) {
-      var form = $(this).prev('.update-form');
-      form.submit();
+  $('.update-link').click(function (e) {
+    var form = $(this).prev('.update-form');
+    form.submit();
   })
 
   // for delete button on click
-  $('.remove-link').click(function(e) {
+  $('.remove-link').click(function (e) {
     var csrfToken = "{{ csrf_token }}";
     var itemId = $(this).attr('id').split('remove_')[1];
     var url = `/cart/remove/${itemId}/`;
-    var data = {'csrfmiddlewaretoken': csrfToken}
+    var data = {
+      'csrfmiddlewaretoken': csrfToken
+    }
 
     $.post(url, data)
-      .done(function() {
+      .done(function () {
         location.reload();
       });
   })

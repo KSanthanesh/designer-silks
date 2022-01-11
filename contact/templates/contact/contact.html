@@ -2,38 +2,41 @@
 {% load static %}
 
 {% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col">
+<div class="container header-container">
+    <div class="row">
+        <div class="col">
 
-            </div>
         </div>
     </div>
+</div>
 {% endblock %}
 
 {% block content %}
 <div class="container">
-<h2 class="text-center text-primary mt-5">Contact Us</h2>
+    <h2 class="text-center text-primary mt-5">Contact Us</h2>
 
     <form class="form ml-5 was-validated" method="post" action="{% url 'contacts' %}">
         {% csrf_token %}
 
         <div class="form-group">
             <label for="fname">Name</label>
-            <input id="name" name="name" type="text" class="form-control" placeholder="Your Name" style="width: 60%" required />
-           
+            <input id="name" name="name" type="text" class="form-control" placeholder="Your Name" style="width: 60%"
+                required />
+
             <label for="email">Email</label>
-            <input id="email" name="email" type="email" class="form-control" placeholder="Your email address" style="width: 60%" required />
-            
+            <input id="email" name="email" type="email" class="form-control" placeholder="Your email address"
+                style="width: 60%" required />
+
             <label for="subject">Subject</label>
-            <textarea id="subject" type="text" name="subject" class="form-control" placeholder="subject" style="height: 200px; width: 60%" required ></textarea>
+            <textarea id="subject" type="text" name="subject" class="form-control" placeholder="subject"
+                style="height: 200px; width: 60%" required></textarea>
             <label for="n_letter"><b>Do you Want to Subscribe a Newsletter?</b></label>
-            <input id="n_letter" name="newsletter" type="radio" value="Yes" required/> Yes
-            <input id="n_letter" name="newsletter" type="radio" value="No" required/> No
+            <input id="n_letter" name="newsletter" type="radio" value="Yes" required /> Yes
+            <input id="n_letter" name="newsletter" type="radio" value="No" required /> No
             <br>
             <input type="submit" class="btn btn-lg btn-success mt-1" value="Send">
         </div>
-        
+
     </form>
 </div>
 
