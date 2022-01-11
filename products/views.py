@@ -1,6 +1,7 @@
 """ Products app views.py """
 
 from django.shortcuts import render, redirect, reverse, get_object_or_404
+from django.http import HttpResponseRedirect
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.db.models import Q
@@ -174,15 +175,15 @@ def wishlist(request, product_id):
             if form.is_valid():
                 form.save()
                 messages.success(request, 'Successfully added a wishlist')
-                return redirect('products')
+                return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
             else:
                 messages.error(request, "Failure to add")
 
             form = WishlistForm()
-            return redirect('products')
+            return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
     else:
         messages.warning(request, 'Already in Your Wishlist')
-    return redirect('products')
+        return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
 
 
 def wishlist1(request, product_id):

@@ -28,17 +28,17 @@
         <div class="col-12 col-md-6 col-lg-4">
             <div class="product-detail-container mb-5 mt-md-5">
                 <h4 class="mb-0">{{ product.name }}</h4>
-                <p>
+                <div>
                     {% if user.is_authenticated %}
                                     <form class="form" action="{% url 'wishlist1' product.id %}" method="Post">
                                         {% csrf_token %}
                                         
-                                        <input type="hidden" name="product" id="product" value="{{ product.id}}" />
-                                        <input type="hidden" name="user" id="user" value="{{ user.id }}" />
-                                        <button class="btn btn-md m-0" id="submit" type="submit"><i class="fas fa-heart wishlist"></i></button>
+                                        <input type="hidden" name="product" value="{{ product.id}}" />
+                                        <input type="hidden" name="user" value="{{ user.id }}" />
+                                        <button class="btn btn-md m-0" type="submit"><i class="fas fa-heart wishlist"></i></button>
                                     </form>
                                     {% endif %}
-                </p>
+                                </div>
                 <p class="lead mb-0 text-left font-weight-bold">€{{product.price }}</p>
                 <p><small>Including vat</small></p>
                 {% if product.rating %}
@@ -69,7 +69,7 @@
                         <div class="form-group w-50">
                             <div class="input-group">
                                 <button type="button" id="minus-btn" class="minus-btn buttons btn-outlook-black w-25">-</button>
-                                <input class="form-control text-center" type="text" value="1" maxlength="2" minlength="1" name="quantity" data_item_id="{{ product.id }}" id="id_qty_{{ product.id }}" required/>
+                                <input class="form-control text-center" type="text" value="1" maxlength="2" minlength="1" name="quantity" required/>
                                 <button type="button" id="add-btn" class="add-btn buttons btn-outlook-black w-25">+</button>
                             </div>
                         </div>
@@ -154,21 +154,21 @@
                         <input type="hidden" name="user" id="user" value="{{ user.id }}" />
                         <input type="hidden" name="created_at" id="created_at" value="06/01/2022" />
                         <div class="form-group">
-                            <textarea class="input review-box" type="text" id="comment" name="comment" placeholder="Your Review" required></textarea>
+                            <textarea class="input review-box" id="comment" name="comment" placeholder="Your Review" required></textarea>
                         </div>
                         <div class="form-group">
                             <div class="input-rating">
                                 <p class="logo-font font-weight-bold">Your Rating</p>
-                                <label for="rate"><i class="fa fa-star text-warning"></i></label>
-                                <input type="radio" name="rate" id="rate" value="1"/>
-                                <label for="rate"><i class="fa fa-star text-warning"></i></label>
-                                <input type="radio" name="rate" id="rate" value="2"/>
-                                <label for="rate"><i class="fa fa-star text-warning"></i></label>
-                                <input type="radio" name="rate" id="rate" value="3"/>
-                                <label for="rate"><i class="fa fa-star text-warning"></i></label>
-                                <input type="radio" name="rate" id="rate" value="4"/>
-                                <label for="rate"><i class="fa fa-star text-warning"></i></label>
-                                <input type="radio" name="rate" id="rate" value="5"/>
+                                <label for="rate1"><i class="fa fa-star text-warning"></i></label>
+                                <input type="radio" name="rate" id="rate1" value="1"/>
+                                <label for="rate2"><i class="fa fa-star text-warning"></i></label>
+                                <input type="radio" name="rate" id="rate2" value="2"/>
+                                <label for="rate3"><i class="fa fa-star text-warning"></i></label>
+                                <input type="radio" name="rate" id="rate3" value="3"/>
+                                <label for="rate4"><i class="fa fa-star text-warning"></i></label>
+                                <input type="radio" name="rate" id="rate4" value="4"/>
+                                <label for="rate5"><i class="fa fa-star text-warning"></i></label>
+                                <input type="radio" name="rate" id="rate5" value="5"/>
                                  <!-- <div class="rating-wrapper">
                                     <i class="text-warning cursor-pointer rating-star fas fa-star"></i>
                                     <i class="text-warning rating-star fas fa-star"></i>
@@ -196,7 +196,7 @@
 {% block postloadjs %}
 {{block.super }}
     
-<script type="text/javascript">
+<script>
     // increment and decrement product buttons
 
     $('#add-btn').click(function () {

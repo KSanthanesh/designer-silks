@@ -63,8 +63,7 @@
                   <div class="input-group">
                     <button type="button" id="minus-btn" class="minus-btn buttons btn-outlook-black w-25">-</button>
                     <input class="form-control text-center" type="text" value="{{ item.quantity }}" maxlength="2"
-                      minlength="1" name="quantity" data_item_id="{{ item.item_id }}" id="id_qty_{{ item.item_id }}"
-                      required />
+                      minlength="1" name="quantity" required />
                     <button type="button" id="add-btn" class="add-btn buttons btn-outlook-black w-25">+</button>
                   </div>
                 </div>
@@ -131,7 +130,7 @@
 {% block postloadjs %}
 {{block.super }}
 
-<script type="text/javascript">
+<script>
   // for plus button onclick
   $('#add-btn').click(function () {
     $(this).prev().val(+$(this).prev().val() + 1);
@@ -141,7 +140,7 @@
     if ($(this).next().val() > 0) $(this).next().val(+$(this).next().val() - 1);
   });
 </script>
-<script type="text/javascript">
+<script>
   // for Edit button on click
   $('.update-link').click(function (e) {
     var form = $(this).prev('.update-form');
