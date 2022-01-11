@@ -19,7 +19,7 @@
         {% csrf_token %}
 
         <div class="form-group">
-            <label for="fname">Name</label>
+            <label for="name">Name</label>
             <input id="name" name="name" type="text" class="form-control" placeholder="Your Name" style="width: 60%"
                 required />
 
@@ -28,13 +28,16 @@
                 style="width: 60%" required />
 
             <label for="subject">Subject</label>
-            <textarea id="subject" type="text" name="subject" class="form-control" placeholder="subject"
+            <textarea id="subject" name="subject" class="form-control" placeholder="subject"
                 style="height: 200px; width: 60%" required></textarea>
-            <label for="n_letter"><b>Do you Want to Subscribe a Newsletter?</b></label>
-            <input id="n_letter" name="newsletter" type="radio" value="Yes" required /> Yes
-            <input id="n_letter" name="newsletter" type="radio" value="No" required /> No
+            <div><b>Do you Want to Subscribe a Newsletter?</b>
+                <input name="newsletter" type="radio" value="Yes" required /> Yes
+
+                <input name="newsletter" type="radio" value="No" required /> No
+            </div>
             <br>
             <input type="submit" class="btn btn-lg btn-success mt-1" value="Send">
+
         </div>
 
     </form>
