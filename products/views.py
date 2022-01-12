@@ -211,7 +211,7 @@ def wishlist1(request, product_id):
         messages.warning(request, 'Already in Your Wishlist')
     return redirect('product_detail', product_id)
 
-
+@login_required
 def wishlist_history(request):
     """Display Order History for specific order """
     profileuser = get_object_or_404(UserProfile, user=request.user)
@@ -226,7 +226,7 @@ def wishlist_history(request):
     }
     return render(request, 'products/wishlist.html', context)
 
-
+@login_required
 def wishlist_delete(request, product_id):
     """ User can delete the wishlist from my wishlist page"""
     # wishlists = get_object_or_404(Wishlist, product=product_id)
