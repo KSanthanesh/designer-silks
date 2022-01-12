@@ -90,9 +90,13 @@
 
                                     <input type="hidden" name="product" value="{{ product.id}}" />
                                     <input type="hidden" name="user" value="{{ user.id }}" />
-                                    <button class="btn btn-md m-0" type="submit"><i
-                                            class="fas fa-heart wishlist"></i></button>
+                                    <button class="btn btn-md m-0" type="submit"><i class="fas fa-heart wishlist"></i></button>
                                 </form>
+                                {% else %}
+                                <div>
+                                    <a data-toggle="tooltip" title="Please Login"><i class="fas fa-heart wishlist"></i></a>
+                                </div>
+                                
                                 {% endif %}
                             </div>
 
