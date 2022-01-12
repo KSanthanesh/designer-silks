@@ -17,14 +17,47 @@
 <div class="container mb-5 product-margin">
   <div class="row">
     <div class="col">
-      {% if cart_items %}
+      
       <h3 class="logo-font mb-4 mt-5 text-primary">Shopping Cart</h3>
     </div>
   </div>
   <div class="row">
     <div class="col">
-
-      <div class="table-responsive rounded">
+      {% if cart_items %}
+      <div class="d-block d-md-none">
+        
+        {% for item in cart_items %}
+        <div class="row">
+          <div class="col-12 col-sm-6 mb-2">
+            {% include 'cart/product-image.html' %}
+          </div>
+          <div class="col-12 col-sm-6 mb-2">
+            {% include 'cart/product-info.html' %}
+          </div>
+          <div class="col-12 col-sm-6 order-sm-last">
+            <p class="my-0">Total: €{{ item.product.price }}</p>
+            <p>SubTotal: <b>€{{ item.product.price | calc_subtotal:item.quantity }}</b></p>
+          </div>
+          <div class="col-12 col-sm-6 my-0">
+            {% include 'cart/quantity-form.html' %}
+            
+          </div>
+        </div>
+        <div class="row"><div class="col"><hr></div></div>
+        {% endfor %}
+        <div class="row">
+          <div class="col">
+            {% include 'cart/cart-total.html' %}
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            {% include 'cart/checkout-buttons.html' %}
+            <p class="text-muted mb-5">A summary of your cart contents are below:</p>
+          </div>
+        </div>
+      </div>
+      <div class="table-responsive rounded d-none d-md-block">
         <table class="table table-sm table-bordered">
           <thead class="text-black">
             <tr class="text-center">
@@ -39,38 +72,17 @@
 
           <tr>
             <td class="p-3">
-              <!-- {% if item.product.image %} -->
-              <a href="{{ item.product.image.url }}">
-
-                <img class="my-auto rounded" src="{{ item.product.image.url}}" alt="{{ item.product.name }}" width="100"
-                  height="100"></a>
-              <!-- {% else %}
-                        <img class="rounded" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.product.name }}" width="100" height="100">
-                        {% endif %} -->
+              {% include "cart/product-image.html" %}
             </td>
 
             <td class="py-3 w-25">
-              <p class="my-0"><b>{{ item.product.name}}</b></p>
-              <p class="my-0 small text-muted">SKU: {{ item.product.sku|upper}}</p>
+              {% include "cart/product-info.html" %}
             </td>
             <td class="py-3">
               <p class="my-0">€{{ item.product.price }}</p>
             </td>
             <td class="py-3">
-              <form class="form update-form" method="POST" action="{% url 'adjust_cart' item.item_id %}">
-                {% csrf_token %}
-                <div class="form-group w-50 mx-auto">
-                  <div class="input-group">
-                    <button type="button" id="minus-btn" class="minus-btn buttons btn-outlook-black w-25">-</button>
-                    <input class="form-control text-center cart-input" type="text" value="{{ item.quantity }}" maxlength="2"
-                      minlength="1" name="quantity" required />
-                    <button type="button" id="add-btn" class="add-btn buttons btn-outlook-black w-25">+</button>
-                  </div>
-                </div>
-              </form>
-              <a class="update-link text-info ml-5 mb-2 update"><small>Update</small></a>
-              <a class="remove-link text-danger float-right mr-5 mb-2 remove"
-                id="remove_{{ item.item_id}}"><small>Remove</small></a>
+              {% include "cart/quantity-form.html" %}
             </td>
             <td class="py-3 w-25 text-center">
               <p class="my-0">€{{ item.product.price | calc_subtotal:item.quantity }}</p>
@@ -80,31 +92,13 @@
           {% endfor %}
           <tr>
             <td colspan="5" class="pt-5 text-right cart-total">
-              <h6><b>Cart Total: €{{ cart_total|floatformat:2 }}</b></h6>
-              <h6>Shipping Charge: €{{ shipping|floatformat:2 }}</h6>
-              <p><small>vat included in this Price</small></p>
-              <h4 class="mt-4"><b>Grand Total: €{{ grand_total|floatformat:2 }}</b></h4>
-              {% if free_shipping_delta > 0 %}
-              <p class="mb-1 text-danger">
-                You could get free Shipping by spending just <b>€{{ free_shipping_delta}}</b> more!</p>
-              {% endif %}
+              {% include "cart/cart-total.html" %}
 
             </td>
           </tr>
           <tr>
             <td colspan="5" class="text-right">
-              <a href="{% url 'products' %}" class="btn btn-outlook-black rounded-0 btn-lg">
-                <span class="fa-icon">
-                  <i class="fas fa-chevron-left"></i>
-                </span>
-                <span>Keep Shopping</span>
-              </a>
-              <a href="{% url 'checkout' %}" class="btn btn-outlook-black rounded-0 btn-lg">
-                <span>Secure Checkout</span>
-                <span class="fa-icon">
-                  <i class="fas fa-lock"></i>
-                </span>
-              </a>
+              {% include "cart/checkout-buttons.html" %}
             </td>
           </tr>
         </table>

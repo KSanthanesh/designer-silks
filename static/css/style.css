@@ -302,20 +302,20 @@ html {
         font-size: 20px;
     }
     .product-margin {
-        margin-top: 70px;
+        margin-top: 50px;
     }
 
     .display-4 .logo-font .text-black {
         font-size: 2rem;
     }
-   .remove {
+   /* .remove {
        margin-left: 110px;
        margin-top: -25px;
    }
    .update {
        margin-left: -20px;
        
-   }
+   } */
 }
 
 /*----------------------------Media query max 772px */
@@ -365,7 +365,7 @@ html {
     
     
     .product-margin {
-        margin-top: 160px;
+        margin-top: 150px;
     }
 
 }

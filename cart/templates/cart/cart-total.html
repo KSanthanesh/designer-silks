@@ -1,0 +1,8 @@
+<h6><b>Cart Total: €{{ cart_total|floatformat:2 }}</b></h6>
+<h6>Shipping Charge: €{{ shipping|floatformat:2 }}</h6>
+<p><small>vat included in this Price</small></p>
+<h5 class="mt-4"><b>Grand Total: €{{ grand_total|floatformat:2 }}</b></h5>
+{% if free_shipping_delta > 0 %}
+<p class="mb-1 text-danger">
+You could get free Shipping by spending just <b>€{{ free_shipping_delta}}</b> more!</p>
+{% endif %}
