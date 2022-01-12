@@ -12,8 +12,8 @@
 {% endblock %}
 
 {% block content %}
-<div class="container">
-    <h2 class="text-center text-primary mt-5">Contact Us</h2>
+<div class="container product-margin">
+    <h2 class="text-primary mt-5 ml-5">Contact Us</h2>
 
     <form class="form ml-5 was-validated" method="post" action="{% url 'contacts' %}">
         {% csrf_token %}

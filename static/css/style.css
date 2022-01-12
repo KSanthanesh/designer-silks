@@ -283,7 +283,7 @@ html {
     
 }
 
-/*----------------------------fixed navbar only on medium and up */
+/*----------------------------Media query max 992px */
 @media (max-width: 992px) {
     .fixed-top-desktop-only {
         position: fixed;
@@ -301,37 +301,56 @@ html {
     .new-arrivals h3 {
         font-size: 20px;
     }
-
     .product-margin {
-        margin-top: 100px;
+        margin-top: 70px;
+    }
+
+    .display-4 .logo-font .text-black {
+        font-size: 2rem;
     }
 }
 
-/*----------------------------fixed navbar only on medium and up */
-@media (max-width: 700px) {
-
-    .header-container {
-        padding-top: 80px;
+/*----------------------------Media query max 669px */
+@media (max-width: 669px) {
+    .footer-header {
+        display: block;
     }
-
+    .product-margin {
+        margin-top: 120px;
+    }
 }
 
-/*----------------------------fixed navbar only on medium and up */
+/*----------------------------Media query max-500px */
 @media (max-width: 500px) {
+    .mobile-heading {
+        font-size: 20px;
+    }
+    .nav-link {
+        padding: 8px;
+    }
+    .product-margin {
+        margin-top: 160px;
+    }
     .new-arrivals {
         margin-top: 22em;
     }
-
-    /* .mobile-heading {
-        font-size: 20px;
-    } */
-}
-
-/* pad the top a bit when the navbar is Collapsed------------*/
-/* @media (max-width:991px) {
-    
-    body {
-        height: calc(100vh - 120px)
+    .contact{
+        font-size: 18px;
     }
+    .newsletter {
+        font-size: 13px;
+        margin-left: -50px;
+    }
+    
+    
 }
-} */
+
+/*----------------------------Media query max-350px */
+@media (max-width: 350px) {
+    
+    
+    .product-margin {
+        margin-top: 160px;
+    }
+
+}
