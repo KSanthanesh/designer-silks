@@ -62,14 +62,14 @@
                 <div class="form-group w-50 mx-auto">
                   <div class="input-group">
                     <button type="button" id="minus-btn" class="minus-btn buttons btn-outlook-black w-25">-</button>
-                    <input class="form-control text-center" type="text" value="{{ item.quantity }}" maxlength="2"
+                    <input class="form-control text-center cart-input" type="text" value="{{ item.quantity }}" maxlength="2"
                       minlength="1" name="quantity" required />
                     <button type="button" id="add-btn" class="add-btn buttons btn-outlook-black w-25">+</button>
                   </div>
                 </div>
               </form>
-              <a class="update-link text-info ml-5 mb-2"><small>Update</small></a>
-              <a class="remove-link text-danger float-right mr-5 mb-2"
+              <a class="update-link text-info ml-5 mb-2 update"><small>Update</small></a>
+              <a class="remove-link text-danger float-right mr-5 mb-2 remove"
                 id="remove_{{ item.item_id}}"><small>Remove</small></a>
             </td>
             <td class="py-3 w-25 text-center">
@@ -79,7 +79,7 @@
           </tr>
           {% endfor %}
           <tr>
-            <td colspan="5" class="pt-5 text-right">
+            <td colspan="5" class="pt-5 text-right cart-total">
               <h6><b>Cart Total: €{{ cart_total|floatformat:2 }}</b></h6>
               <h6>Shipping Charge: €{{ shipping|floatformat:2 }}</h6>
               <p><small>vat included in this Price</small></p>
