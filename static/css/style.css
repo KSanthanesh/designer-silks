@@ -63,8 +63,8 @@ html {
 }
 
 .new-arrivals {
-    margin-top: 14em;
-    margin-left: 50px;
+    margin-top: 10em;
+    margin-left: 30px;
     font-family: 'Lato', sans-serif;
     
 }
@@ -286,9 +286,9 @@ html {
     .header-container {
         padding-top: 20px;
     }
-    .new-arrivals {
+    /* .new-arrivals {
         margin-top: 350px;
-    }
+    } */
     .new-arrivals h3 {
         font-size: 20px;
     }
@@ -320,8 +320,11 @@ html {
     .product-margin {
         margin-top: 160px;
     }
+    .new-arrivals h3 {
+        font-size: 17px;
+    }
     .new-arrivals {
-        margin-top: 22em;
+        margin-left: 80px;
     }
     /* .contact{
         font-size: 18px;
