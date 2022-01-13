@@ -168,43 +168,9 @@
     {% block content %}
     {% endblock %}
 
-    <footer class="bg-dark text-white footer">
-      <div class="row footer-header">
-        <div class="col-6 pl-5">
-          <h3 class="text-warning contact">Contact Details</h3>
-          <p class="phone">Phone: +353 123 456 789</p>
-          <p>Email: designer@silks.com</p>
-        </div>
-    <div class="col-6 pl-5">
-          <h4 class="text-warning pl-5"><a href="{% url 'contacts' %}" class="text-decoration-none text-reset newsletter">Click here for Newsletter Subscription</a></h4>
-    </div>
+    {% include 'includes/footer.html' %}
 
-        <!-- <div class="col-6 pl-5">
-          <h4 class="text-warning pl-5">Newsletter Subscription</h4>
-          <form class="ml-5 was-validated" method="post" action="{% url 'contacts' %}">
-            {% csrf_token %}
-
-            <div class="form-group">
-
-              <input id="name" name="name" type="hidden" class="form-control" value="guest" />
-
-              <input id="email" name="email" type="email" class="form-control" placeholder="Your email address" style="width: 60%" />
-
-              <input id="subject" type="hidden" name="subject" class="form-control" value="guest" />
-
-              <input id="n_letter" name="newsletter" type="hidden" value="Yes" />
-
-              <input type="submit" class="btn btn-sm btn-success mt-1" value="Subscribe">
-            </div>
-
-          </form>
-
-        </div> -->
-      </div>
-      <div class="text-center">
-        <p class="text-center">Copyright&copy;designersarees</p>
-      </div>
-    </footer>
+   
 
     {% block postloadjs %}
     <script>
