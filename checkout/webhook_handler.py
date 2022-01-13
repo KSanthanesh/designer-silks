@@ -78,6 +78,7 @@ class StripeWH_Handler:
                 profile.save()
 
         order_exists = False
+        time.sleep(2) 
         attempt = 1
         while attempt <= 5:
             try:
