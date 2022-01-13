@@ -43,13 +43,13 @@
       {% for item in cart_items %}
       <div class="row">
         <div class="col-2 mb-2 ml-4">
-          {% if item.product.image %}
+          <!-- {% if item.product.image %} -->
           <a href="{% url 'product_detail' item.product.id %}">
 
             <img class="w-100 border border-black" src="{{ item.product.image.url }}" alt="{{ product.name}}">
-            {% else %}
+            <!-- {% else %}
             <img class="w-100" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name}}">
-            {% endif %}
+            {% endif %} -->
           </a>
         </div>
         <div class="col-7">
@@ -156,11 +156,11 @@
 </div>
 
 <div id="loading-screen">
-  <h1 class="loading-spinner mt-5 logo-font text-light"> Loading
-    <span class="fa-icon">
+  <div class="loading-spinner mt-5 logo-font text-light">
+    <span class="fa-icon large">
       <i class="fas fa-3x fa-sync-alt fa-spin"></i>
     </span>
-  </h1>
+  </div>>
 </div>
 {% endblock %}
 
