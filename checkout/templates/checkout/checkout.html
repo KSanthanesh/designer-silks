@@ -84,14 +84,12 @@
         {% csrf_token %}
         <fieldset class="rounded px-3 mb-4 border-black">
           <legend class="fieldset-form small w-auto px-2 text-primary">Personal Details</legend>
-          {{ order_form.first_name | as_crispy_field }}
-          {{ order_form.last_name | as_crispy_field }}
+          {{ order_form.full_name | as_crispy_field }}
           {{ order_form.email | as_crispy_field }}
         </fieldset>
         <fieldset class="rounded px-3 mb-5 border-black">
           <legend class="fieldset-form small w-auto px-2 text-primary">Shipping Address</legend>
           {{ order_form.phone_number | as_crispy_field }}
-          {{ order_form.house_number | as_crispy_field }}
           {{ order_form.address_line1 | as_crispy_field }}
           {{ order_form.address_line2 | as_crispy_field }}
           {{ order_form.county_or_city | as_crispy_field }}

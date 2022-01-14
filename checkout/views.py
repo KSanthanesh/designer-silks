@@ -43,11 +43,9 @@ def checkout(request):
     if request.method == 'POST':
         cart = request.session.get('cart', {})
         form_data = {
-            'first_name': request.POST['first_name'],
-            'last_name': request.POST['last_name'],
+            'full_name': request.POST['full_name'],
             'email': request.POST['email'],
             'phone_number': request.POST['phone_number'],
-            'house_number': request.POST['house_number'],
             'address_line1': request.POST['address_line1'],
             'address_line2': request.POST['address_line2'],
             'county_or_city': request.POST['county_or_city'],
@@ -106,11 +104,9 @@ def checkout(request):
             try:
                 profile = UserProfile.objects.get(user=request.user)
                 order_form = OrderForm(initial={
-                    # 'first_name': profile.user.get_name(),
-                    # 'last_name': profile.user.get_last_name(),
+                    'full_name': profile.user.get_full_name(),
                     'email': profile.user.email,
                     'phone_number': profile.default_phone_number,
-                    'house_number': profile.default_house_number,
                     'address_line1': profile.default_address_line1,
                     'address_line2': profile.default_address_line2,
                     'county_or_city': profile.default_county_or_city,
@@ -152,7 +148,6 @@ def checkout_success(request, order_number):
         if save_info:
             profile_data = {
                 'default_phone_number': order.phone_number,
-                'default_house_number': order.house_number,
                 'default_address_line1': order.address_line1,
                 'default_address_line2': order.address_line2,
                 'default_county_or_city': order.county_or_city,

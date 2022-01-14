@@ -9,9 +9,8 @@ class OrderForm(forms.ModelForm):
     class Meta:
         """ for personal detail and address"""
         model = Order
-        fields = ('first_name', 'last_name', 'email', 'phone_number',
-                  'house_number', 'address_line1', 'address_line2',
-                  'county_or_city', 'postcode', 'country',)
+        fields = ('full_name', 'email', 'phone_number', 'address_line1',
+                  'address_line2', 'county_or_city', 'postcode', 'country',)
 
     def __init__(self, *args, **kwargs):
         """ Add placeholders and classes, remove re-generated lables and
@@ -19,18 +18,16 @@ class OrderForm(forms.ModelForm):
         """
         super().__init__(*args, **kwargs)
         placeholders = {
-            'first_name': 'First Name',
-            'last_name': 'Last Name',
+            'full_name': 'Full Name',
             'email': 'Email',
             'phone_number': 'Phone Number',
-            'house_number': 'House Number',
             'address_line1': 'Street Name',
             'address_line2': 'Street Name(Optional)',
             'county_or_city': 'County or City',
             'postcode': 'Postcode(Optional)',
         }
 
-        self.fields['first_name'].widget.attrs['autofocus'] = True
+        self.fields['full_name'].widget.attrs['autofocus'] = True
         for field in self.fields:
             if field != 'country':
                 if self.fields[field].required:

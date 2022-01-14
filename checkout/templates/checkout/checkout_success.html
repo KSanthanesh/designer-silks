@@ -81,7 +81,7 @@
             <p class="mb-0 text-black">Name:</p>
           </div>
           <div class="col-12 col-md-8 text-md-right">
-            <p class="mb-0 text-black">{{ order.first_name}} {{order.last_name}}</p>
+            <p class="mb-0 text-black">{{ order.full_name}}</p>
           </div>
         </div>
         <div class="row">
@@ -89,7 +89,6 @@
             <p class="mb-0 text-black">Address:</p>
           </div>
           <div class="col-12 col-md-8 text-md-right">
-            <p class="mb-0 text-black">{{ order.house_number}}</p>
             <p class="mb-0 text-black">{{ order.address_line1}}</p>
             {% if order.address_line2 %}
             <p class="mb-0 text-black">{{ order.address_line2}}</p>

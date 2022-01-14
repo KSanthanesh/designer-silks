@@ -1,4 +1,4 @@
-Hello {{ order.first_name}} {{ order.last_name}}!
+Hello {{ order.full_name}}!
 Thanks for making your with Designer Silks. Your Order is confirmed. 
 Your order information is below:
 
@@ -10,7 +10,7 @@ Shipping Cost: €{{ order.shipping_cost|floatformat:2}}
 Grand Total:   €{{ order.order_total|floatformat:2}}
 
 Your Order will be dispatched To:
-{{ order.first_name}} {{ order.last_name}},
+{{ order.full_name}},
 {{ order.address_line1}},
 {{ order.county_or_city}}
 {{ order.country}}.
