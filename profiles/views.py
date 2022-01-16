@@ -46,6 +46,7 @@ def order_history_view(request, order_number):
     }
     return render(request, 'checkout/checkout_success.html', context)
 
+
 def order_history(request):
     """Display Order History for specific order """
     profileuser = get_object_or_404(UserProfile, user=request.user)
@@ -57,6 +58,6 @@ def order_history(request):
         'order': order,
         'from_profile': True,
     }
-    
+
     return render(request, 'profiles/order_history.html', context)
 

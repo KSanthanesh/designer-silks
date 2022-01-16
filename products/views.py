@@ -54,12 +54,15 @@ def all_products(request):
             products_list = products_list.filter(queries)
 
     current_sorting = f'{sort}_{direction}'
+    user_id = request.user
+    wishlist = Wishlist.objects.filter(user=user_id)
 
     context = {
         'products_list': products_list,
         'search_term': query,
         'current_categories': categories_list,
         'current_sorting': current_sorting,
+        'wishlist': wishlist,
     }
     return render(request, 'products/products.html', context)
 
@@ -174,7 +177,7 @@ def wishlist(request, product_id):
             form = WishlistForm(request.POST)
             if form.is_valid():
                 form.save()
-                messages.success(request, 'Successfully added a wishlist')
+                messages.success(request, 'Added a wishlist')
                 return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
             else:
                 messages.error(request, "Failure to add")
@@ -182,44 +185,19 @@ def wishlist(request, product_id):
             form = WishlistForm()
             return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
     else:
-        messages.warning(request, 'Already in Your Wishlist')
+        wishlist_delete(request, product_id)
         return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
-
-
-def wishlist1(request, product_id):
-    """ Wishlist views"""
-    wishlist_p = "None"
-    product_name = Product.objects.get(pk=product_id)
-    user_id = request.POST['user']
-    wishlist_user = User.objects.get(pk=user_id)
-    wishlist_p = Wishlist.objects.filter(
-        product=product_name, user=wishlist_user).count()
-    if wishlist_p < 1:
-
-        if request.method == 'POST':
-            form = WishlistForm(request.POST)
-            if form.is_valid():
-                form.save()
-                messages.success(request, 'Successfully added a wishlist')
-                return redirect('product_detail', product_id)
-            else:
-                messages.error(request, "Failure to add")
-
-            form = WishlistForm()
-            return redirect('product_detail', product_id)
-    else:
-        messages.warning(request, 'Already in Your Wishlist')
-    return redirect('product_detail', product_id)
 
 @login_required
 def wishlist_history(request):
     """Display Order History for specific order """
     profileuser = get_object_or_404(UserProfile, user=request.user)
-    # order = get_object_or_404(Order, user_profile=request.user)
-    # wishlist = profileuser.wishlist.all()
-    wishlist = Wishlist.objects.all()
+    user_id=request.user
+    
+    # wishlist = Wishlist.objects.filter(user_id)
+    wishlist = Wishlist.objects.filter(user=user_id)
 
-    # messages.info(request, f'Your order Number is {order}.')
+   
     context = {
         'wishlist': wishlist,
         'from_profile': True,
@@ -229,9 +207,6 @@ def wishlist_history(request):
 @login_required
 def wishlist_delete(request, product_id):
     """ User can delete the wishlist from my wishlist page"""
-    # wishlists = get_object_or_404(Wishlist, product=product_id)
-    # product_name = Wishlist.objects.filter(pk=product_id)
-    # product_name = Product.objects.get(pk=product_id)
     wishlist_p = Wishlist.objects.filter(product=product_id)
 
     wishlist_p.delete()

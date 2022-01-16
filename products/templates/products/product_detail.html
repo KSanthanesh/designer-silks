@@ -30,7 +30,7 @@
                 <h4 class="mb-0">{{ product.name }}</h4>
                 <div>
                          {% if user.is_authenticated %}
-                            <form class="form" action="{% url 'wishlist1' product.id %}" method="Post">
+                            <form class="form" action="{% url 'wishlist' product.id %}" method="Post">
                                 {% csrf_token %}
                                 
                                 <input type="hidden" name="product" value="{{ product.id}}" />
