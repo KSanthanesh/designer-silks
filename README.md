@@ -33,6 +33,7 @@ Types of Content
     - [UX](#ux)
     - [Business-Vision](#business-vision)
     - [Purpose of Website](#purpose-of-website)
+- [Skeleton](#skeleton)
 - [Scope](#scope "Goto Scope")
    - [Features](#features)
    - [Future Features](#future-features)
@@ -122,11 +123,39 @@ The Home Page covers the foloowing sections:
 - Once the User Login in to  My Account option then the dropdown menu change to four different Categories, Such as My Profile, My Orders, My Wishlist and Logout.
 - If the User is admin then an additional option is available which is Product Management. The Product Management option will allow the following options such as add the product, edit the product and delete the product.
 #### Register
-- The User can use the Register option to fillup his information to register.
+- The User can use the Register option to fillup his information to register.<br>
+Registration page contains:
+    - Header and Footer
+    - Email
+    - Email confirmation
+    - Username (It is not case sensitive)
+    - Password (It is not case sensitive)
+    - Confirm password
+    - Back to Login button
+    - Signup button
+  After Registration mail send for confirmation message, and confirmation email send their email address to confirm for registration.
 #### Login
-- Only Registered User is able to use login option to login in to the website.
+- Only Registered User is able to use login option to login in to the website.<br>
+Login Page contains:
+    - Header and Footer
+    - Username
+    - Password
+    - Remember me with checkbox
+    - Home Button
+    - Sign in button
+    - Forget Password?
+
+After Login the success login message will appear on the rightside of the Page.
+
 #### Logout
-- The User should logout from the website after using the website. 
+- The User should logout from the website after using the website.<br>
+Logout Page Contains:
+    - Header and Footer
+    - Cancel button
+    - Sign out button
+After Logout the success logout message will appear on the rightside of the Page.
+    
+
 #### Product Management
 - The Product Management option will allow the following options such as add the product, edit the product and delete the product for the admin. 
 #### My Profile
@@ -142,6 +171,7 @@ The Home Page covers the foloowing sections:
 - The cart will be update the section.
 
 ### Cart
+- Shopping Cart page contains: 
 
 
 
@@ -194,18 +224,50 @@ The Home Page covers the foloowing sections:
 ### Business Vision
 ### Purpose of Website
 
-
+## Skeleton
+There are approximately 34 products and 3 categories in the designer silks website.
 ## Scope
 ### Features
+- A page with an overview of all the products which can be sort by name, rating, price and category
+- A contact form where customers can ask questions.
+- Newsletter subscription for Further details.
+- Social Media page for New updates.
+- A Registration Page
+- Login Page
+- A page for when the customer forgot their password
+- Logout page for after using the website
+- viewing the order history page
+- viewing the wishlist page
+- A profile page to adjust the user's details.
+- An order sytem, to order the products
+- Secure Stripe Payment
+- Review the about the products.
+- Shipping estimation days and Return policy
+- privacy policy
+
 ### Future Features
 
 ## Structure
+The site will be structured as clear as possible, with a logic workflow and it should be easy to navigate the site on all screen sizes.
 ### Wireframes
 Balsamiq Wireframes used for this website.
 ### Database Schema
 ### Colours
 I have used warm light and dark colours to create pleasant experience for those people to viewing this website. Bootstrap colour also used for this website.
 colours used:
+ - Bootstrap bg and text colours used throughout the project.
+ - #000
+ - #fff 
+ - #222 
+ - rgb(235, 29, 63)
+ - #aab7c4
+ - rgb(24, 136, 241)
+ - #dc3545
+ - rgb(208, 225, 247)
+ - rgb(161, 204, 248)
+ - rgb(170, 183, 196)
+ - rgb(173, 227, 245)
+
 
 
 
@@ -220,6 +282,8 @@ I have used Open Sans, cursive and 'Raleway', sans-serif to create this website.
 - Bootstrap - for responsive website
 - Font Awesome - icons used throughout the site. Responsive design - To generate the mockup image.
 - Google font -used for the website looks more beautiful,fast and great typography.
+- stripe -for payment
+- 
 
 #### Tools
 - Gitpod - is an open source platform for automated and ready-to-code.
@@ -233,6 +297,7 @@ I have used Open Sans, cursive and 'Raleway', sans-serif to create this website.
 - Am I responsive - to check  the responsive pages.
 - Balsamiq - to create wireframes.
 - dbdiagram.io - to create database schema
+- Random Secret Key Generator - https://miniwebtool.com/django-secret-key-generator/
 ## Testing
 ### Automation Testing
 ### Code Validation
@@ -245,6 +310,64 @@ First we need to go to github website to create a new repositary using code Inst
 
 ### gitpod
   Used Gitpod Workspace for coding. To preview the browser window need to type <b>python3 manage.py runserver</b> in the terminal window at the bottom.Afterthat, have to do git add for add files or remove files and do git commit for reasoning and do the git push for git hub repositary website.
+### Procedure for Deployment
+
+  1. Install the Django and gunicorn in the terminal => pip3 install django gunicorn (Gunicon is the server that we're going to use to run Django on Heroku.)<br>
+    next install supporting libraries:
+  2. Then Install ==> pip3 install dj_database_url psycopg2
+  3. Create Requirement.txt file in the terminal.<br>
+       ==> pip3 freeze --local > requirements.txt
+  4. Create a new project name:<br>
+    ==>django-admin startproject designer_silks .<br>
+  5. Create a new app name:<br>
+    ==> python3 manage.py startapp home
+    ==> python3 manage.py startapp product
+    ==> python3 manage.py startapp cart
+    ==>python3 manage.py startapp checkout
+    ==> python3 manage.py startapp profile
+    ==> python3 manage.py startapp contact
+
+    Then enter the app name("home","product", "cart", "checout", "profile", "contact") in to the INSTALLED_APPS in settings.py
+  Set up your database by running the following command in your terminal:<br>
+    ==> python3 manage.py makemigrations<br>
+    ==> python3 manage.py migrate<br>
+    Then run the server:<br>
+    python3 manage.py runserver (we can see the installation work successfully in the browser).<br>
+    6. Now create a superuser to get access to the Django admin, use the following command:<br>
+     ==>python3 manage.py createsuperuser.<br>
+  7. Allauth Setup<br>
+     Install ==> pip3 install django-allauth==0.41.0<br>
+    Add the allauth folder in to root templates.<br>
+  8. mkdir static folder (for css,js and image files)<br>
+       mkdir media folder (for products images)<br>
+  9. Now we need to add the required fixtures data into the database in the following order by using the following commands:<br>
+      ==> python3 manage.py loaddata categories<br>
+      ==> python3 manage.py loaddata products.<br>
+
+#### Heroku
+
+    1. Create new app name and select europe.
+    Then Click => Resources Tab => Addons enter=> Postgres, then select => Heroku postgres => Hobby dev.
+    Then select the settings tab, click Reveal Config Vars and then copy the Database Value.
+    2. And Add some more key values in the Heroku settings
+
+      - SECRET_KEY	          -your_SECRET_KEY
+      - STRIPE_PUBLIC_KEY	    -your_STRIPE_PUBLIC_KEY
+      - STRIPE_SECRET_KEY	    -your_STRIPE_SECRET_KEY
+      - AWS_ACCESS_KEY_ID     -from AWS
+      - AWS_SECRET_ACCESS_KEY -from AWS
+      - EMAIL_HOST_PASS       -from Gmail
+      - EMAIL_HOST_USER       -Gmail
+      - SECRET_KEY            -Random Key Generator
+      - USE_AWS
+#### In the Terminal
+
+
+
+
+
+
+
 
 ## Acknowledgement
 
