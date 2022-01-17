@@ -49,6 +49,7 @@ Types of Content
   - [Features Testing](#features-testing)
 - [Bugs](#bugs)
 - [Deployment](#deployment)
+  - [Amazon Web Services](#amazon-web-services)
 - [Acknowledgement](#acknowledgement)
 
 
@@ -359,6 +360,7 @@ I have used Open Sans, cursive and 'Raleway', sans-serif to create this website.
 - Balsamiq - to create wireframes.
 - dbdiagram.io - to create database schema
 - Random Secret Key Generator - https://miniwebtool.com/django-secret-key-generator/
+- Amazon Web Servvices -to save media and static folder https://aws.amazon.com/
 ## Testing
 ### Automation Testing
 ### Code Validation
@@ -379,14 +381,14 @@ First we need to go to github website to create a new repositary using code Inst
   3. Create Requirement.txt file in the terminal.<br>
        ==> pip3 freeze --local > requirements.txt
   4. Create a new project name:<br>
-    ==>django-admin startproject designer_silks .<br>
-  5. Create a new app name:<br>
-    ==> python3 manage.py startapp home
-    ==> python3 manage.py startapp product
-    ==> python3 manage.py startapp cart
-    ==>python3 manage.py startapp checkout
-    ==> python3 manage.py startapp profile
-    ==> python3 manage.py startapp contact
+    ==>django-admin startproject designer_silks .
+  5. Create a new apps  in the designer-silks project:<br>
+      - python3 manage.py startapp home
+      - python3 manage.py startapp product
+      -  python3 manage.py startapp cart
+      - python3 manage.py startapp checkout
+      -  python3 manage.py startapp profile
+      -  python3 manage.py startapp contact
 
     Then enter the app name("home","product", "cart", "checout", "profile", "contact") in to the INSTALLED_APPS in settings.py
   Set up your database by running the following command in your terminal:<br>
@@ -399,11 +401,62 @@ First we need to go to github website to create a new repositary using code Inst
   7. Allauth Setup<br>
      Install ==> pip3 install django-allauth==0.41.0<br>
     Add the allauth folder in to root templates.<br>
-  8. mkdir static folder (for css,js and image files)<br>
+  8. mkdir static folder (for css,js,images and wireframes folder)<br>
        mkdir media folder (for products images)<br>
   9. Now we need to add the required fixtures data into the database in the following order by using the following commands:<br>
       ==> python3 manage.py loaddata categories<br>
       ==> python3 manage.py loaddata products.<br>
+  10. Run in the terminal ==>mkdir/templates/includes<br>
+  - toast (for using successful, error, warning and info messages throughout the webpage)
+  - footer.html
+  - main-nav.html
+  - mobile-top-header.html
+  11. In cart app needs to create contexts.py file.<br>
+  IN SETTINGS.PY last line under MEDIA_ROOT
+  - FREE_SHIPPING_THRESHOLD = 80
+  - STANDARD_SHIPPING_PERCENTAGE = 12
+  12. for caluculating the price and howmany quantity
+      create new folder in the cart app <br>
+      - templatetags(inside the templatetags folder) create 2 files  
+        -  __init__.py
+        - bag_tools.py
+  13. For checkout app:<br>
+    - pip3 install django-crispy-forms
+    - settings.py => INSTALLED_APPS ==> #other apps
+                                      'crispy_forms'<br>
+    - under ROOT_URLCONF ==>   CRISPY_TEMPLATE_PACK = 'bootstrap4'
+    - OPTIONS  ==>   'builtins': [
+                'crispy_forms.templatetags.crispy_forms_tags',
+                'crispy_forms.templatetags.crispy_forms_field',
+    - In the terminal  ==> pip3 freeze > requirements.txt
+  14. For Media file working
+     - in settings.py ==> OPTIONS( below 'django.contrib.messages.context_processors.messages',) ==> 'django.template.context_processors.media',.
+
+#### Stripe payment
+1. in the base template add script tag for stripe<br>  <script src="https://js.stripe.com/v3/"></script>
+2. in the checkout.html <br>
+    {% block postloadjs %}<br>
+    {{ block.super }}<br>
+    {{ stripe_public_keyjson_script:"id_stripe_public_key" }}<br>
+    {{ client_secret|json_script:"id_client_secret" }}
+{% endblock %}
+
+  3. pip3 install stripe
+  4. in settings.py ==> # Stripe<br>
+    FREE_SHIPPING_THRESHOLD = 80<br>
+    STANDARD_SHIPPING_PERCENTAGE = 12<br>
+    STRIPE_CURRENCY = 'eur'<br>
+    STRIPE_PUBLIC_KEY = os.getenv('STRIPE_PUBLIC_KEY', '')<br>
+    STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY', '')
+
+  5. in the terminal ==> export STRIPE_PUBLIC_KEY and export STRIPE_SECRET_KEY
+
+  6. Create webhook.py
+  7. Create webhook_handler.py
+  8. In the stripe website ==> Goto Developer then go to webhooks and Add an endpoint for https://designer-silks.herokuapp.com/checkout/wh/
+
+
+ 
 
 #### Heroku
 
@@ -422,11 +475,124 @@ First we need to go to github website to create a new repositary using code Inst
       - SECRET_KEY            -Random Key Generator
       - USE_AWS
 #### In the Terminal
+- Add Procfile and run requirements comment
+- Then connect the heroku login in the terminal <br>
+heroku login -i(enter username and password) <br>
+- python3 manage.py createsuperuser(enter same username, email and password for admin page)
+- git add, git commit and git push for heroku main.
+- then again go to Heroku Deploy tab connect the github and click deploy for automatic Deployment or manual Deployment.
 
+## Amazon Web Services 
+https://aws.amazon.com/ 
+- Register in AWS website
+1. AWS Management Console, in the search menu ==> type s3 and select Scalable storage in the cloud
+  - click ==> create Bucket
+  -  bucket name ==> designer-silks
+  -  region  ==> AWS Ireland
+  -  remove blue tick from ==> Block all public access
+  -  tick ==> i acknowledge
+  -  then click ==> create bucket
+  - then click the bucket name ==> designer-silks
+2. Then click ==> properties tab 
+    - click edit button in ==> static website hosting ==> click Enable button
+    - then index document ==> index.html, error document ==> error.html then click ==> save
 
+3.  Then go to Permission tab (3 changes)
 
+    - cors configuration
+			  
+			  edit the button for cors configuration and paste the following  ==> 
+            [
+			{
+				"AllowedHeaders": [
+				"Authorization"
+				  ],
+				  "AllowedMethods": [
+					  "GET"
+				  ],
+				  "AllowedOrigins": [
+					  "*"
+				  ],
+				  "ExposeHeaders": []
+			  }
+			]
+			
+		- Bucket Policy
+			
+			- click edit button ==> click policy generator ==> new window will open ==> policy type click: s3 bucket policy ==> principle : * ==> Action: GetObject
+			==> copy the ARN number from Bucket Policy and paste ARN : arn:aws:s3:::designer-silks   ==> click: Add Statement  ==> click: Generate Policy
+			
+			==>then copy the code and paste in Bucket policy box (then add  /* next to designer-silks/* because need to allow access to all resources in this bucket.)
+			==> then save
+			
+			- Access control list (ACL)
+			==>click: edit button ==> click Everyone (public access) ==> list (only)
+			
+4. then click ==> IAM (in the search box)
+   - click ==> User groups (left hand side)  ==> create new group ==> name: manage-designer-silks ==> click create group
+   - click ==> policies(left hand side) ==> create new policy ==> click JSON ==> click: Import managed policy (right hand side) ==> search box enter: s3 ==> click Amazon s3 Full access
+      ==> then click; Import.
+	  ==> copy the ARN number from  s3 Bucket policy and paste in JSON code Resources like this 
+	  ==> "Resource": [
+                "arn:aws:s3:::designer-silks",
+                "arn:aws:s3:::designer-silks/*"
+            ]  ==> then click: Review Policy ==> name: designer-silks-policy  ==> Description: Access to S3 bucket for Designer Silks static files
+			==> then click: create policy
+	5.  then again goto User groups ==> click: manage-designer-silks ==> goto: permission ==> click: Add permissions ==> then click: Attach policies
+	   ==> then search designer-silks-policy ==> click: Attach policy
+	   
+	6.  then click ==> Users (left hand side) ==> Add Users ==>name: designer-silks-staticfiles-user ==> click: programmatic access ==>next permission
+	   ==>click: manage-boutique-ado ==> just click: next tag ==>just click: next review ==>just click: create user ==> Download Csv (Save it properly cannot take it again).
 
+  7. Then again in the workspace terminal:
+    - pip3 install boto3
+    - pip3 install django-storages
+    - pip3 freeze > requirements.txt
+    - then in settings.py enter ==> settings.py INSTALLED APPS ==> OTHER APPS(below crispy form) ==>'storages',
+    - under the MEDIA URL
+       - if 'USE_AWS' in os.environ:
+       - then add:<br>
+      Cache control, Bucket Config, Static and media files, Override static and media URLs in production.
+      - check the heroku settings <br>
+        - AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY, USE_AWS.
+  - then create new file in the root ==> custom_storages.py<br>
+    from django.conf import settings<br>
+    from storages.backends.s3boto3 import S3Boto3Storage<br>
 
+class StaticStorage(S3Boto3Storage):<br>
+    location = settings.STATICFILES_LOCATION<br>
+
+class MediaStorage(S3Boto3Storage):<br>
+    location = settings.MEDIAFILES_LOCATION<br>
+    Then do git push.
+8. Media files in S3
+  - Then again goto amazon s3 ==> designer-silks ==> create folder ==> name: media ==> save it 
+  - then upload file all the images (control+shift) ==> permission Grant public-read access ==> then confirm ==> then upload.
+
+### Sending Real Mails
+
+- connect the gmail for sending mails.
+- go to gmail account ==> settings ==> see all settings ==> accounts and Import ==> other Google account settings ==> security tab ==> 2 step verification
+   ==> Get started ==> password then enter ==> click show more options ==> text message ==> enter 6 digit no from phone ==> turn on 
+- then again goto ==> Security ==> App password ==> select app: mail ==> select device: other ==> then write: Django ==> click: generate ==> copy the app password
+- Then go to Heroku SETTINGS enter  ==>    EMAIL_HOST_PASS, EMAIL_HOST_USER 
+4. in settings.py
+at the end ==>
+if 'DEVELOPMENT' in os.environ:
+    EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+    DEFAULT_FROM_EMAIL = 'kavithasanthanesh@gmail.com'
+else:
+    EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+    EMAIL_USE_TLS = True
+    EMAIL_PORT = 587
+    EMAIL_HOST = 'smtp.gmail.com'
+    EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
+    EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASS')
+    DEFAULT_FROM_EMAIL = os.environ.get('EMAIL_HOST_USER')
+  - git add . ==> git commit -m "sending real emails"
+
+  - to check the email ==> temp email.com ==> copy the email address ==> register in the app using temp email.==> we can receive emails to temp email page. if we click that
+    there is a url for confirm the verification ==> copy the url and paste in the browser and confirm it. then again sign in for the app.
 
 
 
