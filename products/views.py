@@ -7,7 +7,7 @@ from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.db.models.functions import Lower
 from django.contrib.auth.models import User
-from profiles.models import UserProfile
+# from profiles.models import UserProfile
 
 from products.models import Product, Category, Review, Wishlist
 from products.forms import ProductForm, ReviewForm, WishlistForm
@@ -54,15 +54,15 @@ def all_products(request):
             products_list = products_list.filter(queries)
 
     current_sorting = f'{sort}_{direction}'
-    user_id = request.user
-    wishlist = Wishlist.objects.filter(user=user_id)
+    # user_id = request.user
+    # wishlist = Wishlist.objects.filter(user=user_id)
 
     context = {
         'products_list': products_list,
         'search_term': query,
         'current_categories': categories_list,
         'current_sorting': current_sorting,
-        'wishlist': wishlist,
+        # 'wishlist': wishlist,
     }
     return render(request, 'products/products.html', context)
 
@@ -71,11 +71,12 @@ def product_detail(request, product_id):
     """User can view individual product details"""
     product = get_object_or_404(Product, pk=product_id)
     product_name = Product.objects.get(pk=product_id)
-    # review = get_object_or_404(Review, product=product_name)
+
     review = Review.objects.filter(product=product_name)
     context = {
         'product': product,
         'review': review,
+        'flg': 'wr'
     }
     return render(request, 'products/product_detail.html', context)
 
@@ -163,9 +164,49 @@ def review_rate(request, product_id):
     return redirect('product_detail', product_id)
 
 
+def edit_r(request, p_id, r_id):
+    """For Edit coloumn"""
+    product = get_object_or_404(Product, pk=p_id)
+    product_name = Product.objects.get(pk=p_id)
+
+    review = Review.objects.filter(id=r_id)
+    context = {
+        'product': product,
+        'review': review,
+        'flg': 'er',
+        'product_name': product_name,
+    }
+    return render(request, 'products/product_detail.html', context)
+
+
+def edit_review(request, p_id, r_id):
+    """ User can Edit their Reviews"""
+    review = get_object_or_404(Review, id=r_id)
+    if request.method == 'POST':
+        form = ReviewForm(request.POST, instance=review)
+
+        if form.is_valid():
+            form.save()
+            messages.success(request, "Successfully updated a Review")
+            return redirect('product_detail', p_id)
+    form = ReviewForm(instance=review)
+    # context = {
+    #         'form': form,
+    #     }
+    return redirect('product_detail', p_id)
+
+
+def delete_review(request, p_id, r_id):
+    """ User can delete the their Reviews"""
+    review = get_object_or_404(Review, id=r_id)
+    review.delete()
+    return redirect('product_detail', p_id)
+
+
 def wishlist(request, product_id):
     """ Wishlist views"""
-    wishlist_p = "None"
+    # wishlist_p = "None"
+    wishlist_p = False
     product_name = Product.objects.get(pk=product_id)
     user_id = request.POST['user']
     wishlist_user = User.objects.get(pk=user_id)
@@ -188,21 +229,19 @@ def wishlist(request, product_id):
         wishlist_delete(request, product_id)
         return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
 
+
 @login_required
 def wishlist_history(request):
     """Display Order History for specific order """
-    profileuser = get_object_or_404(UserProfile, user=request.user)
-    user_id=request.user
-    
-    # wishlist = Wishlist.objects.filter(user_id)
+    # profileuser = get_object_or_404(UserProfile, user=request.user)
+    user_id = request.user
     wishlist = Wishlist.objects.filter(user=user_id)
-
-   
     context = {
         'wishlist': wishlist,
         'from_profile': True,
     }
     return render(request, 'products/wishlist.html', context)
+
 
 @login_required
 def wishlist_delete(request, product_id):
@@ -210,5 +249,5 @@ def wishlist_delete(request, product_id):
     wishlist_p = Wishlist.objects.filter(product=product_id)
 
     wishlist_p.delete()
-    messages.success(request, 'Deleted Successfully')
+    messages.info(request, 'Removed from Wishlist')
     return redirect('wishlist_history')
