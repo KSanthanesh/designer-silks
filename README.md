@@ -1,6 +1,6 @@
 # DESIGNER SILKS
-<img src="" align="left" width="300" height="200">
-<img src="" align="center" width="300" height="200">
+<img src="static/images/desktop-1.PNG" align="left" width="300" height="200">
+<img src="static/images/desktop-2.PNG" align="center" width="300" height="200">
 
 Types of Content
 - [Introduction](#introduction)
@@ -251,6 +251,67 @@ There are approximately 34 products and 3 categories in the designer silks websi
 The site will be structured as clear as possible, with a logic workflow and it should be easy to navigate the site on all screen sizes.
 ### Wireframes
 Balsamiq Wireframes used for this website.
+<details>
+<summary>Home</summary>
+<img src="static/wireframes/home-page.png" width="500">
+</details>
+<details>
+<summary>Cotton Sarees</summary>
+<img src="static/wireframes/cotton_sarees.png" width="500">
+</details>
+<details>
+<summary>Silk Sarees</summary>
+<img src="static/wireframes/silk_sarees.png" width="500">
+</details>
+<details>
+<summary>Saree Details</summary>
+<img src="static/wireframes/product_detail.png" width="500">
+</details>
+<details>
+<summary>Shopping Cart</summary>
+<img src="static/wireframes/cart.png" width="500">
+</details>
+<details>
+<summary>Checkout</summary>
+<img src="static/wireframes/checkout.png" width="500">
+</details>
+<details>
+<summary>Checkout Success Message</summary>
+<img src="static/wireframes/checkout_success.png" width="500">
+</details>
+<details>
+<summary>Product Management</summary>
+<img src="static/wireframes/product_management.png" width="500">
+</details>
+<details>
+<summary>Register</summary>
+<img src="static/wireframes/register.png" width="500">
+</details>
+<details>
+<summary>Login</summary>
+<img src="static/wireframes/login.png" width="500">
+</details>
+<details>
+<summary>Logout</summary>
+<img src="static/wireframes/logout.png" width="500">
+</details>
+<details>
+<summary>My Profiles</summary>
+<img src="static/wireframes/user_profile.png" width="500">
+</details>
+<details>
+<summary>My Orders</summary>
+<img src="static/wireframes/my_orders.png" width="500">
+</details>
+<details>
+<summary>My Wishlists</summary>
+<img src="static/wireframes/my_wishlist.png" width="500">
+</details>
+<details>
+<summary>Contact Page</summary>
+<img src="static/wireframes/contact.png" width="500">
+</details>
+
 ### Database Schema
 ### Colours
 I have used warm light and dark colours to create pleasant experience for those people to viewing this website. Bootstrap colour also used for this website.
