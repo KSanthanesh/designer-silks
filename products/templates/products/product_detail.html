@@ -74,7 +74,7 @@
                         <div class="form-group w-50">
                             <div class="input-group">
                                 <button type="button" id="minus-btn" class="minus-btn buttons btn-outlook-black w-25">-</button>
-                                <input class="form-control text-center" type="text" value="1" maxlength="2" minlength="1" name="quantity" required/>
+                                <input class="form-control text-center" type="number" value="1" maxlength="2" minlength="1" name="quantity" required/>
                                 <button type="button" id="add-btn" class="add-btn buttons btn-outlook-black w-25">+</button>
                             </div>
                         </div>
@@ -270,7 +270,7 @@
     });
 
     $('#minus-btn').click(function () {
-        if ($(this).next().val() > 0) $(this).next().val(+$(this).next().val() - 1);
+        if ($(this).next().val() > 1) $(this).next().val(+$(this).next().val() - 1);
     });
 </script>
     

@@ -136,6 +136,10 @@ html {
     border: 1px solid black;
     width: 60%;
 }
+/*----------------------------for input number type */
+input[type=number] {
+    -moz-appearance: textfield;
+  }
 
 /*---------------------------------------------------------Toast message box */
 
