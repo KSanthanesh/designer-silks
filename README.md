@@ -223,7 +223,11 @@ After Logout the success logout message will appear on the rightside of the Page
     
     
 ### Business Vision
+To create a truly global brand that provides growth opportunities for the company, whilst achieving its goal of becoming the number one value fashion retailer across the globe.
+To become a globally prominent online retailer and be ranked amongst the top online retailer in the world in terms of quality, service standards and ultimately customer satisfaction.
+
 ### Purpose of Website
+
 
 ## Skeleton
 There are approximately 34 products and 3 categories in the designer silks website.
@@ -314,6 +318,12 @@ Balsamiq Wireframes used for this website.
 </details>
 
 ### Database Schema
+db diagram used for this website.
+<details>
+<summary>DB Diagram</summary>
+<img src="static/images/db_diagram.PNG" width="500">
+</details>
+
 ### Colours
 I have used warm light and dark colours to create pleasant experience for those people to viewing this website. Bootstrap colour also used for this website.
 colours used:
@@ -360,13 +370,46 @@ I have used Open Sans, cursive and 'Raleway', sans-serif to create this website.
 - Balsamiq - to create wireframes.
 - dbdiagram.io - to create database schema
 - Random Secret Key Generator - https://miniwebtool.com/django-secret-key-generator/
-- Amazon Web Servvices -to save media and static folder https://aws.amazon.com/
+- Amazon Web Servvices -to save media and static folder -https://aws.amazon.com/
+- SEO  -https://www.xml-sitemaps.com/
+- Privacy policy Generator -https://www.privacypolicygenerator.info/
+- For images -https://pixabay.com/
+- Testing Real Send Mail -https://temp-mail.org/
+
 ## Testing
 ### Automation Testing
 ### Code Validation
 ### Features Testing
+1. #### Home Page
+    There are 25 testCases in Home Page.
+- There are 20 testcases in  header section  which are Designer Silks, Home, Chiffon Sarees, Cotton Sarees, Silk Sarees, All Sarees, By Price, By Rating, By Category, All Products, Contact, search bar, Product Management, My Profile, My Orders, My Wishlist, Register, Login, Logout and Cart Navigation.<br>
+Designer Silks heading and Home Navigation are designed to bring the user back to the home page.Testing also proves that these options worked as per design. The other navigations are designed to bring the user to the website.Testing proves that these options worked as per designs.
+- [Header-Testing](static/images/home-testing.PNG)
+<br>
+- There is 1 Testcase in middle of the Hero image. If the user click the Shop Now Button it will navigate to All Products Page. Testing proves that this option worked as per design.
+- [Shop-Now-Button-Testing](static/images/home-testing-2.PNG)
+<br>
+
+- There are 3 Testcases in the Footer Page.
+  1. There is one Social media Facebook link attached in all other pages.When click the Facebook button it brings to the Facebook page.
+  2. Privacy Policy for Designer Silks.
+  3. Newsletter Subscription
+All the three testcases worked as per design requirements.
+- [Footer-Testing](static/images/home-footer.PNG)
+#### All Products
+There are 5 testcases in Chiffon Sarees, Cotton Sarees, Silk Sarees, All Sarees, By Price, By Rating, By Category and All Products Page. There are two tescase for  toggle icon for Add Wishlist and Remove Wishlist for login user and if the user not logged in it says that login . And there are two buttons for Edit and Delete the products button for Admin. If the User clicks these buttons it shows that Sorry, Only store owners can do that. Testing proves that these option worked as per design.
+- [Product-Page_Testing](static/images/product-page-testing.PNG)
+
+- [Error Message-When the normal user clicks Edit/Delete Button ](static/images/error-msg-testing.PNG)
+- [Success Added Wishlist Message ](static/images/add-wishlist-testing.PNG)
+- [Removed from Wishlist Message](static/images/remove-wishlist-testing.PNG)
+
 
 ## Bugs
+1. I try to create new app for wishlist and reviews and add into the products page and product_detail page. But i donot know how to connect these apps to product app. Then i decided to add new model for wishlist and Review in the product app and connect the data into the products templates. Within limited time period i couldnot able to do that, but after this course sure i will learn it.
+2. When I complete the payment system i received duplicate order number in the order history and admin page. I resolved this problem with Tutor support.
+3. When I do the Real send mail section i didnot received a confirmation message in my email. This problem also solved with Tutor Support.
+
 
 ## Deployment
 First we need to go to github website to create a new repositary using code Institute Template. Followed by giving a new name of the website.Then need to click the create repositary button. After click the button it will bring us to go to another page, which contains the green button labelled as Gitpod.Click the Gitpod button will bring us to the Gitpod Workspace for coding screen.
@@ -594,7 +637,49 @@ else:
   - to check the email ==> temp email.com ==> copy the email address ==> register in the app using temp email.==> we can receive emails to temp email page. if we click that
     there is a url for confirm the verification ==> copy the url and paste in the browser and confirm it. then again sign in for the app.
 
+  
+## SEO
+
+https://www.xml-sitemaps.com/
+- Enter Heroku URL to create a sitemap
+- Download you XML SITEMAP
+- Then create sitemap.xml in the gitpod workspace and paste XML SITEMAP
+- Then Create robots.txt, inside it enter the following details:
+  - User-agent: *
+  - Disallow: /accounts/
+  - Disallow: /cart/
+  - Sitemap: https://designer-silks.herokuapp.com//sitemap.xml
+- Then add the meta tag in the base template head. Some inportant keywords for user. 
+
+## Web Marketing
+### Facebook account
+
+
+## Email Marketing
+### MailChimp- Newsletter Subscription 
+- Register for MailChimp account for designer silks email address. And create Signup embeded form, and take only Newsletter column for user newsletter subscription.
+
+## General Data Protection Regulation(GDPR)
+### Privacy policy Generator
+https://www.privacypolicygenerator.info/ 
+- Enter Company Name, website name, Herokku Url followed by Country,State and email then click generate private policy. Copy the link clipboard and Paste in the base template footer.
+
+## Final deployment:
+
+After finish the project then need to do the following steps:
+
+  - Debug= False in settings.py
+  - git add . git commit -m "deployment commit" git push
+  - Then Deploy and can view the App in Heroku.
 
 
 ## Acknowledgement
+  - I would like to thank my mentor Rohit Sharma and my tutors Kasia for their helpfulness, constructive feedback and guidance when needed.
+  - I would like to thank the staff, all the tutor supporters, students and my peers of Code Institute for their help.
+  -I also like to thank Slack Community for sharing the open discussion from various students.
+  - I search lots of information from Google, W3 School and Youtube for this project.
+  - I follow the base structure in Boutique ado walkthrough. It will help me a lot for this project.
+  - The images on this site have been taken from https://pixabay.com/, and used only for education purpose to complete this project.
+  - Thanks for reading my README.md file.
+
 
