@@ -83,7 +83,7 @@
                         <div class="card-body pb-0">
 
                             <div class="mb-0">{{ product.name}}
-                                <!-- <a href="{% url 'wishlist' product.id %}" data-toggle="tooltip" title="Add to Wishlist"><i class="fas fa-heart wishlist"></i></a> -->
+                                
                                 {% if user.is_authenticated %}
                                 <form class="form" action="{% url 'wishlist' product.id %}" method="Post">
                                     {% csrf_token %}
@@ -97,21 +97,7 @@
                                    {% else %}
                                    <button class="btn btn-md m-0" type="submit"><i class="far fa-heart wishlist"></i></button>
                                    {% endif %}
-                                   <!-- <p>{{ wishlist }}</p> -->
-                                   <!-- {% for wh in wishlist %}
-                                   {% if product.name|stringformat:"s" == wh.product|stringformat:"s" %}
-                                   {% with fleg=1 %}
                                    
-                                   <p>{{ fleg }}</p>
-                                   {% endwith %}
-                                   {% endif %}
-                                   {% endfor %}
-                                   <p>{{ fleg }}</p> -->
-                                   <!-- {% if fleg == 1 %}
-                                    <button class="btn btn-md m-0" type="submit"><i class="far fa-heart wishlist"></i></button>
-                                    {% endif %} -->
-                                    
-                                    <!-- <button class="btn btn-md m-0" type="submit"><i class="fas fa-heart wishlist"></i></button>                         -->
                                    
                                 </form>
                                 {% else %}
