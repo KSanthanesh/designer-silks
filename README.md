@@ -1,8 +1,8 @@
-# DESIGNER SILKS
+# <span style="color:green;">DESIGNER SILKS</span>
 <img src="static/images/desktop-1.PNG" align="left" width="300" height="200">
 <img src="static/images/desktop-2.PNG" align="center" width="300" height="200">
 
-Types of Content
+### <span style="color:green;">Types of Content</span>
 - [Introduction](#introduction)
     - [Home](#home)
     - [Sarees](#sarees)
@@ -56,7 +56,7 @@ Types of Content
 
 
 
-## Introduction
+## <span style="color:green;">Introduction</span>
 - This project will cover Saree collections, which is one of the Indian Traditional Culture. 
 - This webpage is categorised into Four main sections,such as Home, Sarees, All Products and Contact. In other two additional navigations available in the header, Which are My account and Cart.
 - When the User choose Sarees Navigation option dropdown menu appears and shows four options to choose, such as Chiffon Sarees, Cotton Sarees, Silk Sarees and All Sarees.
@@ -70,7 +70,7 @@ Types of Content
 <!-- - Success checkout message will appear in completion of the purchase Process. -->
 - The website covers all the screen types, such as Pc,Laptop,Tablet and Mobile.
 
-### Home
+### <span style="color:green;">Home</span>
 The Home Page covers the foloowing sections:
 - Header, Navigation Menus and Shipping details.
 - Hero Image
@@ -82,7 +82,7 @@ The Home Page covers the foloowing sections:
 - Header and Footer will appear in all pages through Navigations. 
 
 
-### Sarees
+### <span style="color:green;">Sarees</span>
 - When the User choose Sarees Navigation option dropdown menu appears and shows four options to choose, such as:
 #### Chiffon Sarees
 #### Cotton Sarees
@@ -98,7 +98,7 @@ The Home Page covers the foloowing sections:
 
 
 
-### All Products
+### <span style="color:green;">All Products</span>
 - When the User choose All Products option dropdown menu appears and shows four options to choose, such as 
 #### By Price
 #### By Rating
@@ -112,18 +112,18 @@ The Home Page covers the foloowing sections:
   - Category (A-Z) and Category (Z-A)
 -
 
-### Contact
+### <span style="color:green;">Contact</span>
 - In the Contact form option, the user has to fillup all the parameters in the form. 
 - There is a Newsletter option where the user has a choice to subscribe or not to subscribe the newsletter.
 
-### Search bar
+### <span style="color:green;">Search bar</span>
 - The Search bar will help the user to narrow down the relevant products and display the products as per search description.
 
-### My Account
+### <span style="color:green;">My Account</span>
 - when the User Choose My account Navigation option, dropdown menu appears and show Two options, such as Register and Login.
 - Once the User Login in to  My Account option then the dropdown menu change to four different Categories, Such as My Profile, My Orders, My Wishlist and Logout.
 - If the User is admin then an additional option is available which is Product Management. The Product Management option will allow the following options such as add the product, edit the product and delete the product.
-#### Register
+#### <span style="color:green;">Register</span>
 - The User can use the Register option to fillup his information to register.<br>
 Registration page contains:
     - Header and Footer
@@ -135,7 +135,7 @@ Registration page contains:
     - Back to Login button
     - Signup button
   After Registration mail send for confirmation message, and confirmation email send their email address to confirm for registration.
-#### Login
+#### <span style="color:green;">Login</span>
 - Only Registered User is able to use login option to login in to the website.<br>
 Login Page contains:
     - Header and Footer
@@ -148,7 +148,7 @@ Login Page contains:
 
 After Login the success login message will appear on the rightside of the Page.
 
-#### Logout
+#### <span style="color:green;">Logout</span>
 - The User should logout from the website after using the website.<br>
 Logout Page Contains:
     - Header and Footer
@@ -157,33 +157,33 @@ Logout Page Contains:
 After Logout the success logout message will appear on the rightside of the Page.
     
 
-#### Product Management
+#### <span style="color:green;">Product Management</span>
 - The Product Management option will allow the following options such as add the product, edit the product and delete the product for the admin. 
-#### My Profile
+#### <span style="color:green;">My Profile</span>
 - Login user can update or store their Delivery information.
-#### My Orders
+#### <span style="color:green;">My Orders</span>
 - Order history and information about the products will be stored in the database.
-#### Wishlist
+#### <span style="color:green;">Wishlist</span>
 - user can add favourite items into the wishlist and shortlist what to buy later.
 
-### Product Details
+### <span style="color:green;">Product Details</span>
 - Product Details options contains: SKU (Product id),Fabric (Material Type), Description,length, Shipping and Returns.
 - Quantity option is available for User to select the number of products of the same product.
 - The cart will be update the section.
 
-### Cart
+### <span style="color:green;">Cart</span>
 - Shopping Cart page contains: 
 
 
 
-### Checkout
+### <span style="color:green;">Checkout</span>
 
-### Checkout Success
+### <span style="color:green;">Checkout Success</span>
 
-## Strategy
-### UX
+## <span style="color:green;">Strategy</span>
+### <span style="color:green;">UX</span>
 
-#### UserStory using Kanban feature in Agile Methodology
+#### <span style="color:green;">UserStory using Kanban feature in Agile Methodology</span>
   These are the steps for UX<br>
 1. Click Projects in the dosa palace repositary and Create a Project name.
 2. Then select, Project Template => Basic Kanban => create Project.
@@ -222,17 +222,17 @@ After Logout the success logout message will appear on the rightside of the Page
     - As a Site User I can subscribe option for Newsletter So that I can get the information regarding the products regularly.
     
     
-### Business Vision
+### <span style="color:green;">Business Vision</span>
 To create a truly global brand that provides growth opportunities for the company, whilst achieving its goal of becoming the number one value fashion retailer across the globe.
 To become a globally prominent online retailer and be ranked amongst the top online retailer in the world in terms of quality, service standards and ultimately customer satisfaction.
 
-### Purpose of Website
+### <span style="color:green;">Purpose of Website</span>
 
 
-## Skeleton
+## <span style="color:green;">Skeleton</span>
 There are approximately 34 products and 3 categories in the designer silks website.
-## Scope
-### Features
+## <span style="color:green;">Scope</span>
+### <span style="color:green;">Features</span>
 - A page with an overview of all the products which can be sort by name, rating, price and category
 - A contact form where customers can ask questions.
 - Newsletter subscription for Further details.
@@ -250,11 +250,11 @@ There are approximately 34 products and 3 categories in the designer silks websi
 - Shipping estimation days and Return policy
 - privacy policy
 
-### Future Features
+### <span style="color:green;">Future Features</span>
 
-## Structure
+## <span style="color:green;">Structure</span>
 The site will be structured as clear as possible, with a logic workflow and it should be easy to navigate the site on all screen sizes.
-### Wireframes
+### <span style="color:green;">Wireframes</span>
 Balsamiq Wireframes used for this website.
 <details>
 <summary>Home</summary>
@@ -317,7 +317,7 @@ Balsamiq Wireframes used for this website.
 <img src="static/wireframes/contact.png" width="500">
 </details>
 
-### Database Schema
+### <span style="color:green;">Database Schema</span>
 db diagram used for this website.
 <details>
 <summary>DB Diagram</summary>
@@ -344,10 +344,10 @@ colours used:
 
 
 
-### Typography
+### <span style="color:green;">Typography</span>
 I have used Open Sans, cursive and 'Raleway', sans-serif to create this website.
 
-## Technologies Used
+## <span style="color:green;">Technologies Used</span>
 
 ### Libraries & Frameworks
 - Django Web Application Framework
@@ -376,13 +376,13 @@ I have used Open Sans, cursive and 'Raleway', sans-serif to create this website.
 - For images -https://pixabay.com/
 - Testing Real Send Mail -https://temp-mail.org/
 
-## Testing
-### Automation Testing
-### Code Validation
-### Features Testing
-1. #### Home Page
-    There are 25 testCases in Home Page.
-- There are 20 testcases in  header section  which are Designer Silks, Home, Chiffon Sarees, Cotton Sarees, Silk Sarees, All Sarees, By Price, By Rating, By Category, All Products, Contact, search bar, Product Management, My Profile, My Orders, My Wishlist, Register, Login, Logout and Cart Navigation.<br>
+## <span style="color:green;">Testing</span>
+### <span style="color:green;">Automation Testing</span>
+### <span style="color:green;">Code Validation</span>
+### <span style="color:green;">Features Testing</span>
+#### Home Page
+There are 25 testCases in Home Page.<br>
+There are 20 testcases in  header section  which are Designer Silks, Home, Chiffon Sarees, Cotton Sarees, Silk Sarees, All Sarees, By Price, By Rating, By Category, All Products, Contact, search bar, Product Management, My Profile, My Orders, My Wishlist, Register, Login, Logout and Cart Navigation.<br>
 Designer Silks heading and Home Navigation are designed to bring the user back to the home page.Testing also proves that these options worked as per design. The other navigations are designed to bring the user to the website.Testing proves that these options worked as per designs.
 - [Header-Testing](static/images/home-testing.PNG)
 <br>
@@ -404,6 +404,29 @@ There are 5 testcases in Chiffon Sarees, Cotton Sarees, Silk Sarees, All Sarees,
 - [Success Added Wishlist Message ](static/images/add-wishlist-testing.PNG)
 - [Removed from Wishlist Message](static/images/remove-wishlist-testing.PNG)
 
+#### Product_details
+- There are 7 new testcases in Product detail page such as Quantity increment and decrement button,Keep shopping button, Add to cart button, Proceed to cheekout button and Reviews Post, Edit and Delete button for login User and success and alert messages will display on top of the page. Testing proves that these options, success message and alert messages are worked as per design.<br>
+  - Quantity increment decrement button can add 1 to 99 products. cannot add letters or decimal point in that box. 
+  - Keep shopping button goes to All product page. Testing proves that this option worked as per design.Testing proves that these options worked as per design.
+    - [Quantity Increment, Decrement button and Keep Shopping Button](static/images/quantity_shopping_testing.PNG)
+  - When I click Add to Cart button, cart details toast message will appear.  There is Proceed to checkout button for cart page. Testing proves that these options worked as per design.
+    - [Add to Cart button and Proceed to checkout button](static/images/add-to-cart-testing.PNG)
+  - There are three buttons in Write a Review section in the product detail page. Such Post, Edit and Delete buttons. Post buttons will only appear for any login users.If the user is not login they Cannot see the Post button and ask them to login the page. Edit and Delete buttons are only visible for particular user. 
+    - [Post, Edit and Delete Buttons in the Review section ](static/images/post-edit-delete-testing.PNG)
+    - if they want to write a review they must enter the comments and must select the rating, otherwise it will give error message.
+      - [ Write a Review Form Validation](static/images/review-validation1-testing.PNG)
+      - [ Error Message for not entering Review Rating ](static/images/review-rate-validation-testing.PNG)
+    - once they submit the post successfully added a review message will appear.
+      - [ Success Message for Add Reviews ](static/images/review-success-msg-testing.PNG)
+    - if they Edit the button and once they updated the Review then successfully updated message will appear.
+      - [ Success Message for Update Reviews ](static/images/review-success-update-msg.PNG)
+    - If they press the Delete button Reviews will deleted from Reviews and Deleted alert will display.
+      - [ Success Alert Message for Deleted Reviews ](static/images/review-delete-msg-testing.PNG)
+    
+  
+
+  
+- There are 5 testcases same like All Products page(such as Wishlist add, remove button and Please login tooltip and Edit/Delete the product page.)
 
 ## Bugs
 1. I try to create new app for wishlist and reviews and add into the products page and product_detail page. But i donot know how to connect these apps to product app. Then i decided to add new model for wishlist and Review in the product app and connect the data into the products templates. Within limited time period i couldnot able to do that, but after this course sure i will learn it.
@@ -612,7 +635,7 @@ class MediaStorage(S3Boto3Storage):<br>
   - Then again goto amazon s3 ==> designer-silks ==> create folder ==> name: media ==> save it 
   - then upload file all the images (control+shift) ==> permission Grant public-read access ==> then confirm ==> then upload.
 
-### Sending Real Mails
+### <span style="color:green;">Sending Real Mails</span>
 
 - connect the gmail for sending mails.
 - go to gmail account ==> settings ==> see all settings ==> accounts and Import ==> other Google account settings ==> security tab ==> 2 step verification
@@ -638,7 +661,7 @@ else:
     there is a url for confirm the verification ==> copy the url and paste in the browser and confirm it. then again sign in for the app.
 
   
-## SEO
+## <span style="color:green;">SEO</span>
 
 https://www.xml-sitemaps.com/
 - Enter Heroku URL to create a sitemap
@@ -651,20 +674,20 @@ https://www.xml-sitemaps.com/
   - Sitemap: https://designer-silks.herokuapp.com//sitemap.xml
 - Then add the meta tag in the base template head. Some inportant keywords for user. 
 
-## Web Marketing
+## <span style="color:green;">Web Marketing</span>
 ### Facebook account
 
 
-## Email Marketing
-### MailChimp- Newsletter Subscription 
+## <span style="color:green;">Email Marketing</span>
+### MailChimp- Newsletter Subscription
 - Register for MailChimp account for designer silks email address. And create Signup embeded form, and take only Newsletter column for user newsletter subscription.
 
-## General Data Protection Regulation(GDPR)
+## <span style="color:green;">General Data Protection Regulation(GDPR)</span>
 ### Privacy policy Generator
 https://www.privacypolicygenerator.info/ 
 - Enter Company Name, website name, Herokku Url followed by Country,State and email then click generate private policy. Copy the link clipboard and Paste in the base template footer.
 
-## Final deployment:
+## <span style="color:green;">Final deployment:</span>
 
 After finish the project then need to do the following steps:
 
@@ -673,7 +696,7 @@ After finish the project then need to do the following steps:
   - Then Deploy and can view the App in Heroku.
 
 
-## Acknowledgement
+## <span style="color:green;">Acknowledgement</span>
   - I would like to thank my mentor Rohit Sharma and my tutors Kasia for their helpfulness, constructive feedback and guidance when needed.
   - I would like to thank the staff, all the tutor supporters, students and my peers of Code Institute for their help.
   -I also like to thank Slack Community for sharing the open discussion from various students.

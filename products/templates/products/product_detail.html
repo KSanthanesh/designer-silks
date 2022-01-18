@@ -171,7 +171,7 @@
                     {% if flg == 'wr' %}
                     
                     <h5 class="logo-font text-primary font-weight-bold">Write your Review</h5>
-                    {% if user.is_authenticated %}
+                    
                     <form class="form" method="POST" name="ReviewForm" action="{% url 'review_rate' product.id %}">
                         {% csrf_token %}
 
@@ -195,13 +195,7 @@
                                 <input type="radio" name="rate" id="rate4" value="4"/>
                                 <label for="rate5"><i class="fa fa-star text-warning"></i></label>
                                 <input type="radio" name="rate" id="rate5" value="5"/>
-                                 <!-- <div class="rating-wrapper">
-                                    <i class="text-warning cursor-pointer rating-star fas fa-star"></i>
-                                    <i class="text-warning rating-star fas fa-star"></i>
-                                    <i class="text-warning rating-star fas fa-star"></i>
-                                    <i class="text-warning rating-star fas fa-star"></i>
-                                    <i class="text-warning rating-star fas fa-star"></i>
-                                </div>  -->
+                               
                             </div>
                         </div>
                         {% if user.is_authenticated %}
@@ -210,7 +204,7 @@
                         <p> You must be logged in for post a Review, <a href="{% url 'account_login' %}">Login</a></p>
                         {% endif %}
                     </form>
-                    {% endif %}
+                    
                     {% endif %}
                     {% if flg == 'er' %}
                     
@@ -245,11 +239,8 @@
                                  
                             </div>
                         </div>
-                        {% if user.is_authenticated %}
+                        
                         <button class="btn btn-danger btn-md m-0" id="submit" type="submit">Update</button>
-                        {% else %}
-                        <p> You must be logged in for post a Review, <a href="{% url 'account_login' %}">Login</a></p>
-                        {% endif %}
                         
                     </form>
                     {% endfor %}

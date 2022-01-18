@@ -205,6 +205,7 @@ def delete_review(request, p_id, r_id):
     """ User can delete the their Reviews"""
     review = get_object_or_404(Review, id=r_id)
     review.delete()
+    messages.info(request, "Successfully Deleted a Review")
     return redirect('product_detail', p_id)
 
 
