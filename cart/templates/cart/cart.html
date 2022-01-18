@@ -128,7 +128,7 @@
 <script>
   // for plus button onclick
   $('.add-btn').click(function () {
-    if ($(this).next().val() < 100) $(this).prev().val(+$(this).prev().val() + 1);
+    if ($(this).prev().val() < 99) $(this).prev().val(+$(this).prev().val() + 1);
   });
   // for minus button onclick
   $('.minus-btn').click(function () {

@@ -269,11 +269,11 @@
 <script>
     // increment and decrement product buttons
 
-    $('#add-btn').click(function () {
-        if ($(this).next().val() < 100)$(this).prev().val(+$(this).prev().val() + 1);
+    $('.add-btn').click(function () {
+        if ($(this).prev().val() < 99) $(this).prev().val(+$(this).prev().val() + 1);
     });
 
-    $('#minus-btn').click(function () {
+    $('.minus-btn').click(function () {
         if ($(this).next().val() > 1) $(this).next().val(+$(this).next().val() - 1);
     });
 </script>
