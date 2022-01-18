@@ -81,8 +81,10 @@
               <p class="my-0">€{{ item.product.price }}</p>
             </td>
             <td class="py-3">
-              {% include "cart/quantity-form.html" %}
+              {% include 'cart/quantity-form.html' %}
+              
             </td>
+            
             <td class="py-3 w-25 text-center">
               <p class="my-0">€{{ item.product.price | calc_subtotal:item.quantity }}</p>
             </td>
@@ -125,11 +127,11 @@
 
 <script>
   // for plus button onclick
-  $('#add-btn').click(function () {
+  $('.add-btn').click(function () {
     $(this).prev().val(+$(this).prev().val() + 1);
   });
   // for minus button onclick
-  $('#minus-btn').click(function () {
+  $('.minus-btn').click(function () {
     if ($(this).next().val() > 0) $(this).next().val(+$(this).next().val() - 1);
   });
 </script>

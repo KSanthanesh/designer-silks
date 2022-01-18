@@ -3,7 +3,6 @@
 from django.shortcuts import (
     render, redirect, reverse, HttpResponse, get_object_or_404)
 from django.contrib import messages
-from django.contrib.auth.decorators import login_required
 
 from products.models import Product
 
@@ -13,7 +12,6 @@ def view_cart(request):
     A view to return the cart page
     """
     return render(request, 'cart/cart.html')
-
 
 
 def add_to_cart(request, item_id):
@@ -48,7 +46,6 @@ def add_to_cart(request, item_id):
     return redirect(redirect_url)
 
 
-@login_required
 def adjust_cart(request, item_id):
     """
     Adjust the quantity in the cart
@@ -78,7 +75,6 @@ def adjust_cart(request, item_id):
     return redirect(reverse('view_cart'))
 
 
-@login_required
 def remove_from_cart(request, item_id):
     """
     remove the quantity from cart

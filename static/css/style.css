@@ -8,15 +8,6 @@ html {
     height: 100%;
 }
 
-/* .bg {
-    width:100%;
-    height: calc(100vh - 200px);
-    background: url('/media/home-img.jpeg') no-repeat top;
-    background-size: cover;
-    font-family: "Open Sans", cursive;
-    color: #000;
-
-} */
 .bg {
     height: 255vh;
     background: url('/media/home-image.jpg') center no-repeat;
@@ -258,12 +249,7 @@ html {
     border-color: #dc3545;
     border-radius: 0;
 }
-/*----------------------------Mailchimp */
-/* #mc_embed_signup {
-    background:#fff;
-    clear:left;
-    font:14px Helvetica,Arial,sans-serif;
-} */
+
 
 
 /*---------------------------------------------------------Media Queries */
@@ -326,13 +312,7 @@ html {
     .new-arrivals {
         margin-left: 80px;
     }
-    /* .contact{
-        font-size: 18px;
-    }
-    .newsletter {
-        font-size: 13px;
-        margin-left: -50px;
-    } */
+  
 }
 
 /*----------------------------Media query max-350px */
