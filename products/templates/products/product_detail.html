@@ -74,7 +74,7 @@
                         <div class="form-group w-50">
                             <div class="input-group">
                                 <button type="button" id="minus-btn" class="minus-btn buttons btn-outlook-black w-25">-</button>
-                                <input class="form-control text-center" type="number" value="1" maxlength="2" minlength="1" name="quantity" required/>
+                                <input class="form-control text-center" type="text" value="1" maxlength="2" minlength="1" name="quantity" onkeypress="return event.charCode >= 48 && event.charCode <= 57" required/>
                                 <button type="button" id="add-btn" class="add-btn buttons btn-outlook-black w-25">+</button>
                             </div>
                         </div>
@@ -266,7 +266,7 @@
     // increment and decrement product buttons
 
     $('#add-btn').click(function () {
-        $(this).prev().val(+$(this).prev().val() + 1);
+        if ($(this).next().val() < 100)$(this).prev().val(+$(this).prev().val() + 1);
     });
 
     $('#minus-btn').click(function () {

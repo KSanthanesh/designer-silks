@@ -128,7 +128,7 @@
 <script>
   // for plus button onclick
   $('.add-btn').click(function () {
-    $(this).prev().val(+$(this).prev().val() + 1);
+    if ($(this).next().val() < 100) $(this).prev().val(+$(this).prev().val() + 1);
   });
   // for minus button onclick
   $('.minus-btn').click(function () {
@@ -138,6 +138,7 @@
 <script>
   // for Edit button on click
   $('.update-link').click(function (e) {
+
     var form = $(this).prev('.update-form');
     form.submit();
   })

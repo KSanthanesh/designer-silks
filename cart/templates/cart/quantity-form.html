@@ -3,8 +3,7 @@
     <div class="form-group w-50 mx-auto">
       <div class="input-group">
         <button type="button" class="minus-btn buttons btn-outlook-black w-25">-</button>
-        <input class="form-control text-center" type="number" value="{{ item.quantity }}" maxlength="2"
-          minlength="1" name="quantity" required />
+        <input class="form-control text-center" type="text" maxlength="2" minlength="1" name="quantity" onkeypress="return event.charCode >= 48 && event.charCode <= 57" value="{{ item.quantity }}"  required />
         <button type="button" class="add-btn buttons btn-outlook-black w-25">+</button>
       </div>
     </div>

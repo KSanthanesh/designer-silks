@@ -54,15 +54,16 @@ def all_products(request):
             products_list = products_list.filter(queries)
 
     current_sorting = f'{sort}_{direction}'
-    # user_id = request.user
-    # wishlist = Wishlist.objects.filter(user=user_id)
-
+    user_id = request.user
+    wishlist = Wishlist.objects.filter(user=user_id).values_list('product', flat=True)
+    list_wish = wishlist
     context = {
         'products_list': products_list,
         'search_term': query,
         'current_categories': categories_list,
         'current_sorting': current_sorting,
-        # 'wishlist': wishlist,
+        'wishlist': list_wish,
+        'fleg': 0,
     }
     return render(request, 'products/products.html', context)
 
