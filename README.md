@@ -15,7 +15,7 @@
         - [By-Rating](#by-rating)
         - [By-Category](#by-category)
         - [All-Products](#all-products)
-    - [About-Us](#about-us)
+    - [Contact](#contact)
     - [Search-bar](#search-bar)
     - [My-Account](#my-account)
         - [Register](#register)
@@ -380,7 +380,7 @@ I have used Open Sans, cursive and 'Raleway', sans-serif to create this website.
 ### <span style="color:green;">Automation Testing</span>
 ### <span style="color:green;">Code Validation</span>
 ### <span style="color:green;">Features Testing</span>
-#### Home Page
+#### <span style="text-decoration: underline">Home Page Testing</span>
 There are 25 testCases in Home Page.<br>
 There are 20 testcases in  header section  which are Designer Silks, Home, Chiffon Sarees, Cotton Sarees, Silk Sarees, All Sarees, By Price, By Rating, By Category, All Products, Contact, search bar, Product Management, My Profile, My Orders, My Wishlist, Register, Login, Logout and Cart Navigation.<br>
 Designer Silks heading and Home Navigation are designed to bring the user back to the home page.Testing also proves that these options worked as per design. The other navigations are designed to bring the user to the website.Testing proves that these options worked as per designs.
@@ -396,7 +396,7 @@ Designer Silks heading and Home Navigation are designed to bring the user back t
   3. Newsletter Subscription
 All the three testcases worked as per design requirements.
 - [Footer-Testing](static/images/home-footer.PNG)
-#### All Products
+#### <span style="text-decoration: underline">All Products page Testing</span>
 There are 5 testcases in Chiffon Sarees, Cotton Sarees, Silk Sarees, All Sarees, By Price, By Rating, By Category and All Products Page. There are two tescase for  toggle icon for Add Wishlist and Remove Wishlist for login user and if the user not logged in it says that login . And there are two buttons for Edit and Delete the products button for Admin. If the User clicks these buttons it shows that Sorry, Only store owners can do that. Testing proves that these option worked as per design.
 - [Product-Page_Testing](static/images/product-page-testing.PNG)
 
@@ -404,7 +404,7 @@ There are 5 testcases in Chiffon Sarees, Cotton Sarees, Silk Sarees, All Sarees,
 - [Success Added Wishlist Message ](static/images/add-wishlist-testing.PNG)
 - [Removed from Wishlist Message](static/images/remove-wishlist-testing.PNG)
 
-#### Product_details
+#### <span style="text-decoration: underline">Product_details Page Testing</span>
 - There are 7 new testcases in Product detail page such as Quantity increment and decrement button,Keep shopping button, Add to cart button, Proceed to cheekout button and Reviews Post, Edit and Delete button for login User and success and alert messages will display on top of the page. Testing proves that these options, success message and alert messages are worked as per design.<br>
   - Quantity increment decrement button can add 1 to 99 products. cannot add letters or decimal point in that box. 
   - Keep shopping button goes to All product page. Testing proves that this option worked as per design.Testing proves that these options worked as per design.
@@ -422,11 +422,53 @@ There are 5 testcases in Chiffon Sarees, Cotton Sarees, Silk Sarees, All Sarees,
       - [ Success Message for Update Reviews ](static/images/review-success-update-msg.PNG)
     - If they press the Delete button Reviews will deleted from Reviews and Deleted alert will display.
       - [ Success Alert Message for Deleted Reviews ](static/images/review-delete-msg-testing.PNG)
-    
-  
 
-  
-- There are 5 testcases same like All Products page(such as Wishlist add, remove button and Please login tooltip and Edit/Delete the product page.)
+- And There are 5 testcases same like All Products page(such as Wishlist add, remove button and Please login tooltip and Edit/Delete the product page.)
+
+#### <span style="text-decoration: underline">Cart Page Testing</span>
+- There are 4 Testcases in Cart page. Such as Update, Remove, Keep Shopping and Secure Checkout Buttons.
+1. Update Button - User can update the quantity add or minus the number and if they press update button it will update the quantiy and automatically correct the amount of subtotal according to the quantity selected. They can update 0 to 99, Cant enter letter and decimal points. If they updated the quantity then success message will appear. Testing Proved.
+  - [ Success Message for Updated the Product quantity ](static/images/update-qty-testing.PNG)
+2. Remove Button - User Click the Remove the Button the products will removed and it will open a newpage. It will say that Your Cart is empty. And successfully removed message also appear. There is one button for Return to shop. If the user Press that Button it will redirect to Products page.Testing Proved.
+  - [ Product Removed from the Cart message ](static/images/delete-qty-testing.PNG)
+3. Keep Shopping - User click the Keep shopping button it will redirect to Product page. Testing Proved.
+4. Secure checkout Button - User clicks this button it will go to Check out page. Testing Proved.
+  - [ Keep Shopping and Secure Checkout Button ](static/images/secure-checkout-testing.PNG)
+
+#### <span style="text-decoration: underline">Checout Page Testing</span>
+There are Two cases in the Check out page. such as Adjust Bag and Complete order Button. And Required form validation Tested in this page. Testing proves that these options worked as per design.
+  - Adjust Bag button - It will Redirect to Cart Page if the user want to update or remove the product.Testing Proved.
+    - [ Adjust Bag Button ](static/images/adjust-bag-testing.PNG)
+  - Complete Order Button - It will goes to Checkout Success Page if they enter all the required Criteria fields.Testing Proved.
+  Two Credit Card Details will approve this payment:
+    - 4242 4242 4242 4242
+    - 4000 0025 0000 3155
+    -  [ Complete Order Button ](static/images/adjust-bag-testing.PNG)
+  - Forms Validationin the Checkout page
+    - [ Validation for Name Field ](static/images/name-field-testing.PNG)
+    - Email Field Automatically stored from Login user
+    - [ Validation for Email Field ](static/images/phone-field-testing.PNG)
+    - [ Validation for Phone Field ](static/images/phone-field-testing.PNG)
+    - [ Validation for Address Line1 ](static/images/street-name-testing.PNG)
+    - Address Line 2 (street name optional) is a optional one. So there is no validation for this.
+    - [ Validation for County or City ](static/images/county-field-testing.PNG)
+    - Postcode is a optional one. So there is no validation for this.
+    - [ Validation for Country ](static/images/country-field-testing.PNG)
+    - [ Validation for Credit Card ](static/images/card-field-testing.PNG)
+      - Two Credit Card Details will approve this payment:
+      - 4242 4242 4242 4242
+      - 4000 0025 0000 3155
+    - [ Validation for Incorrect Credit Card ](static/images/incorrect-card-testing.PNG)
+    - [ Validation for Incomplete Credit Card ](static/images/incomplete-card-testing.PNG)
+    - Once the User entered their shipping address and if they click Save the information to my Profile, it will stored in the Profile page. For next Purchase they dont need to enter the shipping details again. if they want to send for another address then they can edit the address in the same page itself. Testing proves.
+    - [ Validation for Save the Information to the Profile Page Checkbox ](static/images/save-info-testing.PNG)
+  - If they unclick the Save information when the purchase order done, then it wont stored in the Profile page. Testing Proved.
+    - [ Validation for Unclick the checkbox for Save the Information to the Profile](static/images/unclick-checkbox-testing.PNG)
+
+#### <span style="text-decoration: underline">Checkout Success Page Testing</span>
+There is one Testcase in the checkout success page which is Go to the HomePage. It will redirect to home page. Testing Proved.
+  - [ Go to the Home Page button](static/images/checkout-success-testing.PNG)
+
 
 ## Bugs
 1. I try to create new app for wishlist and reviews and add into the products page and product_detail page. But i donot know how to connect these apps to product app. Then i decided to add new model for wishlist and Review in the product app and connect the data into the products templates. Within limited time period i couldnot able to do that, but after this course sure i will learn it.
