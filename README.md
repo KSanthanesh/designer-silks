@@ -108,7 +108,6 @@ The Home Page covers the following sections:
   - Rating (low to high) and Rating (high to low)
   - Name (A-Z) and Name (Z-A)
   - Category (A-Z) and Category (Z-A)
--
 
 ### <span style="color:green;">Contact</span>
 - In the Contact form option, the user has to fillup all the parameters in the form. 
@@ -455,14 +454,14 @@ There are 5 testcases in Chiffon Sarees, Cotton Sarees, Silk Sarees, All Sarees,
 - There are 4 Testcases in Cart page. Such as Update, Remove, Keep Shopping and Secure Checkout Buttons.
 1. Update Button - User can update the quantity increase or decrease items and followed by clicking the update button it will update the quantiy and automatically correct the amount of subtotal according to the quantity selected. The item quantity can range between 0 to 99. the programme donot allow letters and decimal points. Success message will appear after updating the quantity. Testing Proved.
   - [ Success Message for Updated the Product quantity ](static/images/update-qty-testing.PNG)
-2. Remove Button - The remove button can be used to delete items in the shopping Cart page. The new page opens and remains the user the shopping cart is empty and success message will appear on the top right..There is one button for Return to shop. If the user Press that Button it will redirect to Products page.Testing Proved.
+2. Remove Button - The remove button can be used to delete items in the shopping Cart page. The new page opens and remainds the user the shopping cart is empty and success message will appear on the top right.There is one button for Return to shop. If the user Press that Button it will redirect to Products page.Testing Proved.
   - [ Product Removed from the Cart message ](static/images/delete-qty-testing.PNG)
 3. Keep Shopping - User click the Keep shopping button it will redirect to Product page. Testing Proved.
 4. Secure checkout Button - User clicks this button it will go to Check out page. Testing Proved.
   - [ Keep Shopping and Secure Checkout Button ](static/images/secure-checkout-testing.PNG)
 
 #### <span style="text-decoration: underline">Checout Page Testing</span>
-There are Two cases in the Check out page. such as Adjust Bag and Complete order Button. And Required form validation Tested in this page. Testing proves that these options worked as per design.
+There are Two Testcases in the Check out page. such as Adjust Bag and Complete order Button. And Required form validation Tested in this page. if the User is not login, then it will ask you to Register or Login the page.  Testing proves that these options worked as per design. 
   - Adjust Bag button - It will Redirect to Cart Page if the user want to update or remove the product.Testing Proved.
     - [ Adjust Bag Button ](static/images/adjust-bag-testing.PNG)
   - Complete Order Button - It will goes to Checkout Success Page if they enter all the required Criteria fields.Testing Proved.
@@ -470,6 +469,8 @@ There are Two cases in the Check out page. such as Adjust Bag and Complete order
     - 4242 4242 4242 4242
     - 4000 0025 0000 3155
     -  [ Complete Order Button ](static/images/adjust-bag-testing.PNG)
+    -  [ Register or Login button if they are not Login for Purchase ](static/images/checkout-login-testing.PNG)
+
   - Forms Validation in the Checkout page
     - [ Validation for Name Field ](static/images/name-field-testing.PNG)
     - Email Field Automatically stored from Login user
@@ -516,7 +517,66 @@ There is one Testcase in the checkout success page which is Go to the HomePage. 
       - [ New Product detail -if image is not selected in the Add product](static/images/add-product-success-msg-testing.PNG)
 
   - Edit Product
-    -  There is 1 new testcase in the Edit product page which is Update Product.If the superuser click edit button in the product or product detail page, it will allow the user to edit the details. After Editing, success update message will appear. Testing proved.
+    -  There is 1 new testcase in the Edit product page which is Update Product.If the superuser click edit button in the product or product detail page, it will allow the user to edit the details and alert message will appear for before editing the product. After Updating, success update message will appear. Testing proved.
+      - [ Update Button in the Edit product page](static/images/edit-product-testing.PNG)
+      - [ Alert message for before Editing the Product](static/images/edit-product-msg-testing.PNG)
+      - [ Success message after Updating the Product](static/images/edit-product-success-msg-testing.PNG)
+
+  - Delete Product
+    - If the superuser click Delete button the product will be deleted, and then successfully deleted message will appear on top of the page. Testing Proved.
+    - [ Success message after Delete the Product](static/images/delete-product-testing.PNG)
+
+  #### <span style="text-decoration: underline">My Profile Page Testing</span>
+  - There is 1 testcase in the Profile Page which is Update Information Button. After updating the Profile details success message will appear. Testing Proved.
+    - [ Update Information Button in the Profile Page](static/images/profile-page-testing.PNG)
+    - [ Success message after updating the profile page](static/images/profile-success-msg-testing.PNG)
+
+  #### <span style="text-decoration: underline">My Order Page Testing</span>
+  - There is one test case in My Order page, Which is order number. Login User's all the orders are stored in this page. When the user clicks Order number it will redirect to checout success message page.Testing Proved.
+      - [ My Order Page Testing](static/images/my-orders-testing.PNG)
+  
+  #### <span style="text-decoration: underline">My Wishlist Page Testing</span>
+  - There is one TestCase in My Whislist Page, Which is Delete Button. Login User can Delete the wishlist item from Wishlish page. After Deleting Wishlist, Removed alert message will appear on top of the page. Testing proved.
+    - [ My Wishlist Page Delete Button Testing](static/images/my-wishlist-testing.PNG)
+    - [ Removed alert message after Deleted a wishlist](static/images/my-wishlist-delete-msg-testing.PNG)
+
+  #### <span style="text-decoration: underline">Register Page Testing</span>
+  - There are 3 TestCases in Register Page, such as Sign in, Back to Login and Sign Up button. If the User click either signin or Back to Login button, it will redirect to Login Page. This login page for Existing customer. If the User is new they have to Register the page for add or remove wishlist, Reviews about the product or Checkout Payment page. All the Testing options are proved.
+    - [ Sign Up page ](static/images/signup-testing.PNG)
+    - Form Validation for signup Page
+      - [ Validation for Email Field ](static/images/signup-email-field-testing.PNG)
+      - [ Validation for confirm Email Field ](static/images/signup-confirm-email-field-testing.PNG)
+      - [ Validation for Username Field ](static/images/signup-username-field-testing.PNG)
+      - [ Validation for Password Field ](static/images/signup-password-field-testing.PNG)
+      - [ Validation for Confirm Password Field ](static/images/signup-confirm-password-testing.PNG)
+    - After clicking the Sign up page, then the new page opens and remainds the user that Verify your Email Address and alert message will appear on the top right. Testing proved.
+    - [ Verify Email Address and Message Sent to User's Email Address ](static/images/signup-alert-msg-testing.PNG)
+    - Then the User received mail, they have to click the link to confirm for Registration.
+    - [ Confirm for Registration ](static/images/signup-confirm-email-testing.PNG)
+    - Once the user click the confirm button, then confirm success message will appear.
+    - [ Success message for confirm Registration ](static/images/signup-success-msg-testing.PNG)   
+
+  #### <span style="text-decoration: underline">SigIn Page Testing</span>
+  - There are 4 Testcases in signin page.such as Signup, Home, Signin and Forget Password? Buttons. If the user is not existing customer, they have to Signup(Register) first. So if the user clicks Signup page, it will redirect into Register Page. If the User clicks Home button, it will redirect into Home page. If the User clicks Sign up page, they need to enter either username or email and password for signing in. If they want they can click remember me button for easiest way to go this site everytime, this is optional. Finally there is button called Forget Password? button if they forget the password. User needs to click this button and enter their registered email, then mail will send to their email address. They can click that link to enter the New password. All the Testing options are proved.
+    - [ Sign In page ](static/images/signin-testing.PNG)
+    - Form Validation for Signin Page
+      - [ Must enter Username or email for SignIn ](static/images/signin-username-field-testing.PNG)
+      - [ Must enter Password for SignIn ](static/images/signin-password-field-testing.PNG)
+    - if they click forget passwod button, new page will open for Password Reset. Testing proved.
+      - [Password Reset button  ](static/images/signin-forget-password-testing.PNG)
+    - Then they enter their registered email, and click the Reset My Password button. Next the message says that mail send for Password Reset. Testing proved.
+      - [Mail send for Password Reset button  ](static/images/signin-password-reset-mail-testing.PNG)
+    - Then they click the link from mail, it will goes tp Change Password page. They have to enter new password in the two columns and needs to click to Change password button. Testing proved.
+      - [ Change Password ](static/images/signin-change-password-testing.PNG)
+    - Finally success message will appear for change password. Testing proved.
+      - [ success message for Change Password  ](static/images/signin-success-msg-testing.PNG)
+    - Now the user can login with username and password. Once they logged in, success message will appear on the top of the page.Testing proved.
+      - [ Success message for Signin](static/images/signin-success-testing.PNG)
+
+  #### <span style="text-decoration: underline">Signout Page Testing</span>
+  - There are two Testcases in Signout page, such as Cancel and Signout button. If the Login user clicks Cancel Button, it will redirect into Home page. If the login user clicks Signout Button, success message will appear for Signout. All the Testing options are proved.
+    - [ Sign out page ](static/images/signout-testing.PNG)
+    - [ Success message for Signout](static/images/signout-success-msg-testing.PNG)
 
 
 ## Bugs
@@ -737,7 +797,7 @@ class MediaStorage(S3Boto3Storage):<br>
 at the end ==>
 if 'DEVELOPMENT' in os.environ:
     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-    DEFAULT_FROM_EMAIL = 'kavithasanthanesh@gmail.com'
+    DEFAULT_FROM_EMAIL = 'kavithasanthanesh2021@gmail.com'
 else:
     EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
     EMAIL_USE_TLS = True
