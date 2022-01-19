@@ -71,19 +71,20 @@
 - The website covers all the screen types, such as Pc,Laptop,Tablet and Mobile.
 
 ### <span style="color:green;">Home</span>
-The Home Page covers the foloowing sections:
+The Home Page covers the following sections:
 - Header, Navigation Menus and Shipping details.
 - Hero Image
-- Shop Now button is available in the main page. Clicking this button move the user to All Products Page.
+- Shop Now button is available in the main page. Clicking this button move the user will go to Products Page.
 - The Following options are availabele in the Footer:
   - Contact Details
-  - 
-  -
+  - Facebook Button
+  - Privacy Policy
+  - Newsletter subscription
 - Header and Footer will appear in all pages through Navigations. 
 
 
 ### <span style="color:green;">Sarees</span>
-- When the User choose Sarees Navigation option dropdown menu appears and shows four options to choose, such as:
+- When the User chooses Sarees Navigation option dropdown menu appears and shows four options to choose, such as:
 #### Chiffon Sarees
 #### Cotton Sarees
 #### Silk Sarees
@@ -95,11 +96,8 @@ The Home Page covers the foloowing sections:
   - Name (A-Z) and Name (Z-A)
   - Category (A-Z) and Category (Z-A)
 
-
-
-
 ### <span style="color:green;">All Products</span>
-- When the User choose All Products option dropdown menu appears and shows four options to choose, such as 
+- When the User chooses All Products option dropdown menu appears and shows four options to choose, such as 
 #### By Price
 #### By Rating
 #### By Category
@@ -124,7 +122,7 @@ The Home Page covers the foloowing sections:
 - Once the User Login in to  My Account option then the dropdown menu change to four different Categories, Such as My Profile, My Orders, My Wishlist and Logout.
 - If the User is admin then an additional option is available which is Product Management. The Product Management option will allow the following options such as add the product, edit the product and delete the product.
 #### <span style="color:green;">Register</span>
-- The User can use the Register option to fillup his information to register.<br>
+- The User can use the Register option to fillup their information to register.<br>
 Registration page contains:
     - Header and Footer
     - Email
@@ -134,7 +132,7 @@ Registration page contains:
     - Confirm password
     - Back to Login button
     - Signup button
-  After Registration mail send for confirmation message, and confirmation email send their email address to confirm for registration.
+  After Registration, mail will be send to the user to confirm for registration.
 #### <span style="color:green;">Login</span>
 - Only Registered User is able to use login option to login in to the website.<br>
 Login Page contains:
@@ -146,7 +144,7 @@ Login Page contains:
     - Sign in button
     - Forget Password?
 
-After Login the success login message will appear on the rightside of the Page.
+After Login, the success login message will appear on the rightside of the Page.
 
 #### <span style="color:green;">Logout</span>
 - The User should logout from the website after using the website.<br>
@@ -154,7 +152,7 @@ Logout Page Contains:
     - Header and Footer
     - Cancel button
     - Sign out button
-After Logout the success logout message will appear on the rightside of the Page.
+After Logout, the success logout message will appear on the rightside of the Page.
     
 
 #### <span style="color:green;">Product Management</span>
@@ -181,6 +179,7 @@ After Logout the success logout message will appear on the rightside of the Page
 ### <span style="color:green;">Checkout Success</span>
 
 ## <span style="color:green;">Strategy</span>
+The website covers all the screen types, such as Pc, Laptop, Tablet and Mobile. The website is easily navigate to all the sections. This online Business designed for local and international market. The B2C business model is choosen to enhance the business growth and update product trend according to market sentiment. 
 ### <span style="color:green;">UX</span>
 
 #### <span style="color:green;">UserStory using Kanban feature in Agile Methodology</span>
@@ -227,11 +226,19 @@ To create a truly global brand that provides growth opportunities for the compan
 To become a globally prominent online retailer and be ranked amongst the top online retailer in the world in terms of quality, service standards and ultimately customer satisfaction.
 
 ### <span style="color:green;">Purpose of Website</span>
+The Retail market is moving towards online retailing. This website is created to sell Indian Traditional sarees to global market via online. 
 
+### <span style="color:green;">Business Model(B2C)</span>
+- This business is designed for Business to Consumer model(B2C). B2C model is very suitable for such retail online Market. This model keeps the overhead cost low and very flexible to changes with market trend. B2C business model allows to capture global market and enhances growth to Business.
 
 ## <span style="color:green;">Skeleton</span>
 There are approximately 34 products and 3 categories in the designer silks website.
 ## <span style="color:green;">Scope</span>
+This website covers different types of Sarees, Product details, Shipping and return policyand  Reviews about the product.<br>
+There is Wishlist option for the user to use.<br>
+Secure Payment option is used for the User purchase the product.<br>
+And Facebook page is used for Social Media Purposes.<br>
+There are Newsletter subscription and Contact form options available in the website.
 ### <span style="color:green;">Features</span>
 - A page with an overview of all the products which can be sort by name, rating, price and category
 - A contact form where customers can ask questions.
@@ -246,14 +253,18 @@ There are approximately 34 products and 3 categories in the designer silks websi
 - A profile page to adjust the user's details.
 - An order sytem, to order the products
 - Secure Stripe Payment
-- Review the about the products.
+- Reviews about the products.
 - Shipping estimation days and Return policy
 - privacy policy
 
 ### <span style="color:green;">Future Features</span>
+- Other Variety of Products can be added in the website
+- Childrens Indian Tradional costumes can be added.
+- Designer clothings can be added
+- Discount options can be used to widen our market Portfolio.
 
 ## <span style="color:green;">Structure</span>
-The site will be structured as clear as possible, with a logic workflow and it should be easy to navigate the site on all screen sizes.
+The site will be structured as clear as possible, with a logic workflow and it should be easy to navigate the site on all screen sizes. This project is divided into four main pages. The website was better organised after my mentoring session with my mentor. The website was structured such a way that the users can navigate to find relevant information according to their need.
 ### <span style="color:green;">Wireframes</span>
 Balsamiq Wireframes used for this website.
 <details>
@@ -352,10 +363,10 @@ I have used Open Sans, cursive and 'Raleway', sans-serif to create this website.
 ### Libraries & Frameworks
 - Django Web Application Framework
 - Bootstrap - for responsive website
-- Font Awesome - icons used throughout the site. Responsive design - To generate the mockup image.
+- Font Awesome - icons used throughout the webpages. Responsive design - To generate the mockup image.
 - Google font -used for the website looks more beautiful,fast and great typography.
 - stripe -for payment
-- 
+
 
 #### Tools
 - Gitpod - is an open source platform for automated and ready-to-code.
@@ -379,57 +390,72 @@ I have used Open Sans, cursive and 'Raleway', sans-serif to create this website.
 ## <span style="color:green;">Testing</span>
 ### <span style="color:green;">Automation Testing</span>
 ### <span style="color:green;">Code Validation</span>
+
 ### <span style="color:green;">Features Testing</span>
 #### <span style="text-decoration: underline">Home Page Testing</span>
 There are 25 testCases in Home Page.<br>
-There are 20 testcases in  header section  which are Designer Silks, Home, Chiffon Sarees, Cotton Sarees, Silk Sarees, All Sarees, By Price, By Rating, By Category, All Products, Contact, search bar, Product Management, My Profile, My Orders, My Wishlist, Register, Login, Logout and Cart Navigation.<br>
+There are 20 testcases in  header section, which are Designer Silks, Home, Chiffon Sarees, Cotton Sarees, Silk Sarees, All Sarees, By Price, By Rating, By Category, All Products, Contact, search bar, Product Management, My Profile, My Orders, My Wishlist, Register, Login, Logout and Cart Navigation.<br>
 Designer Silks heading and Home Navigation are designed to bring the user back to the home page.Testing also proves that these options worked as per design. The other navigations are designed to bring the user to the website.Testing proves that these options worked as per designs.
 - [Header-Testing](static/images/home-testing.PNG)
+- If the user enter any keyword in the search bar it will show the number of sarees available as per search.
+  - [Search Box Testing](static/images/search-box-testing.PNG)
+- If the search option used without any information in the search bar, it will give error message that Please enter the search criteria!. 
+  - [Search Box Error message Testing](static/images/search-error-msg-testing.PNG)
 <br>
-- There is 1 Testcase in middle of the Hero image. If the user click the Shop Now Button it will navigate to All Products Page. Testing proves that this option worked as per design.
+- There is 1 Testcase in middle of the Hero image. If the user click the Shop Now Button it will navigate to Products Page. Testing proves that this option worked as per design.
 - [Shop-Now-Button-Testing](static/images/home-testing-2.PNG)
 <br>
 
 - There are 3 Testcases in the Footer Page.
   1. There is one Social media Facebook link attached in all other pages.When click the Facebook button it brings to the Facebook page.
   2. Privacy Policy for Designer Silks.
-  3. Newsletter Subscription
+  3. Newsletter Subscription (optional) connected to Mailchimp.
 All the three testcases worked as per design requirements.
 - [Footer-Testing](static/images/home-footer.PNG)
 #### <span style="text-decoration: underline">All Products page Testing</span>
-There are 5 testcases in Chiffon Sarees, Cotton Sarees, Silk Sarees, All Sarees, By Price, By Rating, By Category and All Products Page. There are two tescase for  toggle icon for Add Wishlist and Remove Wishlist for login user and if the user not logged in it says that login . And there are two buttons for Edit and Delete the products button for Admin. If the User clicks these buttons it shows that Sorry, Only store owners can do that. Testing proves that these option worked as per design.
+There are 5 testcases in Chiffon Sarees, Cotton Sarees, Silk Sarees, All Sarees, By Price, By Rating, By Category and All Products Page. There are two testcases for wishlist. Which covers add or Remove items into the Wishlist.These options are only available for Registed User. If the user is not logged in, it will provide a tooltip  to remind the user to login. And there are two buttons for Edit and Delete the products for Admin. If the Normal User clicks these buttons it shows a message that Sorry, Only store owners can do that. When the user clicks any products image it will redirect to individual product detail page. Testing proves that these options worked as per design. 
 - [Product-Page_Testing](static/images/product-page-testing.PNG)
+- There is a Sort by table for user to find the easiest way to go the product search.Testing Proved that these option worked as per design
+  - Price(low to high)
+  - Price(high to low)
+  - Rating(low to high)
+  - Rating (high to low)
+  - Name(A to Z)
+  - Name(Z to A)
+  - Category(A to Z)
+  - Category(Z to A)
+  - [Sort By Table Testing](static/images/sort-by-testing.PNG)
 
 - [Error Message-When the normal user clicks Edit/Delete Button ](static/images/error-msg-testing.PNG)
 - [Success Added Wishlist Message ](static/images/add-wishlist-testing.PNG)
 - [Removed from Wishlist Message](static/images/remove-wishlist-testing.PNG)
 
 #### <span style="text-decoration: underline">Product_details Page Testing</span>
-- There are 7 new testcases in Product detail page such as Quantity increment and decrement button,Keep shopping button, Add to cart button, Proceed to cheekout button and Reviews Post, Edit and Delete button for login User and success and alert messages will display on top of the page. Testing proves that these options, success message and alert messages are worked as per design.<br>
-  - Quantity increment decrement button can add 1 to 99 products. cannot add letters or decimal point in that box. 
-  - Keep shopping button goes to All product page. Testing proves that this option worked as per design.Testing proves that these options worked as per design.
+- There are 7 new testcases in Product detail page such as Quantity increase and decrease button,Keep shopping button, Add to cart button, Proceed to cheekout button and Reviews Post, Edit and Delete button for login User. It also provides success and alert messages will display on top of the page. Testing proves that these options, success message and alert messages are worked as per design.<br>
+  - Quantity increase and  decrease button can add 1 to 99 products. User cannot used  letters or decimal points in that box. 
+  - Keep shopping button goes to Product page. Testing proves that this option worked as per design.
     - [Quantity Increment, Decrement button and Keep Shopping Button](static/images/quantity_shopping_testing.PNG)
-  - When I click Add to Cart button, cart details toast message will appear.  There is Proceed to checkout button for cart page. Testing proves that these options worked as per design.
+  - When I click Add to Cart button, shopping cart details toast message will appear.  There is one testcase for Proceed to checkout button. If the user clicks Proceed to checkout button, it will move Shopping Cart page. Testing proves that these options worked as per design.
     - [Add to Cart button and Proceed to checkout button](static/images/add-to-cart-testing.PNG)
-  - There are three buttons in Write a Review section in the product detail page. Such Post, Edit and Delete buttons. Post buttons will only appear for any login users.If the user is not login they Cannot see the Post button and ask them to login the page. Edit and Delete buttons are only visible for particular user. 
+  - There are three buttons in Write a Review section in the product detail page. Such as Post, Edit and Delete buttons. Post buttons will only appear for any login users.If the user is not login they Cannot see the Post button and ask them to login in to the website. The Reviews can be Edit or Delete by the same user who has posted the message earlier.
     - [Post, Edit and Delete Buttons in the Review section ](static/images/post-edit-delete-testing.PNG)
-    - if they want to write a review they must enter the comments and must select the rating, otherwise it will give error message.
+    - During the Review Post the login user must fill both comment and Rating, otherwise error message will appear.
       - [ Write a Review Form Validation](static/images/review-validation1-testing.PNG)
       - [ Error Message for not entering Review Rating ](static/images/review-rate-validation-testing.PNG)
-    - once they submit the post successfully added a review message will appear.
+    - Once the user published the Review Post, the success message will appear.
       - [ Success Message for Add Reviews ](static/images/review-success-msg-testing.PNG)
-    - if they Edit the button and once they updated the Review then successfully updated message will appear.
+    - Edit the Post -After Editing the Post, successfully updated message will appear.
       - [ Success Message for Update Reviews ](static/images/review-success-update-msg.PNG)
-    - If they press the Delete button Reviews will deleted from Reviews and Deleted alert will display.
+    - Delete the Post - After the post has been Deleted, Alert Deleted message will appear.
       - [ Success Alert Message for Deleted Reviews ](static/images/review-delete-msg-testing.PNG)
 
-- And There are 5 testcases same like All Products page(such as Wishlist add, remove button and Please login tooltip and Edit/Delete the product page.)
+- And There are 5 testcases similar like All Products page(such as Wishlist add, remove button and Please login tooltip and Edit/Delete the product page.)
 
 #### <span style="text-decoration: underline">Cart Page Testing</span>
 - There are 4 Testcases in Cart page. Such as Update, Remove, Keep Shopping and Secure Checkout Buttons.
-1. Update Button - User can update the quantity add or minus the number and if they press update button it will update the quantiy and automatically correct the amount of subtotal according to the quantity selected. They can update 0 to 99, Cant enter letter and decimal points. If they updated the quantity then success message will appear. Testing Proved.
+1. Update Button - User can update the quantity increase or decrease items and followed by clicking the update button it will update the quantiy and automatically correct the amount of subtotal according to the quantity selected. The item quantity can range between 0 to 99. the programme donot allow letters and decimal points. Success message will appear after updating the quantity. Testing Proved.
   - [ Success Message for Updated the Product quantity ](static/images/update-qty-testing.PNG)
-2. Remove Button - User Click the Remove the Button the products will removed and it will open a newpage. It will say that Your Cart is empty. And successfully removed message also appear. There is one button for Return to shop. If the user Press that Button it will redirect to Products page.Testing Proved.
+2. Remove Button - The remove button can be used to delete items in the shopping Cart page. The new page opens and remains the user the shopping cart is empty and success message will appear on the top right..There is one button for Return to shop. If the user Press that Button it will redirect to Products page.Testing Proved.
   - [ Product Removed from the Cart message ](static/images/delete-qty-testing.PNG)
 3. Keep Shopping - User click the Keep shopping button it will redirect to Product page. Testing Proved.
 4. Secure checkout Button - User clicks this button it will go to Check out page. Testing Proved.
@@ -444,7 +470,7 @@ There are Two cases in the Check out page. such as Adjust Bag and Complete order
     - 4242 4242 4242 4242
     - 4000 0025 0000 3155
     -  [ Complete Order Button ](static/images/adjust-bag-testing.PNG)
-  - Forms Validationin the Checkout page
+  - Forms Validation in the Checkout page
     - [ Validation for Name Field ](static/images/name-field-testing.PNG)
     - Email Field Automatically stored from Login user
     - [ Validation for Email Field ](static/images/phone-field-testing.PNG)
@@ -460,7 +486,7 @@ There are Two cases in the Check out page. such as Adjust Bag and Complete order
       - 4000 0025 0000 3155
     - [ Validation for Incorrect Credit Card ](static/images/incorrect-card-testing.PNG)
     - [ Validation for Incomplete Credit Card ](static/images/incomplete-card-testing.PNG)
-    - Once the User entered their shipping address and if they click Save the information to my Profile, it will stored in the Profile page. For next Purchase they dont need to enter the shipping details again. if they want to send for another address then they can edit the address in the same page itself. Testing proves.
+    - Once the User entered their shipping address and if they click Save the information to my Profile, it will stored in the Profile page. For next Purchase, they dont need to enter the shipping details again. if they want to send the product  to another address then they can edit the address in the checkout page. Testing proves.
     - [ Validation for Save the Information to the Profile Page Checkbox ](static/images/save-info-testing.PNG)
   - If they unclick the Save information when the purchase order done, then it wont stored in the Profile page. Testing Proved.
     - [ Validation for Unclick the checkbox for Save the Information to the Profile](static/images/unclick-checkbox-testing.PNG)
@@ -469,11 +495,34 @@ There are Two cases in the Check out page. such as Adjust Bag and Complete order
 There is one Testcase in the checkout success page which is Go to the HomePage. It will redirect to home page. Testing Proved.
   - [ Go to the Home Page button](static/images/checkout-success-testing.PNG)
 
+#### <span style="text-decoration: underline">Contact Page Testing</span>
+  - There is one Testcase in the Contact page which is Send button. Once the user used the contact page then thanks for contact us message will appear. They have option to choose whether newsletter subsription need or not. Form validation checked for contact page. All the Testing options are proved.
+    -  [Contact us success message ](static/images/contact-success-msg-testing.PNG)
+    - Contact Form Validation
+      - [ Name field Validation](static/images/contact-name-testing.PNG)
+      - [ Email field Validation](static/images/contact-email-testing.PNG)
+      - [ Subject field Validation](static/images/contact-subject-testing.PNG)
+      - [ Newsletter Radio box Validation](static/images/newsletter-testing.PNG)
+  #### <span style="text-decoration: underline">Product Management Page Testing</span>
+  Only the Super User is allowed to access the Product Management page. The page allows the following,Add, Edit and Delete the product from the website.
+  - Add a Product
+    - There is 2 test Cases in the Add a product page. Such as Cancel and Add Product Button. If we click Cancel button it will redirect to products page. If we click Add product button, the product will stored in the products page. Testing Proved.
+      - [ Add a Product page Testing](static/images/add-product-testing.PNG)
+    - Form Validation for Add product table.
+    In the Form, Category field can choose from three categories. The other required fields are Name, Price and Description. SKU, Rating, Material and Length fields are Optional. if the superuser is not selected Image Field No image found picture automatically stored in the new product detail page.Finally success message will appear in the new product detail page. All the Testing options are proved.
+      - [ Name Validation in Add Product](static/images/add-product-name-testing.PNG)
+      - [ Price Validation in Add Product](static/images/add-product-price-testing.PNG)
+      - [ Description Validation in Add Product](static/images/add-product-des-testing.PNG)
+      - [ New Product detail -if image is not selected in the Add product](static/images/add-product-success-msg-testing.PNG)
+
+  - Edit Product
+    -  There is 1 new testcase in the Edit product page which is Update Product.If the superuser click edit button in the product or product detail page, it will allow the user to edit the details. After Editing, success update message will appear. Testing proved.
+
 
 ## Bugs
-1. I try to create new app for wishlist and reviews and add into the products page and product_detail page. But i donot know how to connect these apps to product app. Then i decided to add new model for wishlist and Review in the product app and connect the data into the products templates. Within limited time period i couldnot able to do that, but after this course sure i will learn it.
+1. I try to create new app for wishlist and reviews and add into the products page and product_detail page. But i donot know how to connect these apps to product app. Then i decided to add new models for wishlist and Review in the product app and connect the data into the products templates. Within limited time period i couldnot able to do that, but after this course sure i will learn it.
 2. When I complete the payment system i received duplicate order number in the order history and admin page. I resolved this problem with Tutor support.
-3. When I do the Real send mail section i didnot received a confirmation message in my email. This problem also solved with Tutor Support.
+3. When I do the Real send mail section i didnot received a confirmation message in my email. This problem also resolved with Tutor Support.
 
 
 ## Deployment
@@ -718,6 +767,7 @@ https://www.xml-sitemaps.com/
 
 ## <span style="color:green;">Web Marketing</span>
 ### Facebook account
+I Created Facebook page for this website. I have attached the screen shot for the information:
 
 
 ## <span style="color:green;">Email Marketing</span>
