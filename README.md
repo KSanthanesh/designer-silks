@@ -81,27 +81,55 @@ The Home Page covers the following sections:
   - Privacy Policy
   - Newsletter subscription
 - Header and Footer will appear in all pages through Navigations. 
+- [ Home-ipad-1 ](static/images/home-ipad-1.PNG)
+- [ Home-ipad-2 ](static/images/home-ipad-2.PNG)
+- [ Home-ipad-3 ](static/images/home-ipad-3.PNG)
 
 
 ### <span style="color:green;">Sarees</span>
 - When the User chooses Sarees Navigation option dropdown menu appears and shows four options to choose, such as:
 #### Chiffon Sarees
+- [ Chiffon Sarees -1 ](static/images/chiffon-sarees-1.PNG)
+- [ Chiffon Sarees -2 ](static/images/chiffon-sarees-2.PNG)
+- [ Chiffon Sarees Mobile -3 ](static/images/chiffon-sarees-3.PNG)
+- [ Chiffon Sarees Mobile -4 ](static/images/chiffon-sarees-4.PNG)
 #### Cotton Sarees
+- [ Cotton Sarees -1 ](static/images/cotton-sarees-1.PNG)
+- [ Cotton Sarees -2 ](static/images/cotton-sarees-2.PNG)
+
 #### Silk Sarees
+- [ Silk Sarees -1 ](static/images/silk-sarees-1.PNG)
+- [ Silk Sarees -2 ](static/images/silk-sarees-2.PNG)
+- [ Silk Sarees Ipod-3 ](static/images/silk-sarees-3.PNG)
 #### All Sarees
+- [ All Sarees Ipod-1 ](static/images/all-sarees-1.PNG)
+- [ All Sarees Ipod Mini-2 ](static/images/all-sarees-2.PNG)
+- [ All Sarees -3 ](static/images/all-sarees-3.PNG)
 - Total number of Sarees available in each Sarees category is displayed for the User.
 - Sorting Options are available for the User in each Sarees Category, Such as
   - Price (low to high) and Price (high to low)
+    - [ Price (low to High) ](static/images/price-low-1.PNG)
+    - [ Price (high to low) ](static/images/price-high-1.PNG)
   - Rating (low to high) and Rating (high to low)
+    - [ Rating (low to High) ](static/images/rating-low-1.PNG)
+    - [ Rating (high to low) ](static/images/rating-high-1.PNG)
   - Name (A-Z) and Name (Z-A)
+    - [ Name (A to Z) ](static/images/name-atoz-1.PNG)
+    - [ Name (Z to A) ](static/images/name-ztoa-1.PNG)
   - Category (A-Z) and Category (Z-A)
+    - [ Category (A to Z) ](static/images/category-atoz-1.PNG)
+    - [ Category (Z to A) ](static/images/category-ztoa-1.PNG)
 
 ### <span style="color:green;">All Products</span>
 - When the User chooses All Products option dropdown menu appears and shows four options to choose, such as 
 #### By Price
+  - [ Sarees By Price ](static/images/by-price.PNG)
 #### By Rating
+  - [ Sarees By Rating ](static/images/by-rating.PNG)
 #### By Category
+  - [ Sarees By Category ](static/images/by-category.PNG)
 #### All Products
+  - [ All Products ](static/images/all-products.PNG)
 - Total number of Sarees available in each Sarees category is displayed for the User.
 - Sorting Options are available for the User in each Sarees Category, Such as
   - Price (low to high) and Price (high to low)
@@ -112,16 +140,25 @@ The Home Page covers the following sections:
 ### <span style="color:green;">Contact</span>
 - In the Contact form option, the user has to fillup all the parameters in the form. 
 - There is a Newsletter option where the user has a choice to subscribe or not to subscribe the newsletter.
+  - [ Contact Ipod-1](static/images/contact-ipod-1.PNG)
+  - [ Contact Mobile-2](static/images/contact-mobile-2.PNG)
 
 ### <span style="color:green;">Search bar</span>
 - The Search bar will help the user to narrow down the relevant products and display the products as per search description.
+  - [ Search bar for windows ](static/images/search-bar-1.PNG)
+  - [ Search bar for mobiles ](static/images/search-bar-mobile-2.PNG)
+
 
 ### <span style="color:green;">My Account</span>
+  - [ My Account for Superuser ](static/images/my-account-1.PNG)
+  - [ My Account Mobile view for Regular user  ](static/images/my-account-mobile-2.PNG)
 - when the User Choose My account Navigation option, dropdown menu appears and show Two options, such as Register and Login.
 - Once the User Login in to  My Account option then the dropdown menu change to four different Categories, Such as My Profile, My Orders, My Wishlist and Logout.
 - If the User is admin then an additional option is available which is Product Management. The Product Management option will allow the following options such as add the product, edit the product and delete the product.
+  
 #### <span style="color:green;">Register</span>
 - The User can use the Register option to fillup their information to register.<br>
+  - [ Register Mobile View ](static/images/register-mobile.PNG)<br>
 Registration page contains:
     - Header and Footer
     - Email
@@ -132,8 +169,10 @@ Registration page contains:
     - Back to Login button
     - Signup button
   After Registration, mail will be send to the user to confirm for registration.
+    
 #### <span style="color:green;">Login</span>
 - Only Registered User is able to use login option to login in to the website.<br>
+- [ Login Mobile View ](static/images/signin-mobile.PNG)<br>
 Login Page contains:
     - Header and Footer
     - Username
@@ -141,12 +180,14 @@ Login Page contains:
     - Remember me with checkbox
     - Home Button
     - Sign in button
-    - Forget Password?
-
+    - Forget Password?<br>
 After Login, the success login message will appear on the rightside of the Page.
 
+
 #### <span style="color:green;">Logout</span>
-- The User should logout from the website after using the website.<br>
+- The User should logout from the website after using the website.
+  - [ Logout Mobile View ](static/images/signout-mobile.PNG)
+<br>
 Logout Page Contains:
     - Header and Footer
     - Cancel button
@@ -155,18 +196,27 @@ After Logout, the success logout message will appear on the rightside of the Pag
     
 
 #### <span style="color:green;">Product Management</span>
-- The Product Management option will allow the following options such as add the product, edit the product and delete the product for the admin. 
+- The Product Management option will allow the following options such as add the product, edit the product and delete the product for the admin.
+  - [ Add Product Page Only for Admin ](static/images/add-product.PNG)
+  - [ Edit Product Page Only for Admin ](static/images/edit-product.PNG)
 #### <span style="color:green;">My Profile</span>
 - Login user can update or store their Delivery information.
+  - [ My Profile Mobile view ](static/images/my-profile-mobile.PNG)
 #### <span style="color:green;">My Orders</span>
 - Order history and information about the products will be stored in the database.
+  - [ My Orders ](static/images/my-orders.PNG)
 #### <span style="color:green;">Wishlist</span>
 - user can add favourite items into the wishlist and shortlist what to buy later.
+  - [ My Wishlist Ipod view ](static/images/my-wishlist.PNG)
 
 ### <span style="color:green;">Product Details</span>
 - Product Details options contains: SKU (Product id),Fabric (Material Type), Description,length, Shipping and Returns.
 - Quantity option is available for User to select the number of products of the same product.
 - The cart will be update the section.
+  - [ Product Detail -Ipod view ](static/images/product-detail-ipod-1.PNG)
+- There is Review Section in Product Details Page. There are three buttons in Write a Review section in the product detail page. Such as Post, Edit and Delete buttons. Post buttons will only appear for any login users.If the user is not login they Cannot see the Post button and ask them to login in to the website. The Reviews can be Edit or Delete by the same user who has posted the message earlier.
+  - [ Write a Review -Ipod view ](static/images/reviews-post.PNG)
+  - [ Edit a Review -Mobile view ](static/images/review-edit.PNG)
 
 ### <span style="color:green;">Cart</span>
 - Shopping Cart page contains: 
