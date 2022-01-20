@@ -55,12 +55,8 @@
   - [Business Model](#business-model)
   - [Facebook](#facebook)
 - [Email Marketing](#email-marketing)
-- [General Data Protection Regulation-GDPR](#general-data-production-regulation-gdpr)
+- [General Data Protection Regulation](#general-data-protection-regulation)
 - [Acknowledgement](#acknowledgement)
-
-
-
-
 
 ## Introduction
 - This project will cover Saree collections, which is one of the Indian Traditional Culture. 
@@ -211,7 +207,7 @@ After Logout, the success logout message will appear on the rightside of the Pag
 - Order history and information about the products will be stored in the database.
   - [ My Orders ](static/images/my-orders.PNG)
 #### My Wishlist
-- user can add favourite items into the wishlist and shortlist what to buy later.
+- User can add favourite items into the wishlist and shortlist what to buy later.
 - Delete Button
   - [ My Wishlist Ipod view ](static/images/my-wishlist.PNG)
 
@@ -259,7 +255,6 @@ After Logout, the success logout message will appear on the rightside of the Pag
   - [ Checkout Page for Mobile view](static/images/checkout-mobile.PNG)
   
 
-
 ### Checkout Success
 - Checkout Success Page contains:
   - Thanks Message
@@ -270,7 +265,6 @@ After Logout, the success logout message will appear on the rightside of the Pag
   - Billing Info such as Order Total, Shipping Cost and Grand Total
   - Go to the Home Page Button
   - [ Checkout Success](static/images/checkout-success-testing.PNG)
-
 
 ## Strategy
 The website covers all the screen types, such as Pc, Laptop, Tablet and Mobile. The website is easily navigate to all the sections. This online Business designed for local and international market. The B2C business model is choosen to enhance the business growth and update product trend according to market sentiment. 
@@ -313,8 +307,7 @@ The website covers all the screen types, such as Pc, Laptop, Tablet and Mobile. 
     - As a Site User I can Delete the products from the wishlist So that I can shortlist what to buy.
     - As a Site User I can use Contact form to send enquiry So that I can enquire information regarding products and services.
     - As a Site User I can subscribe option for Newsletter So that I can get the information regarding the products regularly.
-    
-    
+     
 ### Business Vision
 To create a truly global brand that provides growth opportunities for the company, whilst achieving its goal of becoming the number one value fashion retailer across the globe.
 To become a globally prominent online retailer and be ranked amongst the top online retailer in the world in terms of quality, service standards and ultimately customer satisfaction.
@@ -608,9 +601,10 @@ There is one Testcase in the checkout success page which is Go to the HomePage. 
       - [ Email field Validation](static/images/contact-email-testing.PNG)
       - [ Subject field Validation](static/images/contact-subject-testing.PNG)
       - [ Newsletter Radio box Validation](static/images/newsletter-testing.PNG)
+
   #### <span style="text-decoration: underline">Product Management Page Testing</span>
   Only the Super User is allowed to access the Product Management page. The page allows the following,Add, Edit and Delete the product from the website.
-  - Add a Product
+  #### Add a Product
     - There is 2 test Cases in the Add a product page. Such as Cancel and Add Product Button. If we click Cancel button it will redirect to products page. If we click Add product button, the product will stored in the products page. Testing Proved.
       - [ Add a Product page Testing](static/images/add-product-testing.PNG)
     - Form Validation for Add product table.
@@ -620,13 +614,13 @@ There is one Testcase in the checkout success page which is Go to the HomePage. 
       - [ Description Validation in Add Product](static/images/add-product-des-testing.PNG)
       - [ New Product detail -if image is not selected in the Add product](static/images/add-product-success-msg-testing.PNG)
 
-  - Edit Product
+  #### Edit Product
     -  There is 1 new testcase in the Edit product page which is Update Product.If the superuser click edit button in the product or product detail page, it will allow the user to edit the details and alert message will appear for before editing the product. After Updating, success update message will appear. Testing proved.
       - [ Update Button in the Edit product page](static/images/edit-product-testing.PNG)
       - [ Alert message for before Editing the Product](static/images/edit-product-msg-testing.PNG)
       - [ Success message after Updating the Product](static/images/edit-product-success-msg-testing.PNG)
 
-  - Delete Product
+  #### Delete Product
     - If the superuser click Delete button the product will be deleted, and then successfully deleted message will appear on top of the page. Testing Proved.
     - [ Success message after Delete the Product](static/images/delete-product-testing.PNG)
 
@@ -776,11 +770,7 @@ First we need to go to github website to create a new repositary using code Inst
   7. Create webhook_handler.py
   8. In the stripe website ==> Goto Developer then go to webhooks and Add an endpoint for https://designer-silks.herokuapp.com/checkout/wh/
 
-
- 
-
 #### Heroku
-
     1. Create new app name and select europe.
     Then Click => Resources Tab => Addons enter=> Postgres, then select => Heroku postgres => Hobby dev.
     Then select the settings tab, click Reveal Config Vars and then copy the Database Value.
@@ -794,7 +784,8 @@ First we need to go to github website to create a new repositary using code Inst
       - EMAIL_HOST_PASS       -from Gmail
       - EMAIL_HOST_USER       -Gmail
       - SECRET_KEY            -Random Key Generator
-      - USE_AWS
+      - USE_AWS               -True
+
 #### In the Terminal
 - Add Procfile and run requirements comment
 - Then connect the heroku login in the terminal <br>
@@ -819,9 +810,7 @@ https://aws.amazon.com/
     - then index document ==> index.html, error document ==> error.html then click ==> save
 
 3.  Then go to Permission tab (3 changes)
-
     - cors configuration
-			  
 			  edit the button for cors configuration and paste the following  ==> 
             [
 			{
@@ -863,7 +852,7 @@ https://aws.amazon.com/
 	   ==> then search designer-silks-policy ==> click: Attach policy
 	   
 	6.  then click ==> Users (left hand side) ==> Add Users ==>name: designer-silks-staticfiles-user ==> click: programmatic access ==>next permission
-	   ==>click: manage-boutique-ado ==> just click: next tag ==>just click: next review ==>just click: create user ==> Download Csv (Save it properly cannot take it again).
+	   ==>click: manage-designer-silks ==> just click: next tag ==>just click: next review ==>just click: create user ==> Download Csv (Save it properly cannot take it again).
 
   7. Then again in the workspace terminal:
     - pip3 install boto3
@@ -930,8 +919,8 @@ https://www.xml-sitemaps.com/
 - Then add the meta tag in the base template head. Some inportant keywords for user. 
 
 ## Web Marketing
-### Business Model(B2C)
-- This business is designed for Business to Consumer model(B2C). B2C model is very suitable for such retail online Market. This model keeps the overhead cost low and very flexible to changes with market trend. B2C business model allows to capture global market and enhances growth to Business.
+### Business Model
+- This business is designed for <b>Business to Consumer model(B2C).</b> B2C model is very suitable for such retail online Market. This model keeps the overhead cost low and very flexible to changes with market trend. B2C business model allows to capture global market and enhances growth to Business.
 ### Facebook account
 I Created Facebook page for this website. I have attached the screen shot for the information:
 
@@ -940,7 +929,7 @@ I Created Facebook page for this website. I have attached the screen shot for th
 ### MailChimp- Newsletter Subscription
 - Register for MailChimp account for designer silks email address. And create Signup embeded form, and take only Newsletter column for user newsletter subscription.
 
-## General Data Protection Regulation-GDPR
+## General Data Protection Regulation
 ### Privacy policy Generator
 https://www.privacypolicygenerator.info/ 
 - Enter Company Name, website name, Herokku Url followed by Country,State and email then click generate private policy. Copy the link clipboard and Paste in the base template footer.
