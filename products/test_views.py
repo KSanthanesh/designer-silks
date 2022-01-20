@@ -1,7 +1,7 @@
 """ Testing the products.views.py"""
 
 from django.test import TestCase
-from django.contrib.auth.models import User
+# from django.contrib.auth.models import User
 from .models import Product, Category
 
 
@@ -57,17 +57,17 @@ class TestViews(TestCase):
             response, 'products/products.html', '?sort=category&direction=asc')
 
     def test_product_detail_page(self):
-        """ When the user click products then product_detail page will appear"""
+        """ If the user click products then product_detail page will appear"""
         category = Category.objects.create(
             name='chiffon_saree', friendly_name='Chiffon Saree')
         product = Product.objects.create(
-            category='chiffon', sku='12345', name='kavi', price='45', rating='4', material='chiffon', description='chiffon', length='5.5m', image='image.jpg'
+            category='chiffon', sku='12345', name='kavi', price='45',
+            rating='4', material='chiffon', description='chiffon',
+            length='5.5m', image='image.jpg'
         )
         response = self.client.get(f'/product_detail/{product.id}')
-        
         self.assertEqual(response.status_code, 200)
         self.assertRedirects(response, 'products/product_detail.html')
-
 
     # def test_add_product_page(self):
     #     """ Test for add product """
@@ -80,6 +80,6 @@ class TestViews(TestCase):
     #     user = User.objects.create(username='designersilks')
     #     response = self.client.post('/add/', {'category': 'chiffon', 'sku': '12345', 'name': 'kavi', 'price': '45', 'rating': '4', 'material': 'chiffon', 'description': 'chiffon', 'length': '5.5m', 'image': 'image.jpg'})
     #     response = self.client.get(f'/product_detail/{product.id}')
-        
+
     #     self.assertEqual(response.status_code, 200)
     #     self.assertRedirects(response, 'products/product_detail.html')

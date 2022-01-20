@@ -16,19 +16,15 @@ class TestModels(TestCase):
         self.assertEqual(str(category.friendly_name), 'Chiffon Saree')
 
     def test_category_str_method_name_returns(self):
-        """ 
-        Check the Name Field is string in Category class in products models
-        """
+        """Check the Name Field is str in Category class in products models"""
+
         category = Category.objects.create(
             name='chiffon_saree', friendly_name='Chiffon Saree')
         expected_string = str(category.name)
         self.assertEqual(str(category), expected_string)
 
     # def test_category_str_method_get_friendly_name_returns(self):
-    #     """ 
-    #     Check the Friendly Name Field is string in Category
-    #     class in products models
-    #     """
+    #     """ Check the Friendly Name Field is string in Category class"""
     #     category = Category.objects.create(
     #         name='chiffon_saree', friendly_name='Chiffon Saree')
     #     friendly_string = str(category.friendly_name)

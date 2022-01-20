@@ -3,11 +3,9 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.http import HttpResponseRedirect
 from django.contrib import messages
-# from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.db.models.functions import Lower
 from django.contrib.auth.models import User
-# from profiles.models import UserProfile
 
 from products.models import Product, Category, Review, Wishlist
 from products.forms import ProductForm, ReviewForm, WishlistForm
@@ -54,8 +52,7 @@ def all_products(request):
             products_list = products_list.filter(queries)
 
     current_sorting = f'{sort}_{direction}'
-    # user_id = request.user
-    # wishlist = Wishlist.objects.filter(user=user_id).values_list('product', flat=True)
+
     wishlist = Wishlist.objects.all().values_list('product', flat=True)
     list_wish = wishlist
     context = {
@@ -64,7 +61,6 @@ def all_products(request):
         'current_categories': categories_list,
         'current_sorting': current_sorting,
         'wishlist': list_wish,
-        # 'fleg': 0,
     }
     return render(request, 'products/products.html', context)
 
@@ -86,7 +82,6 @@ def product_detail(request, product_id):
     return render(request, 'products/product_detail.html', context)
 
 
-# @login_required
 def add_product(request):
     """ Add product to the website """
     if not request.user.is_superuser:
@@ -109,7 +104,6 @@ def add_product(request):
     return render(request, 'products/add_product.html', context)
 
 
-# @login_required
 def edit_product(request, product_id):
     """ Edit product to the website """
 
@@ -138,7 +132,6 @@ def edit_product(request, product_id):
     return render(request, 'products/edit_product.html', context)
 
 
-# @login_required
 def delete_product(request, product_id):
     """ Delete product to the website """
     if not request.user.is_superuser:
@@ -155,7 +148,7 @@ def review_rate(request, product_id):
     """ Reviews views"""
     if request.method == 'POST':
         form = ReviewForm(request.POST)
-        # products = request.POST['rate']
+
         if form.is_valid():
             form.save()
             messages.success(request, "Successfully added a Review")
@@ -195,9 +188,7 @@ def edit_review(request, p_id, r_id):
             messages.success(request, "Successfully updated a Review")
             return redirect('product_detail', p_id)
     form = ReviewForm(instance=review)
-    # context = {
-    #         'form': form,
-    #     }
+
     return redirect('product_detail', p_id)
 
 
@@ -211,7 +202,6 @@ def delete_review(request, p_id, r_id):
 
 def wishlist(request, product_id):
     """ Wishlist views"""
-    # wishlist_p = "None"
     wishlist_p = False
     product_name = Product.objects.get(pk=product_id)
     user_id = request.POST['user']
@@ -234,7 +224,8 @@ def wishlist(request, product_id):
     else:
         wishlist_delete(request, product_id)
     user_id = request.user
-    wishlist = Wishlist.objects.filter(user=user_id).values_list('product', flat=True)
+    wishlist = Wishlist.objects.filter(user=user_id).values_list(
+        'product', flat=True)
     list_wish = wishlist
     context = {
         'wishlist': list_wish,
@@ -242,10 +233,9 @@ def wishlist(request, product_id):
     return HttpResponseRedirect(request.META.get('HTTP_REFERER'), context)
 
 
-# @login_required
 def wishlist_history(request):
     """Display Order History for specific order """
-    # profileuser = get_object_or_404(UserProfile, user=request.user)
+
     user_id = request.user
     wishlist = Wishlist.objects.filter(user=user_id)
     context = {
@@ -255,7 +245,6 @@ def wishlist_history(request):
     return render(request, 'products/wishlist.html', context)
 
 
-# @login_required
 def wishlist_delete(request, product_id):
     """ User can delete the wishlist from my wishlist page"""
     wishlist_p = Wishlist.objects.filter(product=product_id)
