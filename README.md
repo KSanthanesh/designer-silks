@@ -101,10 +101,10 @@ The Home Page covers the following sections:
 #### Silk Sarees
 - [ Silk Sarees -1 ](static/images/silk-sarees-1.PNG)
 - [ Silk Sarees -2 ](static/images/silk-sarees-2.PNG)
-- [ Silk Sarees Ipod-3 ](static/images/silk-sarees-3.PNG)
+- [ Silk Sarees Ipad-3 ](static/images/silk-sarees-3.PNG)
 #### All Sarees
-- [ All Sarees Ipod-1 ](static/images/all-sarees-1.PNG)
-- [ All Sarees Ipod Mini-2 ](static/images/all-sarees-2.PNG)
+- [ All Sarees Ipad-1 ](static/images/all-sarees-1.PNG)
+- [ All Sarees Ipad Mini-2 ](static/images/all-sarees-2.PNG)
 - [ All Sarees -3 ](static/images/all-sarees-3.PNG)
 - Total number of Sarees available in each Sarees category is displayed for the User.
 - Sorting Options are available for the User in each Sarees Category, Such as
@@ -141,7 +141,7 @@ The Home Page covers the following sections:
 ### Contact
 - In the Contact form option, the user has to fillup all the parameters in the form. 
 - There is a Newsletter option where the user has a choice to subscribe or not to subscribe the newsletter.
-  - [ Contact Ipod-1](static/images/contact-ipod-1.PNG)
+  - [ Contact Ipad-1](static/images/contact-ipod-1.PNG)
   - [ Contact Mobile-2](static/images/contact-mobile-2.PNG)
 
 ### Search bar
@@ -209,15 +209,15 @@ After Logout, the success logout message will appear on the rightside of the Pag
 #### My Wishlist
 - User can add favourite items into the wishlist and shortlist what to buy later.
 - Delete Button
-  - [ My Wishlist Ipod view ](static/images/my-wishlist.PNG)
+  - [ My Wishlist Ipad view ](static/images/my-wishlist.PNG)
 
 ### Product Details
 - Product Details options contains: SKU (Product id),Fabric (Material Type), Description,length, Shipping and Returns.
 - Quantity option is available for User to select the number of products of the same product.
 - The cart will be update the section.
-  - [ Product Detail -Ipod view ](static/images/product-detail-ipod-1.PNG)
+  - [ Product Detail -Ipad view ](static/images/product-detail-ipod-1.PNG)
 - There is Review Section in Product Details Page. There are three buttons in Write a Review section in the product detail page. Such as Post, Edit and Delete buttons. Post buttons will only appear for any login users.If the user is not login they Cannot see the Post button and ask them to login in to the website. The Reviews can be Edit or Delete by the same user who has posted the message earlier.
-  - [ Write a Review -Ipod view ](static/images/reviews-post.PNG)
+  - [ Write a Review -Ipad view ](static/images/reviews-post.PNG)
   - [ Edit a Review -Mobile view ](static/images/review-edit.PNG)
 
 ### Cart
