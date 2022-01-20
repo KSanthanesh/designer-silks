@@ -26,6 +26,7 @@
       <h3 class="logo-font mb-4 mt-5 text-primary">Checkout</h3>
     </div>
   </div>
+  <!-- Order summary -->
   <div class="row">
 
     <div class="col-12 col-lg-6 order-lg-last mb-5">
@@ -43,13 +44,11 @@
       {% for item in cart_items %}
       <div class="row">
         <div class="col-2 mb-2 ml-4">
-          <!-- {% if item.product.image %} -->
+
           <a href="{% url 'product_detail' item.product.id %}">
 
             <img class="w-100 border border-black" src="{{ item.product.image.url }}" alt="{{ product.name}}">
-            <!-- {% else %}
-            <img class="w-100" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name}}">
-            {% endif %} -->
+
           </a>
         </div>
         <div class="col-7">
@@ -77,6 +76,7 @@
         </div>
       </div>
     </div>
+    <!-- User needs to fillup Personal Details and Shipping address -->
     <div class="col-12 col-lg-5">
       {% if user.is_authenticated %}
       <p>Please fill the form to complete your order</p>
@@ -110,7 +110,7 @@
             {% endif %}
           </div>
         </fieldset>
-
+        <!-- Payment Section -->
         <fieldset class="rounded px-3 border-black">
           <legend class="fieldset-form small w-auto px-2 text-primary">Payment:</legend>
           <!-- Stripe card element-->
@@ -135,7 +135,7 @@
                 <i class="fas fa-lock"></i>
               </span>
             </span>
-
+            
           </button>
           <p class="text-danger small my-0">
             <span class="fa-icon">
@@ -152,7 +152,7 @@
     </div>
   </div>
 </div>
-
+<!-- Loading Screen for Checkout Success Message -->
 <div id="loading-screen">
   <div class="loading-spinner mt-5 logo-font text-light">
     <span class="fa-icon large">

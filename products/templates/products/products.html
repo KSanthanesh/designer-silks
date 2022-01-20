@@ -12,7 +12,7 @@
 {% endblock %}
 
 {% block content %}
-<!-- <div class="overlay"></div> -->
+
 <div class="container-fluid mb-5 product-margin">
     <div class="row">
         <div class="col text-center mt-5">
@@ -55,9 +55,9 @@
                         {% endif %}
                         <b class="text-black"> Total: {{ products_list|length }} Sarees {% if search_term %}found for
                             {{ search_term }}{% endif %}</b>
-                        
-                        </div>
 
+                    </div>
+                    
                 </div>
             </div>
         </div>
@@ -83,28 +83,31 @@
                         <div class="card-body pb-0">
 
                             <div class="mb-0">{{ product.name}}
-                                
+
                                 {% if user.is_authenticated %}
                                 <form class="form" action="{% url 'wishlist' product.id %}" method="Post">
                                     {% csrf_token %}
 
                                     <input type="hidden" name="product" value="{{ product.id}}" />
                                     <input type="hidden" name="user" value="{{ user.id }}" />
-                                    
-                                    
-                                   {% if product.id in wishlist %}
-                                   <button class="btn btn-md m-0" type="submit"><i class="fas fa-heart wishlist"></i></button>
-                                   {% else %}
-                                   <button class="btn btn-md m-0" type="submit"><i class="far fa-heart wishlist"></i></button>
-                                   {% endif %}
-                                   
-                                   
+
+
+                                    {% if product.id in wishlist %}
+                                    <button class="btn btn-md m-0" type="submit"><i
+                                            class="fas fa-heart wishlist"></i></button>
+                                    {% else %}
+                                    <button class="btn btn-md m-0" type="submit"><i
+                                            class="far fa-heart wishlist"></i></button>
+                                    {% endif %}
+
+
                                 </form>
                                 {% else %}
                                 <div>
-                                    <a data-toggle="tooltip" title="Please Login"><i class="fas fa-heart wishlist"></i></a>
+                                    <a data-toggle="tooltip" title="Please Login"><i
+                                            class="fas fa-heart wishlist"></i></a>
                                 </div>
-                                
+
                                 {% endif %}
                             </div>
 
@@ -180,7 +183,8 @@
     $(document).ready(function () {
         $('[data-toggle="tooltip"]').tooltip();
     });
-       
+
 
 </script>
+
 {% endblock %}

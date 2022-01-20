@@ -22,12 +22,12 @@
 }
 
 .stripe-style-input::placeholder {
-    color: rgb(170, 183, 196);
+  color: rgb(170, 183, 196);
 }
 
 .fieldset-form {
-    position: relative;
-    right: .5rem;
+  position: relative;
+  right: .5rem;
 }
 
 select,
@@ -57,5 +57,4 @@ select option[value=""] {
   margin: 0;
   justify-content: center;
   height: 100%;
-
 }

@@ -4,9 +4,7 @@
 {% block page_header %}
 <div class="container header-container">
     <div class="row">
-        <div class="col">
-
-        </div>
+        <div class="col"></div>
     </div>
 </div>
 {% endblock %}
@@ -14,7 +12,7 @@
 {% block content %}
 <div class="container product-margin">
     <h2 class="text-primary mt-5 ml-5">Contact Us</h2>
-
+    <!-- Contact Form -->
     <form class="form ml-5 was-validated" method="post" action="{% url 'contacts' %}">
         {% csrf_token %}
 

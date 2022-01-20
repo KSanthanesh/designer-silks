@@ -20,6 +20,7 @@
 {% block content %}
 
 <div class="container mb-5 product-margin">
+  <!-- Thanks Message -->
   <div class="row">
     <div class="col">
 
@@ -28,6 +29,7 @@
           class="text-success">{{ order.email }}</b></p>
     </div>
   </div>
+  <!-- Order Info,Order Details, Shipping Address and Billing Information -->
   <div class="row">
     <div class="col-12 col-lg-7">
       <div class="order-confirmation-wrapper p-2">
@@ -140,6 +142,7 @@
       </div>
     </div>
   </div>
+
   <div class="row">
     <div class="col-12 col-lg-7 text-right">
       {% if from_profile %}
