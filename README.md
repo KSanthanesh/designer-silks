@@ -2,7 +2,7 @@
 <img src="static/images/desktop-1.PNG" align="left" width="300" height="200">
 <img src="static/images/desktop-2.PNG" align="center" width="300" height="200">
 
-### <span style="color:green;">Types of Content</span>
+### Types of Content
 - [Introduction](#introduction)
     - [Home](#home)
     - [Sarees](#sarees)
@@ -24,7 +24,7 @@
         - [Product-Management](#product-management)
         - [My-Profile](#my-profile)
         - [My-Orders](#my-orders)
-        - [Wishlist](#wishlist)
+        - [My Wishlist](#my-wishlist)
     - [Cart](#cart)
     - [CheckOut](#checkout)
     - [Checkout-Success](#checkout-success)
@@ -50,13 +50,19 @@
 - [Bugs](#bugs)
 - [Deployment](#deployment)
   - [Amazon Web Services](#amazon-web-services)
+- [SEO](#seo)
+- [Web Marketing](#web-marketing)
+  - [Business Model](#business-model)
+  - [Facebook](#facebook)
+- [Email Marketing](#email-marketing)
+- [General Data Protection Regulation-GDPR](#general-data-production-regulation-gdpr)
 - [Acknowledgement](#acknowledgement)
 
 
 
 
 
-## <span style="color:green;">Introduction</span>
+## Introduction
 - This project will cover Saree collections, which is one of the Indian Traditional Culture. 
 - This webpage is categorised into Four main sections,such as Home, Sarees, All Products and Contact. In other two additional navigations available in the header, Which are My account and Cart.
 - When the User choose Sarees Navigation option dropdown menu appears and shows four options to choose, such as Chiffon Sarees, Cotton Sarees, Silk Sarees and All Sarees.
@@ -66,11 +72,10 @@
 - Once the User Login in to  My Account option then the dropdown menu change to four different Categories, Such as My Profile, My Orders, My Wishlist and Logout.
 - If the User is admin then an additional option is available which is Product Management. The Product Management option will allow the following options such as add the product, edit the product and delete the product.
 - When the User Checkout from the Cart, it will move to Checkout Page. Success Message will appear Once the payment will be successfully completed.
-
-<!-- - Success checkout message will appear in completion of the purchase Process. -->
+- Success checkout message will appear in completion of the purchase Process.
 - The website covers all the screen types, such as Pc,Laptop,Tablet and Mobile.
 
-### <span style="color:green;">Home</span>
+### Home
 The Home Page covers the following sections:
 - Header, Navigation Menus and Shipping details.
 - Hero Image
@@ -86,7 +91,7 @@ The Home Page covers the following sections:
 - [ Home-ipad-3 ](static/images/home-ipad-3.PNG)
 
 
-### <span style="color:green;">Sarees</span>
+### Sarees
 - When the User chooses Sarees Navigation option dropdown menu appears and shows four options to choose, such as:
 #### Chiffon Sarees
 - [ Chiffon Sarees -1 ](static/images/chiffon-sarees-1.PNG)
@@ -120,7 +125,7 @@ The Home Page covers the following sections:
     - [ Category (A to Z) ](static/images/category-atoz-1.PNG)
     - [ Category (Z to A) ](static/images/category-ztoa-1.PNG)
 
-### <span style="color:green;">All Products</span>
+### All Products
 - When the User chooses All Products option dropdown menu appears and shows four options to choose, such as 
 #### By Price
   - [ Sarees By Price ](static/images/by-price.PNG)
@@ -137,26 +142,26 @@ The Home Page covers the following sections:
   - Name (A-Z) and Name (Z-A)
   - Category (A-Z) and Category (Z-A)
 
-### <span style="color:green;">Contact</span>
+### Contact
 - In the Contact form option, the user has to fillup all the parameters in the form. 
 - There is a Newsletter option where the user has a choice to subscribe or not to subscribe the newsletter.
   - [ Contact Ipod-1](static/images/contact-ipod-1.PNG)
   - [ Contact Mobile-2](static/images/contact-mobile-2.PNG)
 
-### <span style="color:green;">Search bar</span>
+### Search bar
 - The Search bar will help the user to narrow down the relevant products and display the products as per search description.
   - [ Search bar for windows ](static/images/search-bar-1.PNG)
   - [ Search bar for mobiles ](static/images/search-bar-mobile-2.PNG)
 
 
-### <span style="color:green;">My Account</span>
+### My Account
   - [ My Account for Superuser ](static/images/my-account-1.PNG)
   - [ My Account Mobile view for Regular user  ](static/images/my-account-mobile-2.PNG)
 - when the User Choose My account Navigation option, dropdown menu appears and show Two options, such as Register and Login.
 - Once the User Login in to  My Account option then the dropdown menu change to four different Categories, Such as My Profile, My Orders, My Wishlist and Logout.
 - If the User is admin then an additional option is available which is Product Management. The Product Management option will allow the following options such as add the product, edit the product and delete the product.
   
-#### <span style="color:green;">Register</span>
+#### Register
 - The User can use the Register option to fillup their information to register.<br>
   - [ Register Mobile View ](static/images/register-mobile.PNG)<br>
 Registration page contains:
@@ -170,7 +175,7 @@ Registration page contains:
     - Signup button
   After Registration, mail will be send to the user to confirm for registration.
     
-#### <span style="color:green;">Login</span>
+#### Login
 - Only Registered User is able to use login option to login in to the website.<br>
 - [ Login Mobile View ](static/images/signin-mobile.PNG)<br>
 Login Page contains:
@@ -184,7 +189,7 @@ Login Page contains:
 After Login, the success login message will appear on the rightside of the Page.
 
 
-#### <span style="color:green;">Logout</span>
+#### Logout
 - The User should logout from the website after using the website.
   - [ Logout Mobile View ](static/images/signout-mobile.PNG)
 <br>
@@ -195,21 +200,22 @@ Logout Page Contains:
 After Logout, the success logout message will appear on the rightside of the Page.
     
 
-#### <span style="color:green;">Product Management</span>
+#### Product Management
 - The Product Management option will allow the following options such as add the product, edit the product and delete the product for the admin.
   - [ Add Product Page Only for Admin ](static/images/add-product.PNG)
   - [ Edit Product Page Only for Admin ](static/images/edit-product.PNG)
-#### <span style="color:green;">My Profile</span>
+#### My Profile
 - Login user can update or store their Delivery information.
   - [ My Profile Mobile view ](static/images/my-profile-mobile.PNG)
-#### <span style="color:green;">My Orders</span>
+#### My Orders
 - Order history and information about the products will be stored in the database.
   - [ My Orders ](static/images/my-orders.PNG)
-#### <span style="color:green;">Wishlist</span>
+#### My Wishlist
 - user can add favourite items into the wishlist and shortlist what to buy later.
+- Delete Button
   - [ My Wishlist Ipod view ](static/images/my-wishlist.PNG)
 
-### <span style="color:green;">Product Details</span>
+### Product Details
 - Product Details options contains: SKU (Product id),Fabric (Material Type), Description,length, Shipping and Returns.
 - Quantity option is available for User to select the number of products of the same product.
 - The cart will be update the section.
@@ -218,20 +224,59 @@ After Logout, the success logout message will appear on the rightside of the Pag
   - [ Write a Review -Ipod view ](static/images/reviews-post.PNG)
   - [ Edit a Review -Mobile view ](static/images/review-edit.PNG)
 
-### <span style="color:green;">Cart</span>
-- Shopping Cart page contains: 
+### Cart
+- Shopping Cart page contains:
+  - Header and Footer
+  - Product Image
+  - Product Info
+  - Price
+  - Quantity 
+  - Quantity Update and Remove Button
+  - Subtotal
+  - Cart Total
+  - Shipping Cost
+  - vat included in this Price
+  - Grand Total
+  - Free shipping Delta
+  - Keep Shopping and Secure Checkout Button
+      - [ Shopping Cart for Larger Screen](static/images/shopping-cart.PNG)
+      - [ Shopping Cart for Mobile View](static/images/shopping-cart-mobile.PNG)
 
 
+### Checkout
+- Checkout Page contains:
+  - Personal Details Such as Fullname and Email.
+  - Shipping Address Such as Phone, Address line1, Address line2,County or City,Postcode and Country.
+  - Payment Credit card details
+  - Order Summary
+    - Product Image
+    - Product Info
+    - SubTotal
+    - Shipping Cost
+    - Grand Total
+  - Adjust Bag and Complete Order Button
+  - [ Checkout Page for Larger Screen](static/images/checkout-windows.PNG)
+  - [ Checkout Page for Mobile view](static/images/checkout-mobile.PNG)
+  
 
-### <span style="color:green;">Checkout</span>
 
-### <span style="color:green;">Checkout Success</span>
+### Checkout Success
+- Checkout Success Page contains:
+  - Thanks Message
+  - Message for confirmation mail send to User
+  - Order Info such as Order Number and Order Date
+  - Order Details such as Product Info and Price
+  - Shipping To column contains Name, Address and Phone Number
+  - Billing Info such as Order Total, Shipping Cost and Grand Total
+  - Go to the Home Page Button
+  - [ Checkout Success](static/images/checkout-success-testing.PNG)
 
-## <span style="color:green;">Strategy</span>
+
+## Strategy
 The website covers all the screen types, such as Pc, Laptop, Tablet and Mobile. The website is easily navigate to all the sections. This online Business designed for local and international market. The B2C business model is choosen to enhance the business growth and update product trend according to market sentiment. 
-### <span style="color:green;">UX</span>
+### UX
 
-#### <span style="color:green;">UserStory using Kanban feature in Agile Methodology</span>
+#### UserStory using Kanban feature in Agile Methodology
   These are the steps for UX<br>
 1. Click Projects in the dosa palace repositary and Create a Project name.
 2. Then select, Project Template => Basic Kanban => create Project.
@@ -270,25 +315,25 @@ The website covers all the screen types, such as Pc, Laptop, Tablet and Mobile. 
     - As a Site User I can subscribe option for Newsletter So that I can get the information regarding the products regularly.
     
     
-### <span style="color:green;">Business Vision</span>
+### Business Vision
 To create a truly global brand that provides growth opportunities for the company, whilst achieving its goal of becoming the number one value fashion retailer across the globe.
 To become a globally prominent online retailer and be ranked amongst the top online retailer in the world in terms of quality, service standards and ultimately customer satisfaction.
 
-### <span style="color:green;">Purpose of Website</span>
+### Purpose of Website
 The Retail market is moving towards online retailing. This website is created to sell Indian Traditional sarees to global market via online. 
 
-### <span style="color:green;">Business Model(B2C)</span>
-- This business is designed for Business to Consumer model(B2C). B2C model is very suitable for such retail online Market. This model keeps the overhead cost low and very flexible to changes with market trend. B2C business model allows to capture global market and enhances growth to Business.
-
-## <span style="color:green;">Skeleton</span>
+## Skeleton
 There are approximately 34 products and 3 categories in the designer silks website.
-## <span style="color:green;">Scope</span>
+## Scope
 This website covers different types of Sarees, Product details, Shipping and return policyand  Reviews about the product.<br>
 There is Wishlist option for the user to use.<br>
 Secure Payment option is used for the User purchase the product.<br>
 And Facebook page is used for Social Media Purposes.<br>
-There are Newsletter subscription and Contact form options available in the website.
-### <span style="color:green;">Features</span>
+There are Newsletter subscription and Contact form options available in the website.<br>
+<p align= "left">
+<img width= "500" src= "static/images/scope.PNG">
+</p>
+### Features
 - A page with an overview of all the products which can be sort by name, rating, price and category
 - A contact form where customers can ask questions.
 - Newsletter subscription for Further details.
@@ -306,15 +351,15 @@ There are Newsletter subscription and Contact form options available in the webs
 - Shipping estimation days and Return policy
 - privacy policy
 
-### <span style="color:green;">Future Features</span>
+### Future Features
 - Other Variety of Products can be added in the website
 - Childrens Indian Tradional costumes can be added.
 - Designer clothings can be added
 - Discount options can be used to widen our market Portfolio.
 
-## <span style="color:green;">Structure</span>
+## Structure
 The site will be structured as clear as possible, with a logic workflow and it should be easy to navigate the site on all screen sizes. This project is divided into four main pages. The website was better organised after my mentoring session with my mentor. The website was structured such a way that the users can navigate to find relevant information according to their need.
-### <span style="color:green;">Wireframes</span>
+### Wireframes
 Balsamiq Wireframes used for this website.
 <details>
 <summary>Home</summary>
@@ -329,7 +374,7 @@ Balsamiq Wireframes used for this website.
 <img src="static/wireframes/silk_sarees.png" width="500">
 </details>
 <details>
-<summary>Saree Details</summary>
+<summary>Product Details</summary>
 <img src="static/wireframes/product_detail.png" width="500">
 </details>
 <details>
@@ -377,7 +422,7 @@ Balsamiq Wireframes used for this website.
 <img src="static/wireframes/contact.png" width="500">
 </details>
 
-### <span style="color:green;">Database Schema</span>
+### Database Schema
 db diagram used for this website.
 <details>
 <summary>DB Diagram</summary>
@@ -404,10 +449,10 @@ colours used:
 
 
 
-### <span style="color:green;">Typography</span>
+### Typography
 I have used Open Sans, cursive and 'Raleway', sans-serif to create this website.
 
-## <span style="color:green;">Technologies Used</span>
+## Technologies Used
 
 ### Libraries & Frameworks
 - Django Web Application Framework
@@ -436,11 +481,20 @@ I have used Open Sans, cursive and 'Raleway', sans-serif to create this website.
 - For images -https://pixabay.com/
 - Testing Real Send Mail -https://temp-mail.org/
 
-## <span style="color:green;">Testing</span>
-### <span style="color:green;">Automation Testing</span>
-### <span style="color:green;">Code Validation</span>
+## Facebook
+I create Facebook page for my Designer Silks Business.
+<p align= "left">
+<img width= "500" src= "static/images/facebook-1.PNG">
+</p>
+<p align= "left">
+<img width= "500" src= "static/images/facebook-2.PNG">
+</p>
 
-### <span style="color:green;">Features Testing</span>
+## Testing
+### Automation Testing
+### Code Validation
+
+### Features Testing
 #### <span style="text-decoration: underline">Home Page Testing</span>
 There are 25 testCases in Home Page.<br>
 There are 20 testcases in  header section, which are Designer Silks, Home, Chiffon Sarees, Cotton Sarees, Silk Sarees, All Sarees, By Price, By Rating, By Category, All Products, Contact, search bar, Product Management, My Profile, My Orders, My Wishlist, Register, Login, Logout and Cart Navigation.<br>
@@ -836,7 +890,7 @@ class MediaStorage(S3Boto3Storage):<br>
   - Then again goto amazon s3 ==> designer-silks ==> create folder ==> name: media ==> save it 
   - then upload file all the images (control+shift) ==> permission Grant public-read access ==> then confirm ==> then upload.
 
-### <span style="color:green;">Sending Real Mails</span>
+### Sending Real Mails
 
 - connect the gmail for sending mails.
 - go to gmail account ==> settings ==> see all settings ==> accounts and Import ==> other Google account settings ==> security tab ==> 2 step verification
@@ -862,7 +916,7 @@ else:
     there is a url for confirm the verification ==> copy the url and paste in the browser and confirm it. then again sign in for the app.
 
   
-## <span style="color:green;">SEO</span>
+## SEO
 
 https://www.xml-sitemaps.com/
 - Enter Heroku URL to create a sitemap
@@ -875,21 +929,23 @@ https://www.xml-sitemaps.com/
   - Sitemap: https://designer-silks.herokuapp.com//sitemap.xml
 - Then add the meta tag in the base template head. Some inportant keywords for user. 
 
-## <span style="color:green;">Web Marketing</span>
+## Web Marketing
+### Business Model(B2C)
+- This business is designed for Business to Consumer model(B2C). B2C model is very suitable for such retail online Market. This model keeps the overhead cost low and very flexible to changes with market trend. B2C business model allows to capture global market and enhances growth to Business.
 ### Facebook account
 I Created Facebook page for this website. I have attached the screen shot for the information:
 
 
-## <span style="color:green;">Email Marketing</span>
+## Email Marketing
 ### MailChimp- Newsletter Subscription
 - Register for MailChimp account for designer silks email address. And create Signup embeded form, and take only Newsletter column for user newsletter subscription.
 
-## <span style="color:green;">General Data Protection Regulation(GDPR)</span>
+## General Data Protection Regulation-GDPR
 ### Privacy policy Generator
 https://www.privacypolicygenerator.info/ 
 - Enter Company Name, website name, Herokku Url followed by Country,State and email then click generate private policy. Copy the link clipboard and Paste in the base template footer.
 
-## <span style="color:green;">Final deployment:</span>
+## Final deployment:
 
 After finish the project then need to do the following steps:
 
@@ -898,7 +954,7 @@ After finish the project then need to do the following steps:
   - Then Deploy and can view the App in Heroku.
 
 
-## <span style="color:green;">Acknowledgement</span>
+## Acknowledgement
   - I would like to thank my mentor Rohit Sharma and my tutors Kasia for their helpfulness, constructive feedback and guidance when needed.
   - I would like to thank the staff, all the tutor supporters, students and my peers of Code Institute for their help.
   -I also like to thank Slack Community for sharing the open discussion from various students.
