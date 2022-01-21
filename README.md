@@ -89,48 +89,48 @@ The Home Page covers the following sections:
 
 ### Sarees
 - When the User chooses Sarees Navigation option dropdown menu appears and shows four options to choose, such as:
-#### Chiffon Sarees
-- [ Chiffon Sarees -1 ](static/images/chiffon-sarees-1.PNG)
-- [ Chiffon Sarees -2 ](static/images/chiffon-sarees-2.PNG)
-- [ Chiffon Sarees Mobile -3 ](static/images/chiffon-sarees-3.PNG)
-- [ Chiffon Sarees Mobile -4 ](static/images/chiffon-sarees-4.PNG)
-#### Cotton Sarees
-- [ Cotton Sarees -1 ](static/images/cotton-sarees-1.PNG)
-- [ Cotton Sarees -2 ](static/images/cotton-sarees-2.PNG)
+  #### Chiffon Sarees
+    - [ Chiffon Sarees -1 ](static/images/chiffon-sarees-1.PNG)
+    - [ Chiffon Sarees -2 ](static/images/chiffon-sarees-2.PNG)
+    - [ Chiffon Sarees Mobile -3 ](static/images/chiffon-sarees-3.PNG)
+    - [ Chiffon Sarees Mobile -4 ](static/images/chiffon-sarees-4.PNG)
+  #### Cotton Sarees
+    - [ Cotton Sarees -1 ](static/images/cotton-sarees-1.PNG)
+    - [ Cotton Sarees -2 ](static/images/cotton-sarees-2.PNG)
 
-#### Silk Sarees
-- [ Silk Sarees -1 ](static/images/silk-sarees-1.PNG)
-- [ Silk Sarees -2 ](static/images/silk-sarees-2.PNG)
-- [ Silk Sarees Ipad-3 ](static/images/silk-sarees-3.PNG)
-#### All Sarees
-- [ All Sarees Ipad-1 ](static/images/all-sarees-1.PNG)
-- [ All Sarees Ipad Mini-2 ](static/images/all-sarees-2.PNG)
-- [ All Sarees -3 ](static/images/all-sarees-3.PNG)
-- Total number of Sarees available in each Sarees category is displayed for the User.
-- Sorting Options are available for the User in each Sarees Category, Such as
-  - Price (low to high) and Price (high to low)
-    - [ Price (low to High) ](static/images/price-low-1.PNG)
-    - [ Price (high to low) ](static/images/price-high-1.PNG)
-  - Rating (low to high) and Rating (high to low)
-    - [ Rating (low to High) ](static/images/rating-low-1.PNG)
-    - [ Rating (high to low) ](static/images/rating-high-1.PNG)
-  - Name (A-Z) and Name (Z-A)
-    - [ Name (A to Z) ](static/images/name-atoz-1.PNG)
-    - [ Name (Z to A) ](static/images/name-ztoa-1.PNG)
-  - Category (A-Z) and Category (Z-A)
-    - [ Category (A to Z) ](static/images/category-atoz-1.PNG)
-    - [ Category (Z to A) ](static/images/category-ztoa-1.PNG)
+  #### Silk Sarees
+    - [ Silk Sarees -1 ](static/images/silk-sarees-1.PNG)
+    - [ Silk Sarees -2 ](static/images/silk-sarees-2.PNG)
+    - [ Silk Sarees Ipad-3 ](static/images/silk-sarees-3.PNG)
+  #### All Sarees
+    - [ All Sarees Ipad-1 ](static/images/all-sarees-1.PNG)
+    - [ All Sarees Ipad Mini-2 ](static/images/all-sarees-2.PNG)
+    - [ All Sarees -3 ](static/images/all-sarees-3.PNG)
+    - Total number of Sarees available in each Sarees category is displayed for the User.
+  - Sorting Options are available for the User in each Sarees Category, Such as
+    - Price (low to high) and Price (high to low)
+      - [ Price (low to High) ](static/images/price-low-1.PNG)
+      - [ Price (high to low) ](static/images/price-high-1.PNG)
+    - Rating (low to high) and Rating (high to low)
+      - [ Rating (low to High) ](static/images/rating-low-1.PNG)
+      - [ Rating (high to low) ](static/images/rating-high-1.PNG)
+    - Name (A-Z) and Name (Z-A)
+      - [ Name (A to Z) ](static/images/name-atoz-1.PNG)
+      - [ Name (Z to A) ](static/images/name-ztoa-1.PNG)
+    - Category (A-Z) and Category (Z-A)
+      - [ Category (A to Z) ](static/images/category-atoz-1.PNG)
+      - [ Category (Z to A) ](static/images/category-ztoa-1.PNG)
 
 ### All Products
-- When the User chooses All Products option dropdown menu appears and shows four options to choose, such as 
-#### By Price
-  - [ Sarees By Price ](static/images/by-price.PNG)
-#### By Rating
-  - [ Sarees By Rating ](static/images/by-rating.PNG)
-#### By Category
-  - [ Sarees By Category ](static/images/by-category.PNG)
-#### All Products
-  - [ All Products ](static/images/all-products.PNG)
+- When the User chooses All Products option dropdown menu appears and shows four options to choose, such as:
+  #### By Price
+    - [ Sarees By Price ](static/images/by-price.PNG)
+  #### By Rating
+    - [ Sarees By Rating ](static/images/by-rating.PNG)
+  #### By Category
+    - [ Sarees By Category ](static/images/by-category.PNG)
+  #### All Products
+    - [ All Products ](static/images/all-products.PNG)
 - Total number of Sarees available in each Sarees category is displayed for the User.
 - Sorting Options are available for the User in each Sarees Category, Such as
   - Price (low to high) and Price (high to low)
