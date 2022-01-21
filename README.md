@@ -485,7 +485,37 @@ I create Facebook page for my Designer Silks Business.
 
 ## Testing
 ### Automation Testing
+I used some automated python Unittest to test models.py, views.py and forms.py. I attached the results for Python Unittest.
+#### Home Automation Testing
+<p align= "left">
+<img width= "500" src= "static/images/coverage-home.PNG">
+</p>
+
+#### Products Automation Testing
+<p align= "left">
+<img width= "500" src= "static/images/coverage-products.PNG">
+</p>
+
+#### Cart Automation Testing
+<p align= "left">
+<img width= "500" src= "static/images/coverage-cart.PNG">
+</p>
+
+#### Contact Automation Testing
+<p align= "left">
+<img width= "500" src= "static/images/coverage-contact.PNG">
+</p>
+
 ### Code Validation
+
+- W3 CSS Validation Service- To validate HTML document, i used validate by direct input, no errors shown in the W3 validation page. W3 CSS validation Result:
+Congratulations! No Error Found.
+- pep8 Online Validator- To validate python document, i used validate by direct input, no errors shown pep8 online validator.
+- Jshint JavaScript Validation - To validate JQuery file. no errors are shown in all file in JShint validation Page. 
+  - But jshint identified repeated one unused variables in the script.js file. Which is $ symbol.
+  - And repeated warnings also there. Such as
+    - 'template literal syntax' is only available in ES6 (use 'esversion: 6').
+    - Expected an assignment or function call and instead saw an expression.
 
 ### Features Testing
 #### <span style="text-decoration: underline">Home Page Testing</span>
