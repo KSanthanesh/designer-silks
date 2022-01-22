@@ -52,9 +52,10 @@ def all_products(request):
             products_list = products_list.filter(queries)
 
     current_sorting = f'{sort}_{direction}'
-
-    wishlist = Wishlist.objects.all().values_list('product', flat=True)
-    list_wish = wishlist
+    if request.user.is_authenticated:
+        list_wish = Wishlist.objects.filter(user=request.user).values_list('product', flat=True) 
+    else:
+        wishlist = []
     context = {
         'products_list': products_list,
         'search_term': query,
@@ -71,8 +72,10 @@ def product_detail(request, product_id):
     product_name = Product.objects.get(pk=product_id)
 
     review = Review.objects.filter(product=product_name)
-    wishlist = Wishlist.objects.all().values_list('product', flat=True)
-    list_wish = wishlist
+    if request.user.is_authenticated:
+        list_wish = Wishlist.objects.filter(user=request.user).values_list('product', flat=True) 
+    else:
+        wishlist = []
     context = {
         'product': product,
         'review': review,
