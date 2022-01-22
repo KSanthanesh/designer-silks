@@ -7,7 +7,6 @@ from .forms import ContactForm
 
 def contacts(request):
     """ User can send enquiry in the contact page"""
-    # contact = get_object_or_404(Contact)
     if request.method == "POST":
         form = ContactForm(request.POST)
         form.save()

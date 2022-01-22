@@ -53,9 +53,10 @@ def all_products(request):
 
     current_sorting = f'{sort}_{direction}'
     if request.user.is_authenticated:
-        list_wish = Wishlist.objects.filter(user=request.user).values_list('product', flat=True) 
+        list_wish = Wishlist.objects.filter(
+            user=request.user).values_list('product', flat=True)
     else:
-        wishlist = []
+        list_wish = []
     context = {
         'products_list': products_list,
         'search_term': query,
@@ -73,9 +74,10 @@ def product_detail(request, product_id):
 
     review = Review.objects.filter(product=product_name)
     if request.user.is_authenticated:
-        list_wish = Wishlist.objects.filter(user=request.user).values_list('product', flat=True) 
+        list_wish = Wishlist.objects.filter(
+            user=request.user).values_list('product', flat=True)
     else:
-        wishlist = []
+        list_wish = []
     context = {
         'product': product,
         'review': review,
@@ -227,9 +229,8 @@ def wishlist(request, product_id):
     else:
         wishlist_delete(request, product_id)
     user_id = request.user
-    wishlist = Wishlist.objects.filter(user=user_id).values_list(
+    list_wish = Wishlist.objects.filter(user=user_id).values_list(
         'product', flat=True)
-    list_wish = wishlist
     context = {
         'wishlist': list_wish,
     }
@@ -240,9 +241,9 @@ def wishlist_history(request):
     """Display Order History for specific order """
 
     user_id = request.user
-    wishlist = Wishlist.objects.filter(user=user_id)
+    list_wish = Wishlist.objects.filter(user=user_id)
     context = {
-        'wishlist': wishlist,
+        'wishlist': list_wish,
         'from_profile': True,
     }
     return render(request, 'products/wishlist.html', context)
