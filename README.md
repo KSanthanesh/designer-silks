@@ -323,11 +323,13 @@ There is a Wishlist option for the user to use.<br>
 Secure Payment option is used for the User to purchase the product.<br>
 And a Facebook page is used for Social Media Purposes.<br>
 There are Newsletter subscription and Contact form options available on the website.<br>
+<b>User Access Details:</b>
 <p align= "left">
 <img width= "500" src= "static/images/scope.PNG">
 </p>
+
 ### Features
-- A page with an overview of all the products which can be sorted by name, rating, price and category
+- A page with an overview of all the products which can be sorted by name, rating, price and category.
 - A contact form where customers can ask questions.
 - Newsletter subscription for Further details.
 - Social Media page for New updates.
@@ -345,7 +347,7 @@ There are Newsletter subscription and Contact form options available on the webs
 - privacy policy
 
 ### Future Features
-- Other Variety of Products can be added on the website
+- Other Variety of Products can be added on the website.
 - Children's Indian Traditional costumes can be added.
 - Designer items of clothings can be added
 - Discount options can be used to widen our market Portfolio.
@@ -439,9 +441,6 @@ colours used:
  - rgb(173, 227, 245)
 
 
-
-
-
 ### Typography
 I have used Open Sans, cursive and 'Raleway', sans-serif to create this website.
 
@@ -485,7 +484,7 @@ I create a Facebook page for my Designer Silks Business.
 
 ## Testing
 ### Automation Testing
-I used some automated python Unittest to test models.py, views.py and forms.py. I attached the results for Python Unittest.
+I used some automated python Unittest to test models.py, views.py and forms.py. I have attached the results for Python Unittest.
 #### Home Automation Testing
 <p align= "left">
 <img width= "500" src= "static/images/coverage-home.PNG">
@@ -712,10 +711,10 @@ There is one Testcase on the checkout success page which is Go to the HomePage. 
 
 
 ## Bugs
-1. I try to create a new app for wishlist and reviews and add it into the products page and product_detail page. But I do not know how to connect these apps to the product app. Then I decided to add new models for wishlist and Review in the product app and connect the data into the products templates. Within a limited period time, I could not able to do that, but after this course sure I will learn it.
-2. When I complete the payment system I received a duplicate order number in the order history and admin page. I resolved this problem with Tutor support.
-3. When I do the Real send mail section I did not received a confirmation message in my email. This problem was also resolved with Tutor Support.
-
+1. I try to create a new app for each wishlist and reviews, and add it into the products page and product_detail page. But I do not know how to connect these apps to the product app. Then I decided to add new models for wishlist and Review in the product app and connect the data into the products templates. Within a limited time, I could not able to do that, but after this course I will learn how to do it.
+2. When I complete the payment system, I received a duplicate order number in the order history and admin page. I resolved this problem with Tutor support.
+3. When I do the Real send mail section, I did not received a confirmation message in my email. This problem was also resolved with Tutor Support.
+4. I had some problem while toggling the Wishlist in product and product detail page. I resolved this problem with the help of Tutor Support.
 
 ## Deployment
 First, we need to go to Github website to create a new repository using code Institute Template. This followed by giving a new name to the website. Then need to click the create repository button. After clicking the button it will bring us to go to another page, which contains the green button labelled as Gitpod. Click the Gitpod button will bring us to the Gitpod Workspace for the coding screen.
