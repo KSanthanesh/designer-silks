@@ -17,7 +17,7 @@ def profile(request):
 
     if request.method == 'POST':
         form = UserProfileForm(request.POST, instance=profileuser)
-        if form.is_valid:
+        if form.is_valid():
             form.save()
             messages.success(request, "Profiles Updated Successfully.")
         else:
@@ -39,7 +39,6 @@ def order_history_view(request, order_number):
     """Display Order History for specific order """
     order = get_object_or_404(Order, order_number=order_number)
 
-    # messages.info(request, f'Your order Number is {order_number}.')
     context = {
         'order': order,
         'from_profile': True,
@@ -50,12 +49,10 @@ def order_history_view(request, order_number):
 def order_history(request):
     """Display Order History for specific order """
     profileuser = get_object_or_404(UserProfile, user=request.user)
-    # order = get_object_or_404(Order, user_profile=request.user)
-    order = profileuser.orders.all()
+    orders = Order.objects.filter(user_profile=profileuser).order_by('-date')
 
-    # messages.info(request, f'Your order Number is {order}.')
     context = {
-        'order': order,
+        'order': orders,
         'from_profile': True,
     }
 

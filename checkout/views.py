@@ -29,10 +29,10 @@ def cache_checkout_data(request):
             'username': request.user,
         })
         return HttpResponse(status=200)
-    except Exception as e:
+    except Exception as exception:
         messages.error(request, 'Sorry, Your payment cannot be processed \
             right now. Please try again later')
-        return HttpResponse(content=e, status=400)
+        return HttpResponse(content=exception, status=400)
 
 
 def checkout(request):
@@ -53,7 +53,7 @@ def checkout(request):
             'country': request.POST['country'],
         }
         order_form = OrderForm(form_data)
-        if order_form.is_valid:
+        if order_form.is_valid():
             order = order_form.save(commit=False)
             pid = request.POST.get('client_secret').split('_secret')[0]
             order.stripe_pid = pid
