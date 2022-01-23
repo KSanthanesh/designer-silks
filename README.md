@@ -266,6 +266,18 @@ After Logout, the success logout message will appear on the right-side of the Pa
   - Go to the Home Page Button
   - [ Checkout Success](static/images/checkout-success-testing.PNG)
 
+#### 404 Error page
+- 404 Error page contains:
+  - Page Header and Footer
+  - Error Message
+  - [ 404 Error Page ](static/images/404-error.PNG)
+
+#### 500 Error page
+- 500 Error page contains:
+  - Page Header and Footer
+  - Error Message
+  - [ 500 Error Page ](static/images/500-error.PNG)
+
 ## Strategy
 The website covers all the screen types, such as Pc, Laptop, Tablet and Mobile. The website is easily navigated to all the sections. This online Business is designed for a local and international markets. The B2C business model is chosen to enhance the business growth and update product trend according to market sentiment. 
 ### UX
